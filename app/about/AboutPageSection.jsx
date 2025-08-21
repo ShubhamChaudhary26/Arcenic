@@ -177,9 +177,9 @@ export const AboutPageSection = () => {
             </div>
             <div className="about-divider" ref={lineRef} />
           </div>
-          <div className="about-team">
-            <div className="about-team-container">
-              {teamMembers.map((member, index) => (
+          {/* <div className="about-team"> */}
+            {/* <div className="about-team-container"> */}
+              {/* {teamMembers.map((member, index) => (
                 <div
                   className="about-team-item"
                   key={index}
@@ -188,9 +188,9 @@ export const AboutPageSection = () => {
                   <p className="description white">{member.name}</p>
                   <p className="description white">{member.title}</p>
                 </div>
-              ))}
-            </div>
-          </div>
+              ))} */}
+            {/* </div> */}
+          {/* </div> */}
           <div className="about-divider" />
           <div className="about-whyus">
             <p className="description about-whyus-description grey">Why us</p>
