@@ -73,122 +73,122 @@ export const SectionTestimonials = () => {
         </div>
         <div className="opacity-blur" ref={emblaWrapperRef} >
             <div className="testimonials-carousel" ref={emblaRef} >
-                <div className="testimonials-carousel-row">
-                    <div className="testimonials-item-padding" />
-                    <div className="testimonials-item" >
-                        <div className="testimonials-item-content">
-                            <div className="testimonials-item-profile">
-                                <img src="/images/pfp1.webp" alt="" />
-                            </div>
-                            <div className="testimonials-item-center">
-                                <p className="big-description white" >Sarah Johnson</p>
-                                <p className="description grey" >Small Business Owner</p>
-                            </div>
-                            <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
-                        </div>
-                        <div className="testimonials-item-grid" />
-                    </div>
-                    <div className="testimonials-item" >
-                        <div className="testimonials-item-content">
-                            <div className="testimonials-item-profile">
-                                <img src="/images/pfp2.webp" alt="" />
-                            </div>
-                            <div className="testimonials-item-center">
-                                <p className="big-description white" >David Patel</p>
-                                <p className="description grey" >Project Manager</p>
-                            </div>
-                            <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
-                        </div>
-                        <div className="testimonials-item-grid" />
-                    </div>
-                    <div className="testimonials-item" >
-                        <div className="testimonials-item-content">
-                            <div className="testimonials-item-profile">
-                                <img src="/images/pfp1.webp" alt="" />
-                            </div>
-                            <div className="testimonials-item-center">
-                                <p className="big-description white" >Emily Carter</p>
-                                <p className="description grey" >Operations Manager</p>
-                            </div>
-                            <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
-                        </div>
-                        <div className="testimonials-item-grid" />
-                    </div>
-                    <div className="testimonials-item" >
-                        <div className="testimonials-item-content">
-                            <div className="testimonials-item-profile">
-                                <img src="/images/pfp2.webp" alt="" />
-                            </div>
-                            <div className="testimonials-item-center">
-                                <p className="big-description white" >Sarah Johnson</p>
-                                <p className="description grey" >Small Business Owner</p>
-                            </div>
-                            <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
-                        </div>
-                        <div className="testimonials-item-grid" />
-                    </div>
-                    <div className="testimonials-item" >
-                        <div className="testimonials-item-content">
-                            <div className="testimonials-item-profile">
-                                <img src="/images/pfp2.webp" alt="" />
-                            </div>
-                            <div className="testimonials-item-center">
-                                <p className="big-description white" >David Patel</p>
-                                <p className="description grey" >Project Manager</p>
-                            </div>
-                            <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
-                        </div>
-                        <div className="testimonials-item-grid" />
-                    </div>
-                    <div className="testimonials-item" >
-                        <div className="testimonials-item-content">
-                            <div className="testimonials-item-profile">
-                                <img src="/images/pfp1.webp" alt="" />
-                            </div>
-                            <div className="testimonials-item-center">
-                                <p className="big-description white" >Emily Carter</p>
-                                <p className="description grey" >Operations Manager</p>
-                            </div>
-                            <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
-                        </div>
-                        <div className="testimonials-item-grid" />
-                    </div>
-                    <div className="testimonials-item" >
-                        <div className="testimonials-item-content">
-                            <div className="testimonials-item-profile">
-                                <img src="/images/pfp2.webp" alt="" />
-                            </div>
-                            <div className="testimonials-item-center">
-                                <p className="big-description white" >Sarah Johnson</p>
-                                <p className="description grey" >Small Business Owner</p>
-                            </div>
-                            <p className="description white" >Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.</p>
-                        </div>
-                        <div className="testimonials-item-grid" />
-                    </div>
-                    <div className="testimonials-item testimonials-item-last" >
-                        <div className="testimonials-item-content testimonials-item-content-last">
-                            <div className="testimonials-item-last-top">
-                                <p className="description white" >Be our next client in this section!</p>
-                            </div>
-                            <p className="small-subheadline white" >Let us get you a coffee.</p>
-                            <div className="contact-button-wrapper">
-                                <button className="contact-button-white" >
-                                    <span>
-                                        <span className="contact-button-container-white">
-                                            <span className="contact-button-primary-white"></span>
-                                            <span className="contact-button-complimentary-white"></span>
-                                        </span>
-                                    </span>
-                                    <span className="description black" >Book a call</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div className="background-gradient-circle-3" />
-                        <div className="testimonials-item-grid" />
-                    </div>
-                    <div className="testimonials-item-padding" />
-                </div>
+               <div className="testimonials-carousel-row">
+  <div className="testimonials-item-padding" />
+
+  {/* Testimonial 1 */}
+{/* Testimonial 1 */}
+<div className="testimonials-item">
+  <div className="testimonials-item-content">
+    <div className="testimonials-item-profile">
+      <img
+        src="https://i.pravatar.cc/150?img=68"
+        alt="Rakesh Kumar"
+        className="avatar"
+      />
+    </div>
+    <div className="testimonials-item-center">
+      <p className="big-description white">Rakesh Kumar</p>
+      <p className="description grey">Small Business Owner</p>
+    </div>
+    <p className="description white">
+      The team’s solution helped us streamline operations and increase our customer satisfaction. Tasks are now much faster to complete.
+    </p>
+  </div>
+  <div className="testimonials-item-grid" />
+</div>
+
+{/* Testimonial 2 */}
+<div className="testimonials-item">
+  <div className="testimonials-item-content">
+    <div className="testimonials-item-profile">
+      <img
+        src="https://i.pravatar.cc/150?img=54"
+        alt="Krish Patel"
+        className="avatar"
+      />
+    </div>
+    <div className="testimonials-item-center">
+      <p className="big-description white">Krish Patel</p>
+      <p className="description grey">Project Manager</p>
+    </div>
+    <p className="description white">
+      This solution transformed how our team collaborates on projects. We now meet deadlines more efficiently and communicate seamlessly.
+    </p>
+  </div>
+  <div className="testimonials-item-grid" />
+</div>
+
+{/* Testimonial 3 */}
+<div className="testimonials-item">
+  <div className="testimonials-item-content">
+    <div className="testimonials-item-profile">
+      <img
+        src="https://i.pravatar.cc/150?img=31"
+        alt="Palkhi Sharma"
+        className="avatar"
+      />
+    </div>
+    <div className="testimonials-item-center">
+      <p className="big-description white">Palkhi Sharma</p>
+      <p className="description grey">Operations Manager</p>
+    </div>
+    <p className="description white">
+      Implementing this platform simplified our workflow and improved team performance. Everyone is more aligned and productive now.
+    </p>
+  </div>
+  <div className="testimonials-item-grid" />
+</div>
+
+{/* Testimonial 4 */}
+<div className="testimonials-item">
+  <div className="testimonials-item-content">
+    <div className="testimonials-item-profile">
+      <img
+        src="https://i.pravatar.cc/150?img=9"
+        alt="Palkhi Sharma"
+        className="avatar"
+      />
+    </div>
+    <div className="testimonials-item-center">
+      <p className="big-description white">Ananya Singh</p>
+      <p className="description grey">Marketing Head</p>
+    </div>
+    <p className="description white">
+      Thanks to this tool, our marketing campaigns run smoothly, and reporting has become much easier. It’s a game-changer for our department.
+    </p>
+  </div>
+  <div className="testimonials-item-grid" />
+</div>
+
+
+
+  {/* Last call-to-action item */}
+  <div className="testimonials-item testimonials-item-last">
+    <div className="testimonials-item-content testimonials-item-content-last">
+      <div className="testimonials-item-last-top">
+        <p className="description white">Be our next client in this section!</p>
+      </div>
+      <p className="small-subheadline white">Let us get you a coffee.</p>
+      <div className="contact-button-wrapper">
+        <button className="contact-button-white">
+          <span>
+            <span className="contact-button-container-white">
+              <span className="contact-button-primary-white"></span>
+              <span className="contact-button-complimentary-white"></span>
+            </span>
+          </span>
+          <span className="description black">Book a call</span>
+        </button>
+      </div>
+    </div>
+    <div className="background-gradient-circle-3" />
+    <div className="testimonials-item-grid" />
+  </div>
+
+  <div className="testimonials-item-padding" />
+</div>
+
             </div>
         </div>
 

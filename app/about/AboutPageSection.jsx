@@ -198,7 +198,7 @@ export const AboutPageSection = () => {
               className="subheadline about-whyus-subheadline white"
               ref={titleRef2}
             >
-              At Arcenic, we embody the startup mindset — dynamic, innovative,
+              At Arcenik, we embody the startup mindset — dynamic, innovative,
               and hungry to make a difference. We don&apos;t just create amazing
               works; we partner with our clients to revolutionize their
               industries through groundbreaking digital experiences. From
@@ -217,7 +217,7 @@ export const AboutPageSection = () => {
                     Website <br /> Development
                   </h1>
                   <p className="description about-sticky-item-left-textbox-description grey">
-                    At <b>Arcenic</b>, we build modern, responsive, and
+                    At <b>Arcenik</b>, we build modern, responsive, and
                     SEO-friendly websites that not only look amazing but also
                     perform flawlessly. From simple portfolios to enterprise web
                     apps, our team delivers high-quality digital experiences
@@ -247,7 +247,7 @@ export const AboutPageSection = () => {
                   <p className="description about-sticky-item-left-textbox-description grey">
                     We believe design is more than visuals—it’s about creating
                     experiences.
-                    <b> Arcenic</b> crafts clean, intuitive, and engaging UI/UX
+                    <b> Arcenik</b> crafts clean, intuitive, and engaging UI/UX
                     designs that guide users smoothly and keep them connected to
                     your brand.
                   </p>
@@ -273,7 +273,7 @@ export const AboutPageSection = () => {
                     E-Commerce <br /> Solutions
                   </h1>
                   <p className="description about-sticky-item-left-textbox-description grey">
-                    Sell smarter with <b>Arcenic’s</b> custom e-commerce
+                    Sell smarter with <b>Arcenik’s</b> custom e-commerce
                     solutions. From product catalogs to secure payments, we
                     develop online stores that are scalable, user-friendly, and
                     optimized to drive more conversions.
@@ -300,7 +300,7 @@ export const AboutPageSection = () => {
                     Branding & <br /> SEO
                   </h1>
                   <p className="description about-sticky-item-left-textbox-description grey">
-                    A great website needs visibility. <b>Arcenic</b> boosts your
+                    A great website needs visibility. <b>Arcenik</b> boosts your
                     digital presence with powerful branding and SEO strategies,
                     helping your business rank higher, attract the right
                     audience, and grow consistently online.

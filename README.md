@@ -1,9 +1,9 @@
-# Arcenic
+# Arcenik
 
-This is the landing page of a digital marcketplace platform by Arcenic.
-Live on [https://Arcenic.com](https://Arcenic.com)
+This is the landing page of a digital marcketplace platform by Arcenik.
+Live on [https://Arcenik.com](https://Arcenik.com)
 
-![Arcenic](public/images/Arcenic.png)
+![Arcenik](public/images/Arcenik.png)
 ![globe](public/images/globe.png)
 ![flower](public/images/flower.png)
 

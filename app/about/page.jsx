@@ -2,7 +2,7 @@ import "./about.css";
 import { AboutPageSection } from "./AboutPageSection";
 
 export const metadata = {
-  title: 'Arcenic | About Us',
+  title: 'Arcenik | About Us',
   description: "Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality.",
   openGraph: {
     title: 'About Us',

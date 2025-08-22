@@ -31,7 +31,7 @@ export const SectionFooter = () => {
       <div className="footer-content">
         <div className="footer-content-left" ref={topRef1} >
           <img src="/images/dwlogo.webp" className="footer-logo" alt="" />
-          <h1 className="subheadline white" >Arcenic</h1>
+          <h1 className="subheadline white" >Arcenik</h1>
           <p className="description grey"  >Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
         </div>
         <div className="footer-content-right" ref={topRef2} >
@@ -69,8 +69,12 @@ export const SectionFooter = () => {
         </div>
       </div>
       <div className="footer-divider" ref={centerRef1} />
+          <div className="description grey justify-end decoration-none underline-none">
+            <p >Contact US: <a href="tel:7777909218" className=" description white hover-text-grey decoration-none">7777909218</a></p>
+            <p>Gmail: <a href="mailto:arceniktechnologies@gmail.com" className=" description white hover-text-grey decoration-none">arceniktechnologies@gmail.com</a></p>
+          </div>
       <div className="footer-content-bottom">
-        <p className="small-description grey" ref={bottomRef1} >© 2024 Arcenic All Rights Reserved</p>
+        <p className="small-description grey" ref={bottomRef1} >© 2024 Arcenik All Rights Reserved</p>
         <div className="footer-socials" ref={bottomRef2} >
           <Instagram strokeWidth={1.25} className="footer-socials-icon" />
           <Twitter strokeWidth={1.25} className="footer-socials-icon" />

@@ -2,7 +2,7 @@ import "./works.css";
 import { WorksPageSection } from "./WorksPageSection";
 
 export const metadata = {
-  title: 'Arcenic | Works',
+  title: 'Arcenik | Works',
   description: "Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality.",
   openGraph: {
     title: 'Works',

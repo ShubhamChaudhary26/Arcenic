@@ -5,6 +5,6 @@ export default function robots() {
         allow: '/',
         disallow: '/private/',
       },
-      sitemap: 'https://Arcenic.com/sitemap.xml',
+      sitemap: 'https://Arcenik.com/sitemap.xml',
     }
   }
