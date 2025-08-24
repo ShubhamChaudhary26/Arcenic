@@ -31,7 +31,7 @@ const Main = () => {
     <ReactLenis root>
       <div className={`initial-loading-screen ${fadeOut ? "fade-out" : ""}`} >
         <div className="loading-image-box" >
-          <img src="/images/loading.gif" className="loading-image" alt="Loading Image" />
+          <img src="/images/logo.jpg" className="loading-image" alt="Loading Image" />
         </div>
       </div>
       <SectionHero />
@@ -51,9 +51,9 @@ const Main = () => {
       <div className="normal-padding" />
       <SectionKPI />
       <div className="normal-padding" />
-      <SectionFlower />
+      {/* <SectionFlower />
       <div className="normal-padding" />
-      <SectionFooter />
+      <SectionFooter /> */}
     </ReactLenis>
   );
 };

@@ -157,22 +157,22 @@ export const SectionHero = () => {
         <div className="hero-content-bottom opacity-blur" ref={logosWrapperRef} >
           <Marquee className="hero-content-bottom-row" gradient={true} gradientColor="#010101" gradientWidth={250}>
             {[
-              "/logos/adobe.webp", 
+              "/logos/minsurveylogosvg.svg", 
               "/logos/webflow.svg", 
               "/logos/stripe.svg", 
-              "/logos/adobe.webp", 
+              "/logos/minsurveylogosvg.svg", 
               "/logos/webflow.svg", 
               "/logos/stripe.svg", 
-              "/logos/adobe.webp", 
+              "/logos/minsurveylogosvg.svg", 
               "/logos/webflow.svg", 
               "/logos/stripe.svg", 
-              "/logos/adobe.webp", 
+              "/logos/minsurveylogosvg.svg", 
               "/logos/webflow.svg", 
               "/logos/stripe.svg", 
-              "/logos/adobe.webp", 
+              "/logos/minsurveylogosvg.svg", 
               "/logos/webflow.svg", 
               "/logos/stripe.svg", 
-              "/logos/adobe.webp", 
+              "/logos/minsurveylogosvg.svg", 
               "/logos/webflow.svg", 
               "/logos/stripe.svg", 
             ].map((src, i) => (
