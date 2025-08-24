@@ -1,8 +1,9 @@
 "use client";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react"; // 👈 X icon import
 import React, { useLayoutEffect, useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { useRouter } from "next/navigation";
+import "./Navigation.css";
 
 export const Navigation = () => {
   const navigationBar = useRef(null);
@@ -17,7 +18,6 @@ export const Navigation = () => {
 
   const router = useRouter();
 
-  // Initial desktop animation
   useLayoutEffect(() => {
     gsap.to(navigationBar.current, {
       opacity: 1,
@@ -44,10 +44,8 @@ export const Navigation = () => {
     gsap.to(navigationBarCenterRef3.current, { opacity: 1, duration: 1, delay: 1.95 });
   }, []);
 
-  // Mobile menu + overlay animation
   useEffect(() => {
     if (isMenuOpen) {
-      // overlay blur & fade in
       gsap.to(overlayRef.current, {
         opacity: 1,
         backdropFilter: "blur(8px)",
@@ -55,7 +53,6 @@ export const Navigation = () => {
         ease: "power2.out",
         display: "block",
       });
-      // menu slide in
       gsap.to(mobileMenuRef.current, {
         y: 0,
         opacity: 1,
@@ -64,7 +61,6 @@ export const Navigation = () => {
         display: "flex",
       });
     } else {
-      // menu slide out
       gsap.to(mobileMenuRef.current, {
         y: "-100%",
         opacity: 0,
@@ -74,7 +70,6 @@ export const Navigation = () => {
           gsap.set(mobileMenuRef.current, { display: "none" });
         },
       });
-      // overlay fade out
       gsap.to(overlayRef.current, {
         opacity: 0,
         duration: 0.3,
@@ -87,96 +82,50 @@ export const Navigation = () => {
   }, [isMenuOpen]);
 
   const handleNavigate = (path) => {
-    setIsMenuOpen(false); // close after navigation
+    setIsMenuOpen(false);
     router.push(path);
   };
 
   return (
-    <div className="navigation-wrapper relative">
+    <div className="navigation-wrapper">
       <div className="navigation-inside" ref={navigationBar}>
         {/* LEFT */}
-        <div className="navigation-inside-left">
-          <img src="/images/dwlogo.webp" className="navigation-inside-left-image" alt="logo" />
+        <div className="navigation-left">
+          <img src="/images/dwlogo.webp" className="logo" alt="logo" />
         </div>
 
         {/* DESKTOP MENU */}
-        <div className="navigation-inside-big hidden md:flex" ref={navigationBarCenter}>
-          <p
-            className="small-description white hover-text-white opacity cursor-pointer"
-            ref={navigationBarCenterRef1}
-            onClick={() => handleNavigate("/")}
-          >
-            Home
-          </p>
-          <p
-            className="small-description white hover-text-white opacity cursor-pointer"
-            ref={navigationBarCenterRef2}
-            onClick={() => handleNavigate("/about")}
-          >
-            About
-          </p>
-          <p
-            className="small-description white hover-text-white opacity cursor-pointer"
-            ref={navigationBarCenterRef3}
-            onClick={() => handleNavigate("/works")}
-          >
-            Works
-          </p>
+        <div className="navigation-center" ref={navigationBarCenter}>
+          <p ref={navigationBarCenterRef1} onClick={() => handleNavigate("/")}>Home</p>
+          <p ref={navigationBarCenterRef2} onClick={() => handleNavigate("/about")}>About</p>
+          <p ref={navigationBarCenterRef3} onClick={() => handleNavigate("/works")}>Works</p>
         </div>
 
         {/* DESKTOP RIGHT */}
-        <div className="navigation-inside-right hidden md:block">
-          <button
-            className="button button-navigation button-transparent-border"
-            onClick={() => handleNavigate("/contact")}
-          >
-            <div className="button-content">
-              <span className="small-description">Get In Touch</span>
-              <span className="small-description">Get In Touch</span>
-            </div>
-            <div className="button-circle button-circle-white">
-              <ArrowUpRight className="button-icon" />
-            </div>
+        <div className="navigation-right">
+          <button onClick={() => handleNavigate("/contact")} className="nav-button">
+            <span>Get In Touch</span>
+            <ArrowUpRight className="icon" />
           </button>
         </div>
 
-        {/* MOBILE HAMBURGER */}
-        <div
-          className="navigation-inside-right-mobile md:hidden cursor-pointer flex flex-col gap-1"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <div className="navigation-inside-right-mobile-line bg-white h-[3px] w-6 rounded" />
-          <div className="navigation-inside-right-mobile-line bg-white h-[3px] w-6 rounded" />
-          <div className="navigation-inside-right-mobile-line bg-white h-[3px] w-6 rounded" />
-        </div>
+        {/* MOBILE CROSS ONLY */}
+        {isMenuOpen && (
+          <div className="cross-btn" onClick={() => setIsMenuOpen(false)}>
+            <X className="cross-icon" />
+          </div>
+        )}
       </div>
 
-      {/* BACKDROP OVERLAY (blur effect) */}
-      <div
-        ref={overlayRef}
-        className="fixed inset-0 bg-black/40 backdrop-blur-md z-40 hidden"
-        style={{ opacity: 0 }}
-        onClick={() => setIsMenuOpen(false)}
-      />
+      {/* OVERLAY */}
+      <div ref={overlayRef} className="overlay" onClick={() => setIsMenuOpen(false)} />
 
-      {/* MOBILE MENU (GSAP animated) */}
-      <div
-        ref={mobileMenuRef}
-        className="mobile-menu fixed top-0 left-0 w-full h-screen text-white flex-col items-center justify-center gap-8 hidden z-50"
-        style={{ transform: "translateY(-100%)", opacity: 0 }}
-      >
-        <p onClick={() => handleNavigate("/")} className="text-2xl cursor-pointer hover:text-gray-300">
-          Home
-        </p>
-        <p onClick={() => handleNavigate("/about")} className="text-2xl cursor-pointer hover:text-gray-300">
-          About
-        </p>
-        <p onClick={() => handleNavigate("/works")} className="text-2xl cursor-pointer hover:text-gray-300">
-          Works
-        </p>
-        <p onClick={() => handleNavigate("/contact")} className="text-2xl cursor-pointer hover:text-gray-300">
-          Get In Touch
-        </p>
+      {/* MOBILE MENU */}
+      <div ref={mobileMenuRef} className="mobile-menu">
+        <p onClick={() => handleNavigate("/")}>Home</p>
+        <p onClick={() => handleNavigate("/about")}>About</p>
+        <p onClick={() => handleNavigate("/works")}>Works</p>
+        <p onClick={() => handleNavigate("/contact")}>Get In Touch</p>
       </div>
     </div>
   );

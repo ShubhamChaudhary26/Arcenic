@@ -51,9 +51,9 @@ const Main = () => {
       <div className="normal-padding" />
       <SectionKPI />
       <div className="normal-padding" />
-      {/* <SectionFlower />
-      <div className="normal-padding" />
-      <SectionFooter /> */}
+      {/* <SectionFlower /> */}
+      {/* <div className="normal-padding" /> */}
+      <SectionFooter />
     </ReactLenis>
   );
 };
