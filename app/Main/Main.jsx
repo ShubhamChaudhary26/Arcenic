@@ -13,7 +13,10 @@ import { SectionKPI } from "./SectionKPI";
 import "./main.css";
 import { useEffect, useLayoutEffect, useState } from 'react';
 import { useProgress } from "@react-three/drei";
+<<<<<<< HEAD
 import Image from 'next/image';
+=======
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
 
 const Main = () => {
 
@@ -32,7 +35,11 @@ const Main = () => {
     <ReactLenis root>
       <div className={`initial-loading-screen ${fadeOut ? "fade-out" : ""}`} >
         <div className="loading-image-box" >
+<<<<<<< HEAD
           <Image  fill src="/images/logo.jpg" className="loading-image" alt="Loading Image" />
+=======
+          <img src="/images/logo.jpg" className="loading-image" alt="Loading Image" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
         </div>
       </div>
       <SectionHero />

@@ -51,7 +51,11 @@
 /* HERO SECTION */
 
 .hero {
+<<<<<<< HEAD
     padding-top: 0vh;
+=======
+    padding-top: 10vh;
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
     padding-bottom: 0;
     position: relative;
 }

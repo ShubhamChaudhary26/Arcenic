@@ -6,7 +6,10 @@ import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -229,9 +232,13 @@ export const AboutPageSection = () => {
               </div>
               <div className="about-sticky-item-right">
                 <div className="about-sticky-item-right-imagebox">
+<<<<<<< HEAD
                   <Image
                     width={300}
                     height={500}
+=======
+                  <img
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                     src="/images/mockup4.webp"
                     className="about-sticky-item-right-image"
                     alt="Website Development"
@@ -259,12 +266,19 @@ export const AboutPageSection = () => {
               </div>
               <div className="about-sticky-item-right">
                 <div className="about-sticky-item-right-imagebox">
+<<<<<<< HEAD
                   <Image
                     src="/images/mockup12.webp"
                     className="about-sticky-item-right-image"
                     alt="UI/UX Design"
                     width={300}
                     height={200}
+=======
+                  <img
+                    src="/images/mockup12.webp"
+                    className="about-sticky-item-right-image"
+                    alt="UI/UX Design"
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                   />
                 </div>
               </div>
@@ -288,12 +302,19 @@ export const AboutPageSection = () => {
               </div>
               <div className="about-sticky-item-right">
                 <div className="about-sticky-item-right-imagebox">
+<<<<<<< HEAD
                   <Image
                     src="/images/mockup7.webp"
                     className="about-sticky-item-right-image"
                     alt="E-Commerce Solutions"
                     width={300}
                     height={200}
+=======
+                  <img
+                    src="/images/mockup7.webp"
+                    className="about-sticky-item-right-image"
+                    alt="E-Commerce Solutions"
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                   />
                 </div>
               </div>
@@ -317,12 +338,19 @@ export const AboutPageSection = () => {
               </div>
               <div className="about-sticky-item-right">
                 <div className="about-sticky-item-right-imagebox">
+<<<<<<< HEAD
                   <Image
                     src="/images/mockup11.webp"
                     className="about-sticky-item-right-image"
                     alt="Branding & SEO"
                     width={300}
                     height={200}
+=======
+                  <img
+                    src="/images/mockup11.webp"
+                    className="about-sticky-item-right-image"
+                    alt="Branding & SEO"
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                   />
                 </div>
               </div>

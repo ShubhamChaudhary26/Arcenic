@@ -4,7 +4,10 @@ import React, { useLayoutEffect, useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { useRouter } from "next/navigation";
 import "./Navigation.css";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
 
 export const Navigation = () => {
   const navigationBar = useRef(null);
@@ -92,7 +95,11 @@ export const Navigation = () => {
       <div className="navigation-inside" ref={navigationBar}>
         {/* LEFT */}
         <div className="navigation-left">
+<<<<<<< HEAD
         <Image    width={20} height={20} src="/images/dwlogo.webp" className="logo" alt="logo" />
+=======
+          <img src="/images/dwlogo.webp" className="logo" alt="logo" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
         </div>
 
         {/* DESKTOP MENU */}

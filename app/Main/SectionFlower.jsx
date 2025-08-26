@@ -3,7 +3,10 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -118,7 +121,11 @@ export const SectionFlower = () => {
             </span>
             <span>
               <div className="flower-content-right-content-item" ref={imageRef1} >
+<<<<<<< HEAD
                 <Image  fill src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="" />
+=======
+                <img src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
               </div>
             </span>
           </div>
@@ -139,7 +146,11 @@ export const SectionFlower = () => {
             </span>
             <span>
               <div className="flower-content-right-content-item" ref={imageRef2} >
+<<<<<<< HEAD
                 <Image  fill src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="" />
+=======
+                <img src="/images/iphoneoptimized.png" className="flower-content-right-content-item-image" alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
               </div>
             </span>
             <span>

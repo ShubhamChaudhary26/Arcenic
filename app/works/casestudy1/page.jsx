@@ -9,7 +9,10 @@ import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
 import { ArrowLeft } from "lucide-react";
 import { usePathname, useRouter } from 'next/navigation';
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -105,7 +108,11 @@ const CaseStudies = () => {
                         <video src="/casestudy/casestudytestvideo.mov" className="casestudy-video" autoPlay="autoplay" muted playsInline={true} data-wf-ignore="true" preload="auto" loop />
                     </div>
                     <div className="casestudy-top-gradient" />
+<<<<<<< HEAD
                     <Image  fill src="/casestudy/casestudyphoto.webp" ref={imageRef} className="casestudy-top-image" alt="" />
+=======
+                    <img src="/casestudy/casestudyphoto.webp" ref={imageRef} className="casestudy-top-image" alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                 </div>
                 <div className="casestudy-center">
                     <h2 className="small-subheadline white" ref={descriptionRef} >We created a seamless experience for Lumara’s eco-home containers, creating unique brand. By challenging the user experience, we enabled people to easily customize their containers from their computer, bringing Lumara’s vision to life with intuitive and personalized design and development solutions, unique creativity, without overlooking essential SEO and speed metrics.</h2>
@@ -118,6 +125,7 @@ const CaseStudies = () => {
                             <p className="small-description white" ref={casestudyCenterRef3} >Team</p>
                             <div className="casestudy-center-item-column">
                                 <div className="casestudy-center-item-profile" ref={casestudyCenterRef4} >
+<<<<<<< HEAD
                                     <Image  fill src="/images/mockup3.webp" className="casestudy-center-item-profile-image" alt="" />
                                     <p className="small-description grey" >Idan Zeidman</p>
                                 </div>
@@ -127,6 +135,17 @@ const CaseStudies = () => {
                                 </div>
                                 <div className="casestudy-center-item-profile" ref={casestudyCenterRef6} >
                                     <Image  fill src="/images/mockup3.webp" className="casestudy-center-item-profile-image" alt="" />
+=======
+                                    <img src="/images/mockup3.webp" className="casestudy-center-item-profile-image" alt="" />
+                                    <p className="small-description grey" >Idan Zeidman</p>
+                                </div>
+                                <div className="casestudy-center-item-profile" ref={casestudyCenterRef5} >
+                                    <img src="/images/mockup3.webp" className="casestudy-center-item-profile-image" alt="" />
+                                    <p className="small-description grey" >Lorenzo Noya</p>
+                                </div>
+                                <div className="casestudy-center-item-profile" ref={casestudyCenterRef6} >
+                                    <img src="/images/mockup3.webp" className="casestudy-center-item-profile-image" alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                                     <p className="small-description grey" >Matvey Vasilyev</p>
                                 </div>
                             </div>
@@ -135,6 +154,7 @@ const CaseStudies = () => {
                 </div>
                 <div className="casestudy-bottom">
                     <div className="casestudy-bottom-half-imagebox" ref={casestudyImageRef1} >
+<<<<<<< HEAD
                         <Image  fill src="/casestudy/casestudyphoto1.avif" className="casestudy-bottom-image" alt="" />
                     </div>
                     <div className="casestudy-bottom-half-imagebox" ref={casestudyImageRef2} >
@@ -151,6 +171,24 @@ const CaseStudies = () => {
                     </div>
                     <div className="casestudy-bottom-full-imagebox" ref={casestudyImageRef6} >
                         <Image  fill src="/casestudy/casestudyphoto6.avif" className="casestudy-bottom-image" alt="" />
+=======
+                        <img src="/casestudy/casestudyphoto1.avif" className="casestudy-bottom-image" alt="" />
+                    </div>
+                    <div className="casestudy-bottom-half-imagebox" ref={casestudyImageRef2} >
+                        <img src="/casestudy/casestudyphoto2.avif" className="casestudy-bottom-image" alt="" />
+                    </div>
+                    <div className="casestudy-bottom-full-imagebox" ref={casestudyImageRef3} >
+                        <img src="/casestudy/casestudyphoto3.avif" className="casestudy-bottom-image" alt="" />
+                    </div>
+                    <div className="casestudy-bottom-half-imagebox" ref={casestudyImageRef4} >
+                        <img src="/casestudy/casestudyphoto4.avif" className="casestudy-bottom-image" alt="" />
+                    </div>
+                    <div className="casestudy-bottom-half-imagebox" ref={casestudyImageRef5} >
+                        <img src="/casestudy/casestudyphoto5.avif" className="casestudy-bottom-image" alt="" />
+                    </div>
+                    <div className="casestudy-bottom-full-imagebox" ref={casestudyImageRef6} >
+                        <img src="/casestudy/casestudyphoto6.avif" className="casestudy-bottom-image" alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                     </div>
                 </div>
             </div>

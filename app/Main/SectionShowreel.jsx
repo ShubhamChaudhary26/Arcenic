@@ -75,6 +75,7 @@
 //         </div>
 //         <div className="showreel-content-row">
 //           <div className="showreel-content-row-item opacity-blur" ref={showreelItemRef1} >
+<<<<<<< HEAD
 //             <Image  fill src="/logos/awwwards.svg" className="showreel-content-row-item-image" alt="" />
 //             <div className="showreel-content-row-item-grid" />
 //           </div>
@@ -88,6 +89,21 @@
 //           </div>
 //           <div className="showreel-content-row-item opacity-blur" ref={showreelItemRef4} >
 //             <Image  fill src="/logos/cssbestux.svg" className="showreel-content-row-item-image" alt="" />
+=======
+//             <img src="/logos/awwwards.svg" className="showreel-content-row-item-image" alt="" />
+//             <div className="showreel-content-row-item-grid" />
+//           </div>
+//           <div className="showreel-content-row-item opacity-blur" ref={showreelItemRef2} >
+//             <img src="/logos/cssbestui.svg" className="showreel-content-row-item-image" alt="" />
+//             <div className="showreel-content-row-item-grid" />
+//           </div>
+//           <div className="showreel-content-row-item opacity-blur" ref={showreelItemRef3} >
+//             <img src="/logos/cssbestinnovation.svg" className="showreel-content-row-item-image" alt="" />
+//             <div className="showreel-content-row-item-grid" />
+//           </div>
+//           <div className="showreel-content-row-item opacity-blur" ref={showreelItemRef4} >
+//             <img src="/logos/cssbestux.svg" className="showreel-content-row-item-image" alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
 //             <div className="showreel-content-row-item-grid" />
 //           </div>
 //         </div>

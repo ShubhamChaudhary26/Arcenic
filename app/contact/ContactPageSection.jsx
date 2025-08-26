@@ -9,7 +9,10 @@ import { SplitText } from "gsap/all";
 import { ScrollTrigger } from "gsap/all";
 import { usePathname, useRouter } from 'next/navigation';
 import { Linkedin, Mail, Phone } from "lucide-react";
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
 
 gsap.registerPlugin(SplitText, ScrollTrigger, TextPlugin);
 
@@ -115,7 +118,11 @@ export const ContactPageSection = () => {
               <div className="contact-content-column">
                 <div className="contact-content-top-item opacity-blur" ref={contactItem1} >
                   <div className="contact-content-top-item-profile">
+<<<<<<< HEAD
                     <Image  width={50} height={150} src="/images/mockup4.webp" className="contact-content-top-item-image" alt="" />
+=======
+                    <img src="/images/mockup4.webp" className="contact-content-top-item-image" alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                   </div>
                   <div className="contact-content-top-item-text">
                     <p className="description white" >Let&apos;s bring your idea to life. Reach out and get in touch with management directly.</p>
@@ -123,7 +130,11 @@ export const ContactPageSection = () => {
                 </div>
                 <div className="contact-content-column-row">
                   <div className="contact-content-small-item opacity-blur" ref={contactItem2} >
+<<<<<<< HEAD
                     <Image width={20} height={20} src="/logos/phone.svg" className="contact-content-small-item-icon" alt="" />
+=======
+                    <img src="/logos/phone.svg" className="contact-content-small-item-icon" alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                     <p className="small-description grey" >Call</p>
                   </div>
                   <div className="contact-content-small-item opacity-blur" ref={contactItem3} >
@@ -131,7 +142,11 @@ export const ContactPageSection = () => {
                     <p className="small-description grey" >Email</p>
                   </div>
                   <div className="contact-content-small-item opacity-blur" ref={contactItem4} >
+<<<<<<< HEAD
                     <Image   width={20} height={20} src="/logos/linkedin.svg" className="contact-content-small-item-icon" alt="" />
+=======
+                    <img src="/logos/linkedin.svg" className="contact-content-small-item-icon" alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                     <p className="small-description grey" >LinkedIn</p>
                   </div>
                 </div>
@@ -152,7 +167,11 @@ export const ContactPageSection = () => {
               </div>
             </div>
             <div className="contact-content-right opacity-blur" ref={imageWrapperRef} >
+<<<<<<< HEAD
               <Image  fill src="/images/logo.jpg" className="contact-content-right-image" ref={imageRef} alt="" />
+=======
+              <img src="/images/dwlogo.webp" className="contact-content-right-image" ref={imageRef} alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
             </div>
           </div>
         </div>

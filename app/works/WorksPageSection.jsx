@@ -221,7 +221,11 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
+<<<<<<< HEAD
                       <img src="/mockups/heave.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy" alt="Heavecorp project" />
+=======
+                      <Image src="/mockups/heave.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy" alt="Heavecorp project" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                     </div>
                     <div className="works-item-border" />
                   </div>
@@ -238,7 +242,11 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
+<<<<<<< HEAD
                       <img src="/mockups/essentia.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy"  alt="" />
+=======
+                      <Image src="/mockups/essentia.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy"  alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                     </div>
                     <div className="works-item-border" />
                   </div>
@@ -255,7 +263,11 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
+<<<<<<< HEAD
                       <img src="/mockups/kinimatic.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy"  alt="" />
+=======
+                      <Image src="/mockups/kinimatic.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy"  alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                     </div>
                     <div className="works-item-border" />
                   </div>
@@ -272,7 +284,11 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
+<<<<<<< HEAD
                       <img src="/mockups/peak.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy"  alt="" />
+=======
+                      <Image src="/mockups/peak.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy"  alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                     </div>
                     <div className="works-item-border" />
                   </div>
@@ -289,7 +305,11 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
+<<<<<<< HEAD
                       <img src="/mockups/vitalenta.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy"  alt="" />
+=======
+                      <Image src="/mockups/vitalenta.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy"  alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                     </div>
                     <div className="works-item-border" />
                   </div>
@@ -306,7 +326,11 @@ export const WorksPageSection = () => {
                           </div>
                         </div>
                       </div>
+<<<<<<< HEAD
                       <img src="/mockups/rev.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy"  alt="" />
+=======
+                      <Image src="/mockups/rev.webp" className="works-item-content-image" width={750} height={750} unoptimized loading="lazy"  alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
                     </div>
                     <div className="works-item-border" />
                   </div>

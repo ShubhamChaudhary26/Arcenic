@@ -30,6 +30,10 @@ export const SectionFooter = () => {
     <section className="footer">
       <div className="footer-content">
         <div className="footer-content-left" ref={topRef1} >
+<<<<<<< HEAD
+=======
+          <img src="/images/dwlogo.webp" className="footer-logo" alt="" />
+>>>>>>> 39c9af97b31c4f83f97846e69d167b7b99fc38fa
           <h1 className="subheadline white" >Arcenik</h1>
           <p className="description grey"  >Harnessing Cutting-Edge Visualization Technology to Transform Vision into Tailored Digital Reality</p>
         </div>
