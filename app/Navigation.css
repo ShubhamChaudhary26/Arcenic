@@ -1,0 +1,127 @@
+.navigation-wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 50;
+}
+
+.navigation-inside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+}
+
+/* Desktop Center */
+.navigation-center {
+  display: flex;
+  gap: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.navigation-center p {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navigation-center p:hover {
+  color: #cccccc;
+}
+
+/* Right button */
+.navigation-right {
+  display: none;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid white;
+  background: transparent;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: white;
+  color: black;
+}
+
+.nav-button .icon {
+  height: 18px;
+  width: 18px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+  display: none;
+  opacity: 0;
+  z-index: 40;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-size: 24px;
+  z-index: 50;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navigation-right {
+    display: block;
+  }
+}
+/* Cross icon */
+.cross-icon {
+  color: white;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+
