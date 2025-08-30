@@ -856,9 +856,10 @@ section {
   object-fit: contain;
 }
 
-/* ===========================
-   FOOTER (Desktop Default)
-=========================== */
+
+
+/* FOOTER */
+
 .footer {
   padding: 0 10vw;
   padding-bottom: 5vh;
@@ -937,74 +938,190 @@ section {
   color: rgba(255, 255, 255, 0.5);
 }
 
-
-/* ===========================
-   FOOTER (Mobile Responsive)
-=========================== */
 @media (max-width: 768px) {
-  .footer {
-    padding: 6vw 5vw;
-    gap: 3vh;
+
+  /* HIDE ON DESKTOP/MOBILE */
+
+  .hide-on-desktop {
+    display: flex;
   }
 
-  .footer-content {
-    flex-direction: column;
-    gap: 4vh;
+  .hide-on-mobile {
+    display: none;
   }
 
-  .footer-content-left,
-  .footer-content-right {
+  /* CURSOR */
+
+  .hover-cursor {
+    display: none;
+  }
+
+  /* OVERALL */
+
+  section {
     width: 100%;
-    padding: 0;
+    height: 200vw;
+    padding: 0 5vw;
   }
 
-  .footer-content-right {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 8vw;
+  /* TEXTS */
+
+  .headline {
+    font-size: 10vw;
   }
 
-  .footer-content-right-column {
-    width: 45%;
+  .subheadline {
+    font-size: 7.5vw;
   }
 
-  .footer-content-bottom {
-    flex-direction: column;
-    gap: 2vh;
-    align-items: flex-start;
+  .small-subheadline {
+    font-size: 5vw;
   }
 
-  .footer-socials {
-    gap: 5vw;
+  .big-description {
+    width: 100%;
+    font-size: 3.5vw;
   }
 
-  /* -------- TEXT SIZES -------- */
-  .footer .subheadline {
-    font-size: 22px;
-    font-weight: 600;
+  .description {
+    font-size: 3.25vw;
   }
 
-  .footer .description {
-    font-size: 16px;
-    line-height: 1.6;
+  .small-description {
+    font-size: 3.25vw;
   }
 
-  .footer .small-description {
-    font-size: 14px;
-    line-height: 1.5;
+  /* NAVIGATION */
+
+  /* BUTTONS */
+
+  .button {
+    height: 10vw;
+    padding: 0 5vw;
+    padding-right: 2.5vw;
+    z-index: 2;
+    gap: 2.5vw;
   }
 
-  .footer .footer-column-contents-item p {
-    font-size: 16px;
+  .button-circle {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 100%;
+    background-color: white;
+    color: #010101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
 
-  /* -------- ICONS -------- */
-  .footer .footer-socials-icon {
-    width: 24px;
-    height: 24px;
+  .button-icon {
+    height: 2.5vw;
+    width: 2.5vw;
   }
 
-  .footer-logo {
-    width: 15vw;
+  .button:hover .button-icon {
+    rotate: 0;
   }
+
+  .button:hover .button-icon-180 {
+    rotate: 0;
+  }
+
+
+  .button:hover span:nth-child(1) {
+    transform: translateY(0%);
+  }
+
+  .button:hover span:nth-child(2) {
+    transform: translateY(0%);
+  }
+
+  /* TEXTBOX */
+
+  .textbox {
+    gap: 2.5vw;
+  }
+
+  .titlebox-gradient {
+    width: 12vw;
+    height: 11vw;
+    border-radius: 50%;
+    background-color: #010101;
+    filter: blur(50px);
+    opacity: 0.85;
+    position: absolute;
+    right: -5vw;
+    bottom: -7.5vw;
+    z-index: 1;
+  }
+
+  .titlebox-medium-gradient {
+    width: 17vw;
+    height: 13vw;
+    border-radius: 50%;
+    background-color: #010101;
+    filter: blur(50px);
+    opacity: 0.85;
+    position: absolute;
+    right: -5vw;
+    bottom: -7.5vw;
+    z-index: 1;
+  }
+
+  .titlebox-big-gradient {
+    width: 20vw;
+    height: 13vw;
+    border-radius: 50%;
+    background-color: #010101;
+    filter: blur(50px);
+    opacity: 0.85;
+    position: absolute;
+    right: -5vw;
+    bottom: -7.5vw;
+    z-index: 1;
+  }
+
+  .subpage-titlebox-gradient {
+    width: 12vw;
+    height: 11vw;
+    border-radius: 50%;
+    background-color: #010101;
+    filter: blur(50px);
+    opacity: 0.85;
+    position: absolute;
+    right: -5vw;
+    bottom: -7.5vw;
+    z-index: 1;
+  }
+
+  .subheadline-box {
+    padding: 1.5vw 2.5vw;
+    gap: 1.5vw;
+  }
+
+  .subheadline-box-icon {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  /* CONTACT BUTTON */
+
+  .contact-button-wrapper {
+    width: 50vw;
+  }
+
+  .contact-button-white {
+    height: 10vw;
+    border-radius: 25px;
+    border: 2px solid white;
+    padding-left: 5vw;
+  }
+
+  .contact-button-container-white {
+    --spread: 1.25vw;
+    --size: 4vw;
+    width: 9vw;
+  }
+
 }

@@ -64,6 +64,16 @@ const SectionTestimonials = dynamic(
     ssr: false, // Add this line
   }
 );
+// const SectionFlower = dynamic(
+//   () =>
+//     import("./SectionFlower").then((mod) => ({
+//       default: mod.SectionFlower,
+//     })),
+//   {
+//     loading: () => <SectionLoader />,
+//     ssr: false, // Add this line
+//   }
+// );
 
 const SectionKPI = dynamic(
   () => import("./SectionKPI").then((mod) => ({ default: mod.SectionKPI })),
@@ -116,7 +126,7 @@ export default function Main() {
         <div className="normal-padding" />
 
         {/* <SectionFlower /> */}
-        <div className="normal-padding" />
+        {/* <div className="normal-padding" /> */}
 
         <SectionFooter />
       </LenisWrapper>

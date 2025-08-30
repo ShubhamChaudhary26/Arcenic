@@ -228,7 +228,7 @@ export const SectionFlower = () => {
                 ref={imageRef1}
               >
                 <img
-                  src="/images/iphoneoptimized.png"
+                  src="/images/iphoneoptimized.webp"
                   className="flower-content-right-content-item-image"
                   alt=""
                 />
@@ -264,7 +264,7 @@ export const SectionFlower = () => {
                 ref={imageRef2}
               >
                 <img
-                  src="/images/iphoneoptimized.png"
+                  src="/images/iphoneoptimized.webp"
                   className="flower-content-right-content-item-image"
                   alt=""
                 />

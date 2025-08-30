@@ -97,6 +97,7 @@ export const SectionFooter = () => {
     <section className="footer">
       <div className="footer-content">
         <div className="footer-content-left" ref={topRef1}>
+          <img src="/images/logo1.png" className="footer-logo" alt="" />
           <h1 className="subheadline white">Arcenik Technologies</h1>
           <p className="description grey">
             Harnessing Cutting-Edge Visualization Technology to Transform Vision
@@ -114,9 +115,9 @@ export const SectionFooter = () => {
                 <p className="description grey hover-text-grey">About</p>
               </div>
               <div className="footer-column-contents-item">
-                <p className="description grey hover-text-grey">Project</p>
+                <p className="description grey hover-text-grey">Projects</p>
               </div>
-              <div className="footer-column-contents-item ">
+              <div className="footer-column-contents-item">
                 <p className="description grey hover-text-grey">Get In Touch</p>
               </div>
             </div>
@@ -129,7 +130,7 @@ export const SectionFooter = () => {
                   Terms of Service
                 </p>
               </div>
-              <div className="footer-column-contents-item ">
+              <div className="footer-column-contents-item">
                 <p className="description grey hover-text-grey">
                   Privacy Policy
                 </p>
@@ -145,14 +146,14 @@ export const SectionFooter = () => {
       </div>
       <div className="footer-divider" ref={centerRef1} />
       <div className="footer-content-bottom">
+        <p className="small-description grey" ref={bottomRef1}>
+          © {currentYear} Arcenik All Rights Reserved
+        </p>
         <div className="footer-socials" ref={bottomRef2}>
           <Instagram strokeWidth={1.25} className="footer-socials-icon" />
           <Twitter strokeWidth={1.25} className="footer-socials-icon" />
           <Linkedin strokeWidth={1.25} className="footer-socials-icon" />
         </div>
-        <p className="small-description grey" ref={bottomRef1}>
-          © {currentYear} Arcenik All Rights Reserved
-        </p>
       </div>
     </section>
   );

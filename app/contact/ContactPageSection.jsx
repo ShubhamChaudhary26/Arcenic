@@ -217,45 +217,46 @@ export const ContactPageSection = () => {
     }));
   }, []);
 
-  const handleSubmit = useCallback(
-    async (e) => {
-      e.preventDefault();
-      setIsSubmitting(true);
-      setSubmitStatus("");
+const handleSubmit = useCallback(
+  async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("");
 
-      try {
-        // EmailJS configuration
-        const serviceId = "YOUR_SERVICE_ID"; // Replace with your EmailJS service ID
-        const templateId = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS template ID
-        const publicKey = "YOUR_PUBLIC_KEY"; // Replace with your EmailJS public key
+    try {
+      // ✅ Your EmailJS configuration
+      const serviceId = "service_jk8l7cb";        // Gmail service you created
+      const templateId = "template_40vl5fm";      // Your template ID
+      const publicKey  = "4StxwdIVjXDm7fCgp";     // Your public key
 
-        const templateParams = {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to_name: "Arcenik Team",
-        };
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: "Arcenik Team",                  // optional
+        time: new Date().toLocaleString(),        // optional timestamp
+      };
 
-        await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
 
-        // Hide success message after 5 seconds
-        setTimeout(() => setSubmitStatus(""), 5000);
-      } catch (error) {
-        console.error("Email send failed:", error);
-        setSubmitStatus("error");
+      // Hide success message after 5s
+      setTimeout(() => setSubmitStatus(""), 5000);
+    } catch (error) {
+      console.error("Email send failed:", error);
+      setSubmitStatus("error");
 
-        // Hide error message after 5 seconds
-        setTimeout(() => setSubmitStatus(""), 5000);
-      } finally {
-        setIsSubmitting(false);
-      }
-    },
-    [formData]
-  );
+      // Hide error message after 5s
+      setTimeout(() => setSubmitStatus(""), 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
+  },
+  [formData]
+);
 
   // Navigation
   const router = useRouter();

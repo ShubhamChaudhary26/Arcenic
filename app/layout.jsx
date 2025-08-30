@@ -3,7 +3,7 @@ import { Navigation } from "./Navigation";
 import Script from "next/script";
 
 export const metadata = {
-  metadataBase: new URL("https://arceniktechnologies.com/"), // Replace with your actual domain
+  metadataBase: new URL("https://arceniktechnologies.com/"),
   title:
     "Arcenik | Website Development in Vapi, Gujarat | Web Design & Digital Solutions",
   description:
@@ -18,6 +18,14 @@ export const metadata = {
     address: false,
     telephone: false,
   },
+
+  // ✅ ADD THIS PART
+  icons: {
+    icon: "/images/logo1.png",        // browser tab favicon
+    shortcut: "/images/logo1.png",    // Windows/MacOS shortcut icon
+    apple: "/images/logo1.png",       // iOS home screen icon
+  },
+
   openGraph: {
     title:
       "Arcenik | Website Development in Vapi, Gujarat | Professional Web Design",
@@ -27,7 +35,7 @@ export const metadata = {
     siteName: "Arcenik",
     images: [
       {
-        url: "/images/og-image.webp",
+        url: "/images/logo1.png",
         width: 1200,
         height: 630,
         alt: "Arcenik - Website Development in Vapi",
@@ -41,7 +49,7 @@ export const metadata = {
     title: "Arcenik | Website Development in Vapi, Gujarat",
     description:
       "Professional website development and web design services in Vapi, Silvassa, Valsad, Gujarat.",
-    images: ["/images/og-image.webp"],
+    images: ["/images/logo1.png"],
   },
   robots: {
     index: true,
@@ -64,6 +72,7 @@ export const metadata = {
     ICBM: "20.3893, 72.9106",
   },
 };
+
 
 // Enhanced JSON-LD Schema with complete local business markup
 const jsonLd = {

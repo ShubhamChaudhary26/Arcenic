@@ -31,28 +31,28 @@ export const AboutPageSection = () => {
       title: "Website Development",
       description:
         "At Arcenik, we build modern, responsive, and SEO-friendly websites that not only look amazing but also perform flawlessly. From simple portfolios to enterprise web apps, our team delivers high-quality digital experiences tailored to your business.",
-      image: "/images/mockup4.webp",
+      image: "/images/macbook.webp",
     },
     {
       number: "02",
       title: "UI/UX Design",
       description:
         "We believe design is more than visuals—it's about creating experiences. Arcenik crafts clean, intuitive, and engaging UI/UX designs that guide users smoothly and keep them connected to your brand.",
-      image: "/images/mockup12.webp",
+      image: "/images/iphoneoptimized.webp",
     },
     {
       number: "03",
       title: "E-Commerce Solutions",
       description:
         "Sell smarter with Arcenik's custom e-commerce solutions. From product catalogs to secure payments, we develop online stores that are scalable, user-friendly, and optimized to drive more conversions.",
-      image: "/images/mockup7.webp",
+      image: "/casestudy/cs2.webp",
     },
     {
       number: "04",
       title: "Branding & SEO",
       description:
         "A great website needs visibility. Arcenik boosts your digital presence with powerful branding and SEO strategies, helping your business rank higher, attract the right audience, and grow consistently online.",
-      image: "/images/mockup11.webp",
+      image: "/images/test17.webp",
     },
   ];
 

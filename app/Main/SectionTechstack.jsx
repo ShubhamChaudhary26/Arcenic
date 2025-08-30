@@ -511,15 +511,6 @@ export const SectionTechstack = () => {
             <div className="techstack-item-content">
               <div className="techstack-item-content-column">
                 <div className="techstack-item-content-column-slider">
-                  <Image
-                    src="/images/abs.webp"
-                    width={400}
-                    height={300}
-                    className="techstack-item-content-column-slider-image"
-                    alt="Abstract background"
-                    loading="lazy"
-                    quality={80}
-                  />
                   <div
                     className="techstack-item-content-column-slider-carousel"
                     ref={emblaRef}
@@ -549,7 +540,7 @@ export const SectionTechstack = () => {
 
                 <div className="techstack-item-content-column-textbox">
                   <h2 className="small-subheadline white">
-                    Integration Is Key
+                    Integration Is Key  
                   </h2>
                   <AnimatePresence mode="wait">
                     <motion.p
