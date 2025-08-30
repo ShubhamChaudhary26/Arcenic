@@ -9,6 +9,7 @@ import { Canvas } from "@react-three/fiber";
 import { Environment, Float, OrbitControls } from "@react-three/drei";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 // Lazy load the 3D model
 const Item3 = dynamic(
@@ -34,7 +35,7 @@ export const SectionHero = () => {
 
   // Memoize logo array
   const logoSources = useMemo(
-    () => ["/logos/adobe.webp", "/logos/webflow.svg", "/logos/stripe.svg"],
+    () => ["/logos/gi.webp", "/logos/minsurveylogosvg.svg", "/logos/cssbestinnovation.svg"],
     []
   );
 
@@ -170,14 +171,19 @@ export const SectionHero = () => {
   if (!isClient) {
     return (
       <section className="shimmer-section">
-        <div className="shimmer-content-right">
-          <div className="shimmer-loader">
-            <div className="shimmer-text">Preparing Experience...</div>
-            <div className="shimmer-button"></div>
-            <div className="shimmer-button"></div>
-          </div>
-        </div>
-      </section>
+  <div className="shimmer-content-right">
+    <div className="shimmer-loader">
+      <div className="shimmer-text">Preparing Experience...</div>
+      {/* Add GIF here */}
+      <img 
+        src="/images/loading.gif" 
+        alt="Loading animation" 
+        className="shimmer-gif"
+      />
+    </div>
+  </div>
+</section>
+
     );
   }
 
@@ -203,32 +209,35 @@ export const SectionHero = () => {
                 Vision into Tailored Digital Reality
               </p>
             </div>
-            <div className="hero-buttons-row">
-              <button
-                className="button button-transparent-border opacity-blur"
-                ref={buttonRef1}
-              >
-                <div className="button-content">
-                  <span className="small-description">See More</span>
-                  <span className="small-description">See More</span>
-                </div>
-                <div className="button-circle">
-                  <ArrowUpRight className="button-icon button-icon-180" />
-                </div>
-              </button>
-              <button
-                className="button button-transparent-border opacity-blur"
-                ref={buttonRef2}
-              >
-                <div className="button-content">
-                  <span className="small-description">Get In Touch</span>
-                  <span className="small-description">Get In Touch</span>
-                </div>
-                <div className="button-circle">
-                  <ArrowUpRight className="button-icon" />
-                </div>
-              </button>
-            </div>
+          <div className="hero-buttons-row">
+      <Link
+        href="/about"
+        className="button button-transparent-border opacity-blur"
+        ref={buttonRef1}
+      >
+        <div className="button-content">
+          <span className="small-description">See More</span>
+          <span className="small-description">See More</span>
+        </div>
+        <div className="button-circle">
+          <ArrowUpRight className="button-icon button-icon-180" />
+        </div>
+      </Link>
+
+      <Link
+        href="/contact"
+        className="button button-transparent-border opacity-blur"
+        ref={buttonRef2}
+      >
+        <div className="button-content">
+          <span className="small-description">Get In Touch</span>
+          <span className="small-description">Get In Touch</span>
+        </div>
+        <div className="button-circle">
+          <ArrowUpRight className="button-icon" />
+        </div>
+      </Link>
+    </div>
           </div>
           <div
             className="hero-content-right"

@@ -387,7 +387,7 @@ const handleSubmit = useCallback(
                 >
                   <div className="contact-content-top-item-profile">
                     <Image
-                      src="/images/mockup4.webp"
+                      src="/images/1.jpeg"
                       width={80}
                       height={80}
                       className="contact-content-top-item-image"

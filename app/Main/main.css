@@ -122,6 +122,12 @@
     height: 100%;
 }
 
+.shimmer-gif {
+  width: 70px;   /* adjust size */
+  height: auto;
+  margin-top: 10px;
+}
+
 .shimmer-loader {
     display: flex;
     flex-direction: column;
@@ -266,7 +272,7 @@
 }
 
 .hero-content-bottom-image {
-    height: 2.5vh;
+    height: 4.5vh;
     width: auto;
 }
 
@@ -2063,7 +2069,7 @@
     }
 
     .hero-content-bottom-image {
-        height: 4.5vw;
+        height: 5.5vw;
         width: auto;
     }
 

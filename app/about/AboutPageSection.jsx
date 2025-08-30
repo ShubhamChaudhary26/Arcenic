@@ -17,54 +17,66 @@ export const AboutPageSection = () => {
   const itemRefs = useRef([]);
   const stickyRefs = useRef([]);
 
-  const teamMembers = [
-    { name: "Shubham Chaudhary", title: "Co-CEO & Co-Founder" },
-    { name: "Aditya Mishra", title: "Co-CEO & Co-Founder" },
-    { name: "Amit Mishra", title: "COO & Co-Founder" },
-    { name: "Krish Patel", title: "Motion Graphics Designer" },
-    { name: "Abhimanyu Chaudhary", title: "Visualization Expert" },
-  ];
-
   const services = [
     {
       number: "01",
       title: "Website Development",
       description:
-        "At Arcenik, we build modern, responsive, and SEO-friendly websites that not only look amazing but also perform flawlessly. From simple portfolios to enterprise web apps, our team delivers high-quality digital experiences tailored to your business.",
+        "At Arcenik, we build modern, responsive, and SEO-friendly websites that not only look amazing but also perform flawlessly.",
       image: "/images/macbook.webp",
     },
     {
       number: "02",
       title: "UI/UX Design",
       description:
-        "We believe design is more than visuals—it's about creating experiences. Arcenik crafts clean, intuitive, and engaging UI/UX designs that guide users smoothly and keep them connected to your brand.",
+        "We believe design is more than visuals—it's about creating experiences.",
       image: "/images/iphoneoptimized.webp",
     },
     {
       number: "03",
       title: "E-Commerce Solutions",
       description:
-        "Sell smarter with Arcenik's custom e-commerce solutions. From product catalogs to secure payments, we develop online stores that are scalable, user-friendly, and optimized to drive more conversions.",
+        "Sell smarter with Arcenik's custom e-commerce solutions. From product catalogs to secure payments, we develop scalable stores.",
       image: "/casestudy/cs2.webp",
     },
     {
       number: "04",
       title: "Branding & SEO",
       description:
-        "A great website needs visibility. Arcenik boosts your digital presence with powerful branding and SEO strategies, helping your business rank higher, attract the right audience, and grow consistently online.",
+        "A great website needs visibility. Arcenik boosts your digital presence with powerful branding and SEO strategies.",
       image: "/images/test17.webp",
+    },
+    // 👉 New Services added
+    {
+      number: "05",
+      title: "CRM Solutions",
+      description:
+        "Streamline customer management with our CRM solutions designed to improve relationships, automate workflows, and boost sales.",
+      image: "/images/CRM.webp",
+    },
+    {
+      number: "06",
+      title: "ERP Systems",
+      description:
+        "Optimize operations with robust ERP systems. Manage finance, HR, supply chain, and more with seamless integration.",
+      image: "/images/ERP.webp",
+    },
+    {
+      number: "07",
+      title: "Graphic Design",
+      description:
+        "From logos to complete brand kits, Arcenik's creative team designs visuals that inspire trust and captivate audiences.",
+      image: "/images/GD.webp",
     },
   ];
 
   useEffect(() => {
     const mm = gsap.matchMedia();
 
-    // Title animation
     const titleSplit = new SplitText(titleRef.current, { type: "chars" });
     gsap.fromTo(
       titleSplit.chars,
       {
-        "will-change": "opacity, transform",
         filter: "blur(8px)",
         opacity: 0,
         yPercent: 50,
@@ -80,7 +92,6 @@ export const AboutPageSection = () => {
       }
     );
 
-    // Description animation
     gsap.to(descriptionRef.current, {
       opacity: 1,
       filter: "blur(0px)",
@@ -88,18 +99,16 @@ export const AboutPageSection = () => {
       delay: 0.6,
     });
 
-    // Line animation
     gsap.fromTo(
       lineRef.current,
       { opacity: 0, filter: "blur(8px)" },
       { opacity: 1, filter: "blur(0px)", duration: 0.5, delay: 0.5 }
     );
 
-    // Title 2 animation
     const titleSplit2 = new SplitText(titleRef2.current, { type: "words" });
     gsap.fromTo(
       titleSplit2.words,
-      { "will-change": "opacity", filter: "blur(8px)", opacity: 0 },
+      { opacity: 0, filter: "blur(8px)" },
       {
         opacity: 1,
         filter: "blur(0px)",
@@ -114,7 +123,6 @@ export const AboutPageSection = () => {
       }
     );
 
-    // Team member animations
     itemRefs.current.forEach((item, index) => {
       if (item) {
         gsap.fromTo(
@@ -136,7 +144,6 @@ export const AboutPageSection = () => {
       }
     });
 
-    // Sticky cards animation - only on desktop
     mm.add("(min-width: 768px)", () => {
       stickyRefs.current.forEach((ref, position) => {
         if (!ref) return;
@@ -194,6 +201,7 @@ export const AboutPageSection = () => {
     <ReactLenis root>
       <section className="about">
         <div className="about-content">
+          {/* Top Section */}
           <div className="about-content-top">
             <div className="about-content-textbox">
               <div className="titlebox">
@@ -211,43 +219,24 @@ export const AboutPageSection = () => {
             <div className="about-divider" ref={lineRef} />
           </div>
 
-          <div className="about-team">
-            <div className="about-team-container">
-              {teamMembers.map((member, index) => (
-                <div
-                  className="about-team-item"
-                  key={index}
-                  ref={(el) => (itemRefs.current[index] = el)}
-                >
-                  <p className="description white">{member.name}</p>
-                  <p className="description white about-team-title">
-                    {member.title}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="about-divider" />
-
+          {/* Why Us */}
           <div className="about-whyus">
             <p className="description about-whyus-description grey">Why us</p>
             <p
               className="subheadline about-whyus-subheadline white"
               ref={titleRef2}
             >
-              At Arcenik, we embody the startup mindset — dynamic, innovative,
-              and hungry to make a difference. We don&apos;t just create amazing
-              works; we partner with our clients to revolutionize their
-              industries through groundbreaking digital experiences. From
-              redefining brand engagement to boosting conversions, every project
-              we take on is an opportunity to challenge the norm, deliver
-              excellence, and leave an impact.
+             At Arcenik, we embody the startup mindset — dynamic, innovative,
+    and hungry to make a difference. We constantly push boundaries,
+    craft exceptional digital experiences, and collaborate closely
+    with our clients to achieve measurable results that drive growth
+    and impact.
             </p>
           </div>
 
           <div className="about-divider" />
 
+          {/* Services Section */}
           <div className="about-sticky-container">
             {services.map((service, index) => (
               <div
@@ -258,21 +247,10 @@ export const AboutPageSection = () => {
                 <div className="about-sticky-item-left">
                   <div className="about-sticky-item-left-textbox">
                     <h1 className="headline white about-sticky-headline">
-                      {service.title.split(" ").map((word, i) => (
-                        <React.Fragment key={i}>
-                          {word}
-                          {i === 0 && <br />}
-                          {i > 0 && " "}
-                        </React.Fragment>
-                      ))}
+                      {service.title}
                     </h1>
                     <p className="description about-sticky-item-left-textbox-description grey">
-                      {service.description.split("Arcenik").map((part, i) => (
-                        <React.Fragment key={i}>
-                          {i > 0 && <b>Arcenik</b>}
-                          {part}
-                        </React.Fragment>
-                      ))}
+                      {service.description}
                     </p>
                   </div>
                   <h1 className="headline white about-sticky-number">
