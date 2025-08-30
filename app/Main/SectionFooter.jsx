@@ -116,9 +116,9 @@ export const SectionFooter = () => {
                 <p className="description grey hover-text-grey">About</p>
               </div>
               <div className="footer-column-contents-item">
-                <p className="description grey hover-text-grey">Projects</p>
+                <p className="description grey hover-text-grey">Project</p>
               </div>
-              <div className="footer-column-contents-item">
+              <div className="footer-column-contents-item ">
                 <p className="description grey hover-text-grey">Get In Touch</p>
               </div>
             </div>
@@ -131,7 +131,7 @@ export const SectionFooter = () => {
                   Terms of Service
                 </p>
               </div>
-              <div className="footer-column-contents-item">
+              <div className="footer-column-contents-item ">
                 <p className="description grey hover-text-grey">
                   Privacy Policy
                 </p>
