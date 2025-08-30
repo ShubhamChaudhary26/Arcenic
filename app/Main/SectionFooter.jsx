@@ -1,6 +1,4 @@
 "use client";
-import "./footer.css";
-
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";

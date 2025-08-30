@@ -856,3 +856,155 @@ section {
   object-fit: contain;
 }
 
+/* ===========================
+   FOOTER (Desktop Default)
+=========================== */
+.footer {
+  padding: 0 10vw;
+  padding-bottom: 5vh;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-content-left,
+.footer-content-right {
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  gap: 1.5vh;
+}
+
+.footer-content-left {
+  padding: 0 15vw 0 0;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 4vw;
+}
+
+.footer-content-right {
+  justify-content: end;
+  gap: 5vw;
+}
+
+.footer-content-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+}
+
+.footer-column-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.footer-column-contents-item {
+  width: fit-content;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer-content-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1vw;
+}
+
+.footer-socials-icon {
+  width: 1.5vw;
+  height: 1.5vw;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ===========================
+   FOOTER (Mobile Responsive)
+=========================== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 6vw 5vw;
+    gap: 3vh;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 4vh;
+  }
+
+  .footer-content-left,
+  .footer-content-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer-content-right {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8vw;
+  }
+
+  .footer-content-right-column {
+    width: 45%;
+  }
+
+  .footer-content-bottom {
+    flex-direction: column;
+    gap: 2vh;
+    align-items: flex-start;
+  }
+
+  .footer-socials {
+    gap: 5vw;
+  }
+
+  /* -------- TEXT SIZES -------- */
+  .footer .subheadline {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .footer .description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .footer .small-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .footer .footer-column-contents-item p {
+    font-size: 16px;
+  }
+
+  /* -------- ICONS -------- */
+  .footer .footer-socials-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-logo {
+    width: 15vw;
+  }
+}
