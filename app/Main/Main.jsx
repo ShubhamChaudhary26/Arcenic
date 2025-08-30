@@ -98,11 +98,7 @@ export default function Main() {
       {/* Everything else loads progressively */}
       <LenisWrapper>
         <div className="normal-padding" />
-
-        <div className="border-padding">
-          <div className="section-border"></div>
-        </div>
-
+        
         <SectionServices />
         <div className="normal-padding" />
 

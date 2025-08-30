@@ -1,4 +1,6 @@
 "use client";
+import "./footer.css";
+
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
@@ -97,7 +99,6 @@ export const SectionFooter = () => {
     <section className="footer">
       <div className="footer-content">
         <div className="footer-content-left" ref={topRef1}>
-          <img src="/images/logo1.png" className="footer-logo" alt="" />
           <h1 className="subheadline white">Arcenik Technologies</h1>
           <p className="description grey">
             Harnessing Cutting-Edge Visualization Technology to Transform Vision
@@ -146,14 +147,14 @@ export const SectionFooter = () => {
       </div>
       <div className="footer-divider" ref={centerRef1} />
       <div className="footer-content-bottom">
-        <p className="small-description grey" ref={bottomRef1}>
-          © {currentYear} Arcenik All Rights Reserved
-        </p>
         <div className="footer-socials" ref={bottomRef2}>
           <Instagram strokeWidth={1.25} className="footer-socials-icon" />
           <Twitter strokeWidth={1.25} className="footer-socials-icon" />
           <Linkedin strokeWidth={1.25} className="footer-socials-icon" />
         </div>
+        <p className="small-description grey" ref={bottomRef1}>
+          © {currentYear} Arcenik All Rights Reserved
+        </p>
       </div>
     </section>
   );

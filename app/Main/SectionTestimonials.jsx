@@ -207,10 +207,10 @@ export const SectionTestimonials = () => {
             </div>
             <div className="titlebox">
               <div className="titlebox-big-gradient" />
-              <h1 className="subheadline white">
+              <h2 className="subheadline white">
                 Don&apos;t Take Our Word For It! <br />
                 Hear It From Our Partners.
-              </h1>
+              </h2>
             </div>
           </div>
           <div className="testimonials-loading">Loading testimonials...</div>
@@ -229,10 +229,10 @@ export const SectionTestimonials = () => {
           </div>
           <div className="titlebox">
             <div className="titlebox-big-gradient" />
-            <h1 className="subheadline white" ref={titleRef}>
+            <h2 className="subheadline white" ref={titleRef}>
               Don&apos;t Take Our Word For It! <br />
               Hear It From Our Partners.
-            </h1>
+            </h2>
           </div>
         </div>
 

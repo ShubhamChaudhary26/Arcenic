@@ -158,9 +158,9 @@ export const SectionKPI = () => {
             </div>
             <div className="titlebox">
               <div className="titlebox-gradient" />
-              <h1 className="subheadline white">
+              <h2 className="subheadline white">
                 Numbers That Just Make Sense
-              </h1>
+              </h2>
             </div>
           </div>
           <div className="kpi-loading">Loading KPIs...</div>
@@ -181,9 +181,9 @@ export const SectionKPI = () => {
           </div>
           <div className="titlebox">
             <div className="titlebox-gradient" />
-            <h1 className="subheadline white" ref={titleRef}>
+            <h2 className="subheadline white" ref={titleRef}>
               Numbers That Just Make Sense
-            </h1>
+            </h2>
           </div>
         </div>
 

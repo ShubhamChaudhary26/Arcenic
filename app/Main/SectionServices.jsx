@@ -209,7 +209,7 @@ export const SectionServices = () => {
             </div>
             <div className="titlebox">
               <div className="titlebox-gradient" />
-              <h1 className="subheadline white">Your Digital Powerhouse</h1>
+              <h2 className="subheadline white">Your Digital Powerhouse</h2>
             </div>
             <p className="description grey">
               Where innovation fuels transformation. We empower brands to
@@ -265,9 +265,9 @@ export const SectionServices = () => {
           </div>
           <div className="titlebox">
             <div className="titlebox-gradient" />
-            <h1 className="subheadline white" ref={titleRef}>
+            <h2 className="subheadline white" ref={titleRef}>
               Your Digital Powerhouse
-            </h1>
+            </h2>
           </div>
           <p className="description grey" ref={descriptionRef}>
             Where innovation fuels transformation. We empower brands to redefine

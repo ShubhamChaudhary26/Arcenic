@@ -413,10 +413,10 @@ export const SectionTechstack = () => {
             </div>
             <div className="titlebox">
               <div className="titlebox-big-gradient" />
-              <h1 className="subheadline white">
+              <h2 className="subheadline white">
                 Integrating Powerful Tools To Create Seamless, Scalable, And
                 Innovative Solutions.
-              </h1>
+              </h2>
             </div>
             <p className="description grey">
               Maximizing Results with Cutting-Edge Technology
@@ -438,11 +438,11 @@ export const SectionTechstack = () => {
           </div>
           <div className="titlebox">
             <div className="titlebox-big-gradient" />
-            <h1 className="subheadline white" ref={titleRef}>
+            <h2 className="subheadline white" ref={titleRef}>
               Integrating Powerful Tools To Create Seamless,{" "}
               <br className="hide-on-mobile" /> Scalable, And Innovative
               Solutions.
-            </h1>
+            </h2>
           </div>
           <p className="description grey" ref={descriptionRef}>
             Maximizing Results with Cutting-Edge Technology

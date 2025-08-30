@@ -120,10 +120,10 @@ export const SectionProjectsMobile = () => {
         </div>
         <div className="titlebox">
           <div className="titlebox-big-gradient" />
-          <h1 className="subheadline white" ref={titleRef}>
+          <h2 className="subheadline white" ref={titleRef}>
             Pioneering Projects That Consistently{" "}
             <br className="hide-on-mobile" /> Redefine What’s Possible
-          </h1>
+          </h2>
         </div>
         <p className="description grey" ref={descriptionRef}>
           Transforming startups, SMEs, and industry{" "}
