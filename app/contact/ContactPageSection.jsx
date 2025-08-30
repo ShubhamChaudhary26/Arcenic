@@ -76,14 +76,14 @@ export const ContactPageSection = () => {
       {
         icon: Phone,
         label: "Call",
-        value: "+91 XXXXX XXXXX",
-        href: "tel:+91XXXXXXXXXX",
+        value: "+91 7777909218",
+        href: "tel:+917777909218",
       },
       {
         icon: Mail,
         label: "Email",
-        value: "contact@arcenik.com",
-        href: "mailto:contact@arcenik.com",
+        value: "arceniktechnologies@gmail.com",
+        href: "mailto:arceniktechnologies@gmail.com",
       },
       {
         icon: Linkedin,
