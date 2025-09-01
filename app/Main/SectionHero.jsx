@@ -35,7 +35,7 @@ export const SectionHero = () => {
 
   // Memoize logo array
   const logoSources = useMemo(
-    () => ["/logos/gii.webp", "/logos/minsurveylogosvg.svg", "/logos/cssbestinnovation.svg","/logos/KVL.webp"],
+    () => ["/logos/gii.webp", "/logos/minsurveylogosvg.svg", "/logos/cssbestinnovation.svg","/logos/kvl.webp"],
     []
   );
 
