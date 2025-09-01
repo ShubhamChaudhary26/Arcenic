@@ -234,17 +234,17 @@ export const SectionServices = () => {
         style={{ display: "none", opacity: 0 }}
         onClick={toggleOverlay}
       >
-        <div className="calendly-overlay-widget" ref={overlayWidgetRef}>
-          <div className="calendly-overlay-widget-border" />
-          <div className="calendly-overlay-widget-scrollbar-hider" />
-          <Suspense
-            fallback={
-              <div className="calendly-loading">Loading calendar...</div>
-            }
-          >
-            <CalendlyWidget />
-          </Suspense>
-        </div>
+        <div
+  className="calendly-overlay-widget"
+  ref={overlayWidgetRef}
+  onClick={(e) => e.stopPropagation()} // add this
+>
+  <div className="calendly-overlay-widget-border" />
+  <div className="calendly-overlay-widget-scrollbar-hider" />
+  <Suspense fallback={<div className="calendly-loading">Loading calendar...</div>}>
+    <CalendlyWidget />
+  </Suspense>
+</div>
         <div
           className="calendly-overlay-widget-button"
           ref={overlayWidgetButtonRef}
