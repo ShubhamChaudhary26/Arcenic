@@ -783,7 +783,16 @@ section {
   font-weight: 400;
   margin: 0;
   font-family: "Causten Regular", sans-serif;
+  text-decoration: none;  /* remove underline */
 }
+.button,
+.button:visited,
+.button:hover,
+.button:active {
+  text-decoration: none;
+}
+
+
 
 .hover-text-grey {
   position: relative;
