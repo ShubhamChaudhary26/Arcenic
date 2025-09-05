@@ -173,7 +173,6 @@ export const SectionHero = () => {
       <section className="shimmer-section">
   <div className="shimmer-content-right">
     <div className="shimmer-loader">
-      <div className="shimmer-text">Preparing Experience...</div>
       {/* Add GIF here */}
       <img 
         src="/images/loading.gif" 

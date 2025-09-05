@@ -21,9 +21,9 @@ export const metadata = {
 
   // ✅ ADD THIS PART
   icons: {
-    icon: "/images/logo1.png",        // browser tab favicon
-    shortcut: "/images/logo1.png",    // Windows/MacOS shortcut icon
-    apple: "/images/logo1.png",       // iOS home screen icon
+    icon: "/images/logo1.webp",        // browser tab favicon
+    shortcut: "/images/logo1.webp",    // Windows/MacOS shortcut icon
+    apple: "/images/logo1.webp",       // iOS home screen icon
   },
 
   openGraph: {
