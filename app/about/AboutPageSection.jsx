@@ -17,58 +17,58 @@ export const AboutPageSection = () => {
   const itemRefs = useRef([]);
   const stickyRefs = useRef([]);
 
-  const services = [
-    {
-      number: "01",
-      title: "Website Development",
-      description:
-        "At Arcenik, we build modern, responsive, and SEO-friendly websites that not only look amazing but also perform flawlessly.",
-      image: "/images/macbook.webp",
-    },
-    {
-      number: "02",
-      title: "UI/UX Design",
-      description:
-        "We believe design is more than visuals—it's about creating experiences.",
-      image: "/images/iphoneoptimized.webp",
-    },
-    {
-      number: "03",
-      title: "E-Commerce Solutions",
-      description:
-        "Sell smarter with Arcenik's custom e-commerce solutions. From product catalogs to secure payments, we develop scalable stores.",
-      image: "/casestudy/cs2.webp",
-    },
-    {
-      number: "04",
-      title: "Branding & SEO",
-      description:
-        "A great website needs visibility. Arcenik boosts your digital presence with powerful branding and SEO strategies.",
-      image: "/images/test17.webp",
-    },
-    // 👉 New Services added
-    {
-      number: "05",
-      title: "CRM Solutions",
-      description:
-        "Streamline customer management with our CRM solutions designed to improve relationships, automate workflows, and boost sales.",
-      image: "/images/CRM.webp",
-    },
-    {
-      number: "06",
-      title: "ERP Systems",
-      description:
-        "Optimize operations with robust ERP systems. Manage finance, HR, supply chain, and more with seamless integration.",
-      image: "/images/ERP.webp",
-    },
-    {
-      number: "07",
-      title: "Graphic Design",
-      description:
-        "From logos to complete brand kits, Arcenik's creative team designs visuals that inspire trust and captivate audiences.",
-      image: "/images/GD.webp",
-    },
-  ];
+ const services = [
+  {
+    number: "01",
+    title: "Website Development",
+    description:
+      "At Arcenik, we craft modern, responsive, and SEO-optimized websites that not only look stunning but also deliver exceptional performance across all devices. Our development focuses on speed, scalability, and a seamless user experience.",
+    image: "/images/macbook.webp",
+  },
+  {
+    number: "02",
+    title: "UI/UX Design",
+    description:
+      "We design intuitive, user-centered interfaces that combine creativity with functionality. Every design decision is backed by research to ensure your users enjoy a smooth, engaging, and memorable digital journey.",
+    image: "/images/iphoneoptimized.webp",
+  },
+  {
+    number: "03",
+    title: "Digital Commerce",
+    description:
+      "Sell smarter with Arcenik’s custom e-commerce solutions. From product catalogs to secure payments and personalized shopping experiences, we build scalable online stores that grow with your business.",
+    image: "/casestudy/cs2.webp",
+  },
+  {
+    number: "04",
+    title: "Branding & SEO",
+    description:
+      "A powerful website deserves visibility. Arcenik strengthens your digital identity with impactful branding and data-driven SEO strategies that boost reach, improve rankings, and maximize conversions.",
+    image: "/images/test17.webp",
+  },
+  {
+    number: "05",
+    title: "CRM Solutions",
+    description:
+      "Streamline customer management with our tailored CRM systems. From automating workflows to analyzing customer data, our solutions help businesses build stronger relationships and accelerate sales growth.",
+    image: "/images/CRM.webp",
+  },
+  {
+    number: "06",
+    title: "ERP Systems",
+    description:
+      "Take control of your business processes with robust ERP solutions. We integrate finance, HR, supply chain, and operations into one unified system for greater efficiency and productivity.",
+    image: "/images/ERP.webp",
+  },
+  {
+    number: "07",
+    title: "Graphic Design",
+    description:
+      "From logos to complete brand kits, our creative design team delivers visuals that capture attention, inspire trust, and bring your brand identity to life across digital and print platforms.",
+    image: "/images/GD.webp",
+  },
+];
+
 
   useEffect(() => {
     const mm = gsap.matchMedia();
@@ -206,15 +206,16 @@ export const AboutPageSection = () => {
             <div className="about-content-textbox">
               <div className="titlebox">
                 <div className="titlebox-gradient" />
-                <h1 className="headline white" ref={titleRef}>
-                  A Global Network Of Talent
-                </h1>
-              </div>
-              <p className="description grey opacity-blur" ref={descriptionRef}>
-                We&apos;ve assembled a team of dedicated professionals from
-                diverse backgrounds who share the same passion for your brand as
-                you do.
-              </p>
+               <h1 className="headline white" ref={titleRef}>
+  Building Next-Gen Web Experiences
+</h1>
+</div>
+<p className="description grey opacity-blur" ref={descriptionRef}>
+  We specialize in creating fast, scalable, and modern websites tailored to your brand. 
+  From intuitive design to seamless development, our solutions are built to help your 
+  business grow in the digital world.
+</p>
+
             </div>
             <div className="about-divider" ref={lineRef} />
           </div>
@@ -226,11 +227,10 @@ export const AboutPageSection = () => {
               className="subheadline about-whyus-subheadline white"
               ref={titleRef2}
             >
-             At Arcenik, we embody the startup mindset — dynamic, innovative,
-    and hungry to make a difference. We constantly push boundaries,
-    craft exceptional digital experiences, and collaborate closely
-    with our clients to achieve measurable results that drive growth
-    and impact.
+             At Arcenik, innovation is at the heart of everything we do. 
+  By blending creativity with cutting-edge technology, we partner with 
+  clients to build modern digital products that solve problems and 
+  create lasting impact.
             </p>
           </div>
 
@@ -253,9 +253,9 @@ export const AboutPageSection = () => {
                       {service.description}
                     </p>
                   </div>
-                  <h1 className="headline white about-sticky-number">
+                  {/* <h1 className="headline white about-sticky-number">
                     ({service.number})
-                  </h1>
+                  </h1> */}
                 </div>
                 <div className="about-sticky-item-right">
                   <div className="about-sticky-item-right-imagebox">

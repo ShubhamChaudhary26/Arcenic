@@ -378,15 +378,17 @@ export const WorksPageSection = () => {
                 <div className="titlebox">
                   <div className="subpage-titlebox-gradient" />
                   <h1 className="headline white" ref={titleRef}>
-                    Collection of Our Works
+                    Our Creative Projects
                   </h1>
                 </div>
                 <p
                   className="description grey opacity-blur"
                   ref={descriptionRef}
                 >
-                  Case studies offer a unique opportunity to explore real-world
-                  examples of challenges, solutions, and results.
+                  <br />
+                  Discover how we turn ideas into reality. Each project
+                  showcases our approach to solving challenges with design,
+                  technology, and innovation.
                 </p>
               </div>
               <div className="works-content-top-divider" ref={lineRef} />
@@ -625,12 +627,23 @@ export const WorksPageSection = () => {
               <div className="titlebox">
                 <div className="titlebox-medium-gradient" />
                 <h1 className="subheadline white" ref={subtitleRef1}>
-                  We have extensive experience <br /> across multiple industries
+                  Delivering Tailored Digital Solutions <br />
+                  Across Industries Worldwide
                 </h1>
               </div>
               <p className="description grey" ref={subdescriptionRef1}>
-                Our product designers have completed projects in different
-                niches. They know how to add business value and provide.
+                From technology startups to established enterprises, our team at
+                Arcenik has collaborated with businesses across diverse sectors.
+                We bring deep industry knowledge, cutting-edge design, and
+                robust development expertise to every project. Whether it's
+                optimizing logistics, reimagining travel experiences,
+                transforming real estate, or building AI-driven platforms — we
+                adapt our solutions to meet the unique challenges of each
+                industry. <br />
+                <br />
+                Our goal is simple: empower brands with digital products that
+                don’t just look great but deliver measurable impact and
+                long-term growth.
               </p>
             </div>
             <div className="works-industries-container">
@@ -647,7 +660,7 @@ export const WorksPageSection = () => {
                     ref={industryImageRef1}
                   >
                     <img
-                      src="/images/test14.webp"
+                      src="/images/test14.jpg"
                       className="works-industries-item-right-image"
                       alt=""
                     />
@@ -667,7 +680,7 @@ export const WorksPageSection = () => {
                     ref={industryImageRef2}
                   >
                     <img
-                      src="/images/test17.webp"
+                      src="/images/test17.jpg"
                       className="works-industries-item-right-image"
                       alt=""
                     />
@@ -687,7 +700,7 @@ export const WorksPageSection = () => {
                     ref={industryImageRef3}
                   >
                     <img
-                      src="/images/test18.webp"
+                      src="/images/test188.jpg"
                       className="works-industries-item-right-image"
                       alt=""
                     />
@@ -705,7 +718,7 @@ export const WorksPageSection = () => {
                     ref={industryImageRef4}
                   >
                     <img
-                      src="/images/test19.webp"
+                      src="/images/test19.jpg"
                       className="works-industries-item-right-image"
                       alt=""
                     />

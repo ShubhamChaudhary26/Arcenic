@@ -19,30 +19,29 @@ export const SectionKPI = () => {
   // Memoize KPI data
   const kpiData = useMemo(
     () => [
-      {
-        number: "250",
-        unit: "thousand",
-        description: "of data processed by our models every single month",
-        icon: Globe,
-        ref: bentoBoxRef1,
-      },
-      {
-        number: "$100",
-        unit: "million",
-        description:
-          "client revenue driven by our tailored solutions and strategies.",
-        icon: User,
-        ref: bentoBoxRef2,
-      },
-      {
-        number: "500",
-        unit: "million",
-        description:
-          "users continuously running our photo enhancement software plugin.",
-        icon: Cone,
-        ref: bentoBoxRef3,
-      },
-    ],
+  {
+    number: "10",
+    unit: "projects",
+    description: "successfully delivered for our early clients this year.",
+    icon: Globe,
+    ref: bentoBoxRef1,
+  },
+  {
+    number: "1000",
+    unit: "hours",
+    description: "of development and design work invested into our solutions.",
+    icon: User,
+    ref: bentoBoxRef2,
+  },
+  {
+    number: "5000",
+    unit: "interactions",
+    description: "powered by our platform across different industries.",
+    icon: Cone,
+    ref: bentoBoxRef3,
+  },
+]
+    ,
     []
   );
 

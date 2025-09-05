@@ -282,7 +282,7 @@
 
 .works-industries-item {
     width: 100%;
-    height: 30vh;
+    height: 40vh;
     display: flex;
     justify-content: space-between;
 }
@@ -307,10 +307,12 @@
 }
 
 .works-industries-item-right-image {
-    width: 40vw;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;        /* full width lo */
+    height: 100%;       /* parent ke equal height lo */
+    object-fit: cover;  /* image stretch na ho, proportion maintained rahe */
+    border-radius: 10px; /* rounded corners */
 }
+
 
 .works-casestudies {
     display: flex;

@@ -31,56 +31,35 @@ export const SectionTestimonials = () => {
   // Memoize testimonials data
   const testimonialsData = useMemo(
     () => [
-      {
-        name: "Sarah Johnson",
-        role: "Small Business Owner",
-        image: "/images/pfp1.webp",
-        testimonial:
-          "Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.",
-      },
-      {
-        name: "David Patel",
-        role: "Project Manager",
-        image: "/images/pfp2.webp",
-        testimonial:
-          "Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.",
-      },
-      {
-        name: "Emily Carter",
-        role: "Operations Manager",
-        image: "/images/pfp1.webp",
-        testimonial:
-          "Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.",
-      },
-      {
-        name: "Sarah Johnson",
-        role: "Small Business Owner",
-        image: "/images/pfp2.webp",
-        testimonial:
-          "Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.",
-      },
-      {
-        name: "David Patel",
-        role: "Project Manager",
-        image: "/images/pfp2.webp",
-        testimonial:
-          "Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.",
-      },
-      {
-        name: "Emily Carter",
-        role: "Operations Manager",
-        image: "/images/pfp1.webp",
-        testimonial:
-          "Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.",
-      },
-      {
-        name: "Sarah Johnson",
-        role: "Small Business Owner",
-        image: "/images/pfp2.webp",
-        testimonial:
-          "Since integrating this solution into our workflow, we have experienced a remarkable improvement in both efficiency and team collaboration, enabling us to complete tasks more quickly and communicate more.",
-      },
-    ],
+  {
+    name: "Rahul Singh",
+    role: "Small Business Owner",
+    image: "/images/testimonial1.jpg",
+    testimonial:
+      "Integrating this solution has dramatically improved our efficiency and team collaboration. We now complete projects faster and communicate more effectively."
+  },
+  {
+    name: "Nisha Rao",
+    role: "Creative Consultant",
+    image: "/images/testimonial4.jpg",
+    testimonial:
+      "Adopting this solution enabled us to unlock creative collaboration across teams like never before. Projects flow smoother and our productivity has soared."
+  },
+  {
+    name: "Arjun Mehta",
+    role: "Operations Lead",
+    image: "/images/testimonial3.jpg",
+    testimonial:
+      "Adopting this solution elevated our operational quality—reducing bottlenecks and letting us focus on delivering real impact, not just getting things done."
+  },
+  {
+    name: "Abhimanyu Chaudhary",
+    role: "Client Success Specialist",
+    image: "/images/testimonial2.jpg",
+    testimonial:
+      "Since introducing this solution, client satisfaction has soared. Our response times are faster, and our team enjoys smoother collaboration."
+  }
+],
     []
   );
 

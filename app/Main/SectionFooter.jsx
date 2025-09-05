@@ -98,10 +98,12 @@ export const SectionFooter = () => {
       <div className="footer-content">
         <div className="footer-content-left" ref={topRef1}>
           <img src="/images/logo1.png" className="footer-logo" alt="" />
-          <h1 className="subheadline white">Arcenik Technologies</h1>
+          {/* <h1 className="subheadline white">Arcenik Technologies</h1> */}
+          <h2 className="description grey">
+          Where vision meets web.
+          </h2>
           <p className="description grey">
-            Harnessing Cutting-Edge Visualization Technology to Transform Vision
-            into Tailored Digital Reality
+            We design and develop tailor-made web solutions that blend creativity, technology, and strategy to help brands stand out in the digital world.
           </p>
         </div>
         <div className="footer-content-right" ref={topRef2}>
