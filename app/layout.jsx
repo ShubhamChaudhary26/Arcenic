@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Navigation } from "./Navigation";
-import Script from "next/script";
+import Script from "next/script"; // 👈 ye import zaruri hai
 
 export const metadata = {
   title: "Arcenik | Cutting-Edge Website Design & Custom Digital Solutions",
@@ -50,17 +50,18 @@ export default function RootLayout({ children }) {
           src="https://cdn.botpress.cloud/webchat/v1/inject.js"
           strategy="afterInteractive"
         />
-        <Script id="botpress-webchat" strategy="afterInteractive">
+        <Script id="botpress-webchat" strategy="lazyOnload">
           {`
-            window.botpressWebChat.init({
-              hostUrl: "https://cdn.botpress.cloud/webchat/v1",
-              messagingUrl: "https://messaging.botpress.cloud",
-              clientId: "e1c774e4-b3b2-49d5-8575-1bec2f1081b8",
-              botName: "Arcenik Assistant",
-              themeColor: "#facc15",
-              showPoweredBy: false,
-              hideWidget: false,
-              useSessionStorage: true
+            window.addEventListener("load", function () {
+              window.botpressWebChat.init({
+                hostUrl: "https://cdn.botpress.cloud/webchat/v1",
+                messagingUrl: "https://messaging.botpress.cloud",
+                clientId: "e1c774e4-b3b2-49d5-8575-1bec2f1081b8", // 👈 apna client ID yahan daal
+                botName: "Arcenik Assistant",
+                themeColor: "#facc15",
+                showPoweredBy: false,
+                hideWidget: false
+              });
             });
           `}
         </Script>
