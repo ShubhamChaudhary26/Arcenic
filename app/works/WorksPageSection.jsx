@@ -89,112 +89,7 @@ export const WorksPageSection = () => {
     link: "https://veltrixgym.in",
   },
 
-  // 2. Software
-  {
-    title: "Logistics Dashboard",
-    category: "software",
-    type: "software",
-    categoryLabel: "Logistics Management System",
-    tags: ["React", "Node.js", "PostgreSQL", "Docker", "Google Maps API"],
-    image: "/works/kvl.png",
-    description:
-      "Comprehensive dashboard for managing logistics operations with real-time shipment tracking and fleet management.",
-    screenshots: [
-      "/works/kvl.png",
-      "/works/kvl.png",
-      "/works/kvl.png",
-      "/works/kvl.png",
-    ],
-    features: [
-      "Real-time shipment tracking with GPS integration",
-      "Automated route optimization for delivery",
-      "Fleet management and vehicle tracking",
-      "Delivery scheduling and notifications",
-      "Driver performance analytics",
-      "Customer delivery status updates",
-    ],
-    link: "#",
-  },
-
-  // 3. Ecommerce
-  {
-    title: "Gift Shop",
-    category: "ecommerce",
-    type: "web",
-    categoryLabel: "E-Commerce Platform",
-    tags: ["Shopify", "Custom Theme", "SEO", "Payment Gateway"],
-    image: "/works/gift.jpeg",
-    description:
-      "Online gift store with personalized product options, gift wrapping, and occasion-based categories.",
-    link: "https://mybestgift.in/",
-  },
-
-  // 4. Website
-  {
-    title: "7Star Travels",
-    category: "website",
-    type: "web",
-    categoryLabel: "Travel Agency Website",
-    tags: ["Next.js", "Tailwind CSS", "Prisma", "Framer Motion"],
-    image: "/works/tourist-min.png",
-    description:
-      "Premium travel agency website with tour packages, booking system, and destination guides.",
-    link: "/works/peak-creations",
-  },
-
-  // 5. Software
-  {
-    title: "TaskMaster CRM",
-    category: "software",
-    type: "software",
-    categoryLabel: "Customer Relationship Management",
-    tags: ["React", "Node.js", "MongoDB", "Socket.io", "AWS"],
-    image: "/works/peak.webp",
-    description:
-      "Powerful CRM solution with visual sales pipeline, lead management, and marketing automation.",
-    screenshots: [
-      "/software/taskmaster/dashboard.png",
-      "/software/taskmaster/pipeline.png",
-      "/software/taskmaster/contacts.png",
-      "/software/taskmaster/reports.png",
-    ],
-    features: [
-      "Visual drag-drop sales pipeline management",
-      "Lead scoring with AI-powered predictions",
-      "Email and WhatsApp campaign automation",
-      "Customer interaction timeline and history",
-      "Team performance analytics and targets",
-      "Third-party integrations (Slack, Gmail, Zapier)",
-    ],
-    link: "/works/taskmaster-crm",
-  },
-
-  // 6. Ecommerce
-  {
-    title: "Sana Commerce",
-    category: "ecommerce",
-    type: "web",
-    categoryLabel: "B2B E-Commerce Platform",
-    tags: ["Next.js", "Prisma", "PostgreSQL", "Stripe API"],
-    image: "/works/sona.png",
-    description:
-      "A high-performance B2B e-commerce website developed for Sana Commerce. Built with Next.js to ensure fast load times and SEO optimization.",
-    link: "https://www.sana-commerce.com/",
-  },
-
-  // 7. Website
-  {
-    title: "MintSurvey",
-    category: "website",
-    type: "web",
-    categoryLabel: "SaaS Platform",
-    tags: ["React", "Node.js", "Docker", "MongoDB", "Charts.js"],
-    image: "/works/mintsurvey.png",
-    description:
-      "Survey creation platform with drag-drop builder, real-time analytics, and export reports.",
-    link: "https://mintsurvey.com",
-  },
-
+  
   // 8. Software
   {
     title: "AMS Engineer",
@@ -220,6 +115,103 @@ export const WorksPageSection = () => {
     ],
     link: "/works/amsengineer",
   },
+  
+
+  // 3. Ecommerce
+  {
+    title: "Gift Shop",
+    category: "ecommerce",
+    type: "web",
+    categoryLabel: "E-Commerce Platform",
+    tags: ["Shopify", "Custom Theme", "SEO", "Payment Gateway"],
+    image: "/works/gift.jpeg",
+    description:
+      "Online gift store with personalized product options, gift wrapping, and occasion-based categories.",
+    link: "https://mybestgift.in/",
+  },
+
+  // 4. Website
+  {
+    title: "7Star Travels",
+    category: "website",
+    type: "web",
+    categoryLabel: "Travel Agency Website",
+    tags: ["Next.js", "Tailwind CSS", "Prisma", "Framer Motion"],
+    image: "/works/tourist.png",
+    description:
+      "Premium travel agency website with tour packages, booking system, and destination guides.",
+    link: "https://7sevenstartravels.com/",
+  },
+
+ // 17. Software
+  {
+    title: "LogiFlow ERP",
+    category: "software",
+    type: "software",
+    categoryLabel: "Enterprise Resource Planning",
+    tags: ["Python", "Django", "PostgreSQL", "Redis", "Celery"],
+    image: "/works/kinimatic.webp",
+    description:
+      "Complete enterprise resource planning system for supply chain and logistics management.",
+    screenshots: [
+      "/software/logiflow/main.png",
+      "/software/logiflow/inventory.png",
+      "/software/logiflow/orders.png",
+      "/software/logiflow/analytics.png",
+    ],
+    features: [
+      "End-to-end supply chain visibility",
+      "Automated purchase order management",
+      "Real-time inventory tracking across warehouses",
+      "Vendor relationship and procurement management",
+      "Financial reporting and GST integration",
+      "Custom workflow automation with approval system",
+    ],
+    link: "/works/logiflow-erp",
+  },
+
+  // 6. Ecommerce
+
+
+  // 7. Website
+  {
+    title: "MintSurvey",
+    category: "website",
+    type: "web",
+    categoryLabel: "SaaS Platform",
+    tags: ["React", "Node.js", "Docker", "MongoDB", "Charts.js"],
+    image: "/works/mintsurvey.png",
+    description:
+      "Survey creation platform with drag-drop builder, real-time analytics, and export reports.",
+    link: "https://mintsurvey.com",
+  },
+  // 12. Software
+  {
+    title: "FarmTrack Pro",
+    category: "software",
+    type: "software",
+    categoryLabel: "Agriculture Management System",
+    tags: ["React", "Node.js", "MongoDB", "IoT Integration"],
+    image: "/works/farmtrackPro/farmtrackPro1.png",
+    description:
+      "Smart farming solution for crop management, livestock tracking, and agricultural analytics.",
+    screenshots: [
+      "/works/farmtrackPro/farmtrackPro2.png",
+      "/works/farmtrackPro/farmtrackPro3.png",
+      "/works/farmtrackPro/farmtrackPro4.png",
+    ],
+    features: [
+      "Crop planning and harvest scheduling",
+      "Weather monitoring and alerts",
+      "Livestock health and feeding management",
+      "Expense tracking and profit analysis",
+      "Irrigation scheduling and reminders",
+      "Market price updates and selling insights",
+    ],
+    link: "/works/farmtrack-pro",
+  },
+
+ 
 
   // 9. Website
   {
@@ -233,6 +225,8 @@ export const WorksPageSection = () => {
       "A global leader in polymer stabilization solutions. Built with Next.js for high performance and SEO optimization, the platform delivers a clean industrial design.",
     link: "https://www.goldstab.com/",
   },
+
+
 
   // 10. Software
   {
@@ -273,30 +267,33 @@ export const WorksPageSection = () => {
     link: "https://rentagreementwithus.com/",
   },
 
-  // 12. Software
+  
+
+  // 5. Software
   {
-    title: "FarmTrack Pro",
+    title: "TaskMaster CRM",
     category: "software",
     type: "software",
-    categoryLabel: "Agriculture Management System",
-    tags: ["React", "Node.js", "MongoDB", "IoT Integration"],
-    image: "/works/farmtrackPro/farmtrackPro1.png",
+    categoryLabel: "Customer Relationship Management",
+    tags: ["React", "Node.js", "MongoDB", "Socket.io", "AWS"],
+    image: "/works/peak.webp",
     description:
-      "Smart farming solution for crop management, livestock tracking, and agricultural analytics.",
+      "Powerful CRM solution with visual sales pipeline, lead management, and marketing automation.",
     screenshots: [
-      "/works/farmtrackPro/farmtrackPro2.png",
-      "/works/farmtrackPro/farmtrackPro3.png",
-      "/works/farmtrackPro/farmtrackPro4.png",
+      "/software/taskmaster/dashboard.png",
+      "/software/taskmaster/pipeline.png",
+      "/software/taskmaster/contacts.png",
+      "/software/taskmaster/reports.png",
     ],
     features: [
-      "Crop planning and harvest scheduling",
-      "Weather monitoring and alerts",
-      "Livestock health and feeding management",
-      "Expense tracking and profit analysis",
-      "Irrigation scheduling and reminders",
-      "Market price updates and selling insights",
+      "Visual drag-drop sales pipeline management",
+      "Lead scoring with AI-powered predictions",
+      "Email and WhatsApp campaign automation",
+      "Customer interaction timeline and history",
+      "Team performance analytics and targets",
+      "Third-party integrations (Slack, Gmail, Zapier)",
     ],
-    link: "/works/farmtrack-pro",
+    link: "/works/taskmaster-crm",
   },
 
   // 13. Website
@@ -310,6 +307,17 @@ export const WorksPageSection = () => {
     description:
       "Modern property listing platform with virtual tours, advanced search filters, and lead management.",
     link: "#",
+  },
+    {
+    title: "Sana Commerce",
+    category: "ecommerce",
+    type: "web",
+    categoryLabel: "B2B E-Commerce Platform",
+    tags: ["Next.js", "Prisma", "PostgreSQL", "Stripe API"],
+    image: "/works/sona.png",
+    description:
+      "A high-performance B2B e-commerce website developed for Sana Commerce. Built with Next.js to ensure fast load times and SEO optimization.",
+    link: "https://www.sana-commerce.com/",
   },
 
   // 14. Software
@@ -338,17 +346,17 @@ export const WorksPageSection = () => {
   },
 
   // 15. Website
-  {
-    title: "Gajpati Industries",
-    category: "website",
-    type: "web",
-    categoryLabel: "Chemical Industries Website",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion", "SEO"],
-    image: "/works/gajpati.png",
-    description:
-      "A chemical manufacturing company website. Built with Next.js for high performance and SEO, enhanced with modern animations.",
-    link: "https://gajpatiindustries.com/",
-  },
+  // {
+  //   title: "Gajpati Industries",
+  //   category: "website",
+  //   type: "web",
+  //   categoryLabel: "Chemical Industries Website",
+  //   tags: ["Next.js", "Tailwind CSS", "Framer Motion", "SEO"],
+  //   image: "/works/gajpati.png",
+  //   description:
+  //     "A chemical manufacturing company website. Built with Next.js for high performance and SEO, enhanced with modern animations.",
+  //   link: "https://gajpatiindustries.com/",
+  // },
 
   // 16. Software
   {
@@ -376,32 +384,35 @@ export const WorksPageSection = () => {
     link: "/works/property-ledger",
   },
 
-  // 17. Software
   
+
+
+  
+  // 2. Software
   {
-    title: "LogiFlow ERP",
+    title: "Logistics Dashboard",
     category: "software",
     type: "software",
-    categoryLabel: "Enterprise Resource Planning",
-    tags: ["Python", "Django", "PostgreSQL", "Redis", "Celery"],
-    image: "/works/kinimatic.webp",
+    categoryLabel: "Logistics Management System",
+    tags: ["React", "Node.js", "PostgreSQL", "Docker", "Google Maps API"],
+    image: "/works/kvl.png",
     description:
-      "Complete enterprise resource planning system for supply chain and logistics management.",
+      "Comprehensive dashboard for managing logistics operations with real-time shipment tracking and fleet management.",
     screenshots: [
-      "/software/logiflow/main.png",
-      "/software/logiflow/inventory.png",
-      "/software/logiflow/orders.png",
-      "/software/logiflow/analytics.png",
+      "/works/kvl.png",
+      "/works/kvl.png",
+      "/works/kvl.png",
+      "/works/kvl.png",
     ],
     features: [
-      "End-to-end supply chain visibility",
-      "Automated purchase order management",
-      "Real-time inventory tracking across warehouses",
-      "Vendor relationship and procurement management",
-      "Financial reporting and GST integration",
-      "Custom workflow automation with approval system",
+      "Real-time shipment tracking with GPS integration",
+      "Automated route optimization for delivery",
+      "Fleet management and vehicle tracking",
+      "Delivery scheduling and notifications",
+      "Driver performance analytics",
+      "Customer delivery status updates",
     ],
-    link: "/works/logiflow-erp",
+    link: "#",
   },
 
   // 18. Software
