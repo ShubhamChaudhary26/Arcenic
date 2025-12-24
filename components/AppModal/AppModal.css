@@ -1,0 +1,748 @@
+/* components/AppModal/AppModal.css */
+
+/* ============ MODAL CONTAINER ============ */
+.app-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden; /* Prevent any overflow */
+}
+
+/* ============ BACKDROP ============ */
+.app-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  opacity: 0;
+}
+
+/* ============ CONTENT WRAPPER ============ */
+.app-modal-content-wrapper {
+  position: relative;
+  background: linear-gradient(
+    165deg,
+    rgba(28, 28, 32, 0.98) 0%,
+    rgba(12, 12, 15, 0.99) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 32px;
+  max-width: 1100px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Important: clips scrollbar to border radius */
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 50px 100px -30px rgba(0, 0, 0, 0.7),
+    0 30px 60px -20px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* ============ SCROLLABLE CONTENT ============ */
+.app-modal-content {
+  flex: 1;
+  padding: 3rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain; /* Prevents scroll chaining */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+}
+
+/* Custom Scrollbar */
+.app-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.app-modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+  margin: 8px 0; /* Creates gap from top/bottom edges */
+}
+
+.app-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.app-modal-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+  background-clip: content-box;
+}
+
+/* Firefox Scrollbar */
+.app-modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.02);
+}
+
+/* ============ CLOSE BUTTON ============ */
+.app-modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.app-modal-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transform: rotate(90deg) scale(1.05);
+}
+
+/* ============ LAYOUT ============ */
+.app-modal-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+  min-height: min-content;
+}
+
+/* ============ PHONE SECTION ============ */
+.app-modal-phone-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  position: sticky;
+  top: 0;
+}
+
+.app-modal-phone-wrapper {
+  position: relative;
+  perspective: 1200px;
+}
+
+/* Phone Glow Effect */
+.app-modal-phone-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 400px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(120, 120, 255, 0.12) 0%,
+    rgba(100, 100, 255, 0.06) 35%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* ============ PHONE DEVICE ============ */
+.app-modal-phone {
+  position: relative;
+  width: 290px;
+  height: 595px;
+  background: linear-gradient(
+    155deg,
+    #3a3a40 0%,
+    #252528 25%,
+    #1a1a1c 50%,
+    #0f0f10 75%,
+    #1a1a1c 100%
+  );
+  border-radius: 52px;
+  padding: 11px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 35px 80px -20px rgba(0, 0, 0, 0.6),
+    0 20px 40px -15px rgba(0, 0, 0, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.1),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  animation: phoneFloat 5s ease-in-out infinite;
+}
+
+@keyframes phoneFloat {
+  0%, 100% {
+    transform: translateY(0) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-6px) rotateX(1deg) rotateY(2deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateX(0deg) rotateY(0deg);
+  }
+  75% {
+    transform: translateY(-6px) rotateX(-1deg) rotateY(-2deg);
+  }
+}
+
+/* Frame Highlight */
+.app-modal-phone-frame-highlight {
+  position: absolute;
+  inset: 0;
+  border-radius: 52px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+/* ============ DYNAMIC ISLAND ============ */
+.app-modal-phone-island {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85px;      /* 105px se 85px */
+  height: 24px;     /* 34px se 24px */
+  background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
+  border-radius: 14px;  /* 22px se 14px */
+  z-index: 10;
+  box-shadow: 
+    inset 0 1px 4px rgba(0, 0, 0, 0.9),
+    0 1px 1px rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 14px;  /* 18px se 14px */
+}
+
+.app-modal-phone-island-camera {
+  width: 8px;       /* 11px se 8px */
+  height: 8px;      /* 11px se 8px */
+  background: radial-gradient(
+    circle at 30% 30%,
+    #2a2a3e 0%,
+    #12121a 50%,
+    #0a0a0f 100%
+  );
+  border-radius: 50%;
+  box-shadow: 
+    inset 0 1px 2px rgba(0, 0, 0, 0.8),
+    0 0 2px rgba(80, 80, 120, 0.3);
+}
+
+/* ============ PHONE SCREEN ============ */
+.app-modal-phone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 44px;
+  overflow: hidden;
+}
+
+.app-modal-screenshot {
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.app-modal-screenshot.active {
+  opacity: 1;
+}
+
+/* Screen Glare */
+.app-modal-phone-glare {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  pointer-events: none;
+  z-index: 5;
+  border-radius: 44px;
+}
+
+/* ============ HOME INDICATOR ============ */
+.app-modal-phone-home {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 115px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 5px;
+  z-index: 10;
+}
+
+/* ============ PHYSICAL BUTTONS ============ */
+.app-modal-phone-button-power {
+  position: absolute;
+  right: -2.5px;
+  top: 140px;
+  width: 4px;
+  height: 75px;
+  background: linear-gradient(90deg, #2a2a2c 0%, #1a1a1c 50%, #252528 100%);
+  border-radius: 0 3px 3px 0;
+  box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.app-modal-phone-button-silent {
+  position: absolute;
+  left: -2.5px;
+  top: 115px;
+  width: 4px;
+  height: 28px;
+  background: linear-gradient(90deg, #252528 0%, #1a1a1c 50%, #2a2a2c 100%);
+  border-radius: 3px 0 0 3px;
+  box-shadow: -1px 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.app-modal-phone-button-vol-up {
+  position: absolute;
+  left: -2.5px;
+  top: 165px;
+  width: 4px;
+  height: 50px;
+  background: linear-gradient(90deg, #252528 0%, #1a1a1c 50%, #2a2a2c 100%);
+  border-radius: 3px 0 0 3px;
+  box-shadow: -1px 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.app-modal-phone-button-vol-down {
+  position: absolute;
+  left: -2.5px;
+  top: 225px;
+  width: 4px;
+  height: 50px;
+  background: linear-gradient(90deg, #252528 0%, #1a1a1c 50%, #2a2a2c 100%);
+  border-radius: 3px 0 0 3px;
+  box-shadow: -1px 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ============ NAVIGATION ============ */
+.app-modal-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-modal-nav-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.app-modal-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.app-modal-nav-btn:active {
+  transform: scale(0.95);
+}
+
+.app-modal-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.app-modal-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.app-modal-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.15);
+}
+
+.app-modal-dot.active {
+  background: #fff;
+  transform: scale(1.4);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+/* Screenshot Counter */
+.app-modal-counter {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.app-modal-counter span:first-child,
+.app-modal-counter span:last-child {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.app-modal-counter-divider {
+  opacity: 0.4;
+}
+
+/* ============ INFO SECTION ============ */
+.app-modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 1rem;
+}
+
+/* Category Badge */
+.app-modal-category-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 8px 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+}
+
+.app-modal-category-badge span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Title */
+.app-modal-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* Description */
+.app-modal-description {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 450px;
+}
+
+/* ============ TAGS ============ */
+.app-modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.app-modal-tag {
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  transition: all 0.25s ease;
+}
+
+.app-modal-tag:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* ============ FEATURES ============ */
+.app-modal-features {
+  margin-top: 0.5rem;
+}
+
+.app-modal-features-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
+.app-modal-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-modal-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.app-modal-feature-dot {
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, #888 0%, #555 100%);
+  border-radius: 50%;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.app-modal-feature span {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+}
+
+/* ============ HIGHLIGHTS ============ */
+.app-modal-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.app-modal-highlight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  transition: all 0.25s ease;
+}
+
+.app-modal-highlight:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-modal-highlight-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.app-modal-highlight-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.app-modal-highlight-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.app-modal-highlight-value {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 950px) {
+  .app-modal-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .app-modal-phone-section {
+    position: relative;
+    top: auto;
+  }
+
+  .app-modal-info {
+    align-items: center;
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .app-modal-category-badge {
+    align-self: center;
+  }
+
+  .app-modal-description {
+    max-width: 100%;
+  }
+
+  .app-modal-tags {
+    justify-content: center;
+  }
+
+  .app-modal-features {
+    text-align: left;
+    max-width: 400px;
+  }
+
+  .app-modal-highlights {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .app-modal {
+    padding: 1rem;
+  }
+
+  .app-modal-content-wrapper {
+    border-radius: 24px;
+    max-height: 94vh;
+  }
+
+  .app-modal-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .app-modal-close {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .app-modal-phone {
+    width: 240px;
+    height: 492px;
+    border-radius: 44px;
+    padding: 9px;
+  }
+
+  .app-modal-phone-screen {
+    border-radius: 38px;
+  }
+
+  .app-modal-phone-island {
+    width: 70px;      /* Smaller on mobile */
+    height: 20px;
+    top: 12px;
+    border-radius: 12px;
+    padding-right: 12px;
+  }
+
+  .app-modal-phone-island-camera {
+    width: 6px;
+    height: 6px;
+  }
+  .app-modal-phone-home {
+    width: 95px;
+    height: 4px;
+    bottom: 12px;
+  }
+
+  .app-modal-phone-glow {
+    width: 260px;
+    height: 340px;
+  }
+
+  .app-modal-title {
+    font-size: 2rem;
+  }
+
+  .app-modal-description {
+    font-size: 1rem;
+  }
+
+  .app-modal-nav-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .app-modal-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .app-modal-phone {
+    width: 210px;
+    height: 430px;
+    border-radius: 38px;
+  }
+
+  .app-modal-phone-screen {
+    border-radius: 32px;
+  }
+
+   .app-modal-phone-island {
+    width: 60px;
+    height: 18px;
+    border-radius: 10px;
+  }
+
+  .app-modal-phone-island-camera {
+    width: 5px;
+    height: 5px;
+  }
+  .app-modal-title {
+    font-size: 1.75rem;
+  }
+}

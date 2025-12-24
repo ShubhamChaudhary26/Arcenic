@@ -1,0 +1,1366 @@
+/* ============================================
+   ARCENIK - GLOBAL STYLES
+   Organized & Optimized
+   ============================================ */
+
+/* ============================================
+   1. FONTS
+   ============================================ */
+
+@font-face {
+  font-family: 'SF PRO TEXT 400';
+  src: url('/fonts/SF Pro Text 400.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF PRO DISPLAY 700';
+  src: url('/fonts/SF PRO DISPLAY 700.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SF PRO DISPLAY 600';
+  src: url('/fonts/SF PRO DISPLAY 600.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Causten Regular';
+  src: url('/fonts/Causten-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+/* ============================================
+   2. CSS CUSTOM PROPERTIES (Variables)
+   ============================================ */
+/* ✅ Screen Reader Only - Hidden but SEO friendly */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Alternative: If you want visible H1 in hero section */
+.main-heading {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+:root {
+  /* Colors */
+  --color-bg: #010101;
+  --color-white: #ffffff;
+  --color-black: #010101;
+  --color-grey: rgba(255, 255, 255, 0.5);
+  --color-border: rgba(255, 255, 255, 0.075);
+  --color-border-light: rgba(255, 255, 255, 0.1);
+  --color-border-medium: rgba(255, 255, 255, 0.15);
+  --color-glass: rgba(255, 255, 255, 0.025);
+  --color-glass-hover: rgba(255, 255, 255, 0.05);
+
+  /* Fonts */
+  --font-primary: "SF PRO TEXT 400", sans-serif;
+  --font-heading: "SF PRO DISPLAY 700", sans-serif;
+  --font-heading-medium: "SF PRO DISPLAY 600", sans-serif;
+  --font-body: "Causten Regular", sans-serif;
+
+  /* Border Radius */
+  --radius: 25px;
+  --radius-sm: 15px;
+  --radius-xs: 10px;
+  --radius-full: 999px;
+
+  /* Transitions */
+  --transition-fast: 0.25s ease;
+  --transition-medium: 0.5s ease;
+  --transition-slow: 0.75s ease;
+
+  /* Shadows */
+  --glass-border: inset 0 0 0 1px var(--color-border);
+  --glass-glow: inset 0 0 5vw rgba(255, 255, 255, 0.05);
+  --glass-glow-strong: inset 0 0 5vw rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   3. RESET & BASE
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ============================================
+   4. SECTION BASE
+   ============================================ */
+
+section {
+  width: 100%;
+  height: 100vh;
+  pointer-events: all;
+  padding: 0 10vw;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* ============================================
+   5. UTILITY CLASSES
+   ============================================ */
+
+/* Colors */
+.white {
+  color: var(--color-white);
+}
+
+.black {
+  color: var(--color-black);
+}
+
+.grey {
+  color: var(--color-grey);
+}
+
+/* Visibility */
+.hide-on-desktop {
+  display: none;
+}
+
+.hide-on-mobile {
+  display: flex;
+}
+
+/* Animation Presets */
+.opacity-blur {
+  opacity: 0;
+  filter: blur(8px);
+}
+
+.opacity {
+  opacity: 0;
+}
+
+/* Background Gradients */
+.background-gradient-down {
+  background-image: radial-gradient(125% 107.13% at 50% 20%, transparent 40%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.25) 100%);
+}
+
+.background-gradient-up {
+  background-image: radial-gradient(131.66% 109.77% at 50% 97.75%, transparent 37.41%, rgba(255, 255, 255, 0.1) 69.27%, rgba(255, 255, 255, 0.25) 100%);
+}
+
+.background-gradient-side {
+  background-image: radial-gradient(100% 120% at 85% 125%, rgba(255, 255, 255, 0.25), transparent 70%);
+}
+
+.background-gradient-circle {
+  background-color: rgba(255, 255, 255, 0.25);
+  filter: blur(100px);
+  opacity: 0.7;
+  bottom: 0;
+  flex: none;
+  height: 25vh;
+  overflow: visible;
+  position: absolute;
+  left: 0;
+  width: 20vw;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.background-gradient-circle-2 {
+  background-color: rgba(255, 255, 255, 0.25);
+  filter: blur(100px);
+  opacity: 0.7;
+  bottom: 0;
+  flex: none;
+  height: 25vh;
+  overflow: visible;
+  position: absolute;
+  right: 0;
+  width: 20vw;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.background-gradient-circle-3 {
+  background-color: rgba(255, 255, 255, 0.25);
+  filter: blur(100px);
+  opacity: 0.7;
+  bottom: 0;
+  flex: none;
+  height: 30vh;
+  overflow: visible;
+  position: absolute;
+  right: 0;
+  width: 13vw;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   6. TYPOGRAPHY
+   ============================================ */
+
+.headline {
+  position: relative;
+  font-size: 5.2vw;
+  margin: 0;
+  font-weight: auto;
+  line-height: 100%;
+  font-family: var(--font-heading);
+  color: var(--color-white);
+}
+
+.subheadline {
+  font-size: 3.25vw;
+  margin: 0;
+  font-weight: auto;
+  line-height: 110%;
+  font-family: var(--font-heading);
+}
+
+.small-subheadline {
+  font-size: 2vw;
+  margin: 0;
+  font-weight: 500;
+  line-height: 100%;
+  font-family: var(--font-heading-medium);
+}
+
+.big-description {
+  width: 75%;
+  font-size: 1.2vw;
+  font-weight: 400;
+  margin: 0;
+  line-height: 115%;
+  font-family: var(--font-body);
+}
+
+.description {
+  font-size: 1.1vw;
+  font-weight: 400;
+  margin: 0;
+  line-height: 115%;
+  font-family: var(--font-body);
+}
+
+.small-description {
+  font-size: 1vw;
+  font-weight: 400;
+  margin: 0;
+  font-family: var(--font-body);
+  text-decoration: none;
+}
+
+/* Hover Text Effects */
+.hover-text-grey {
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-text-grey::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -0.15vh;
+  left: 0;
+  background-color: var(--color-grey);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform var(--transition-medium);
+}
+
+.hover-text-grey:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hover-text-white {
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-text-white::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -0.15vh;
+  left: 0;
+  background-color: var(--color-white);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform var(--transition-medium);
+}
+
+.hover-text-white:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* ============================================
+   7. BUTTONS
+   ============================================ */
+
+.button {
+  width: fit-content;
+  height: 5.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1vw;
+  padding-right: 0.5vw;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  gap: 1vw;
+  border: 1px solid var(--color-border-light);
+  background-color: var(--color-glass);
+  color: var(--color-white);
+  box-shadow: inset 0 0 1vw rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+.button,
+.button:visited,
+.button:hover,
+.button:active {
+  text-decoration: none;
+}
+
+.button-circle {
+  width: 1.75vw;
+  height: 1.75vw;
+  border-radius: 100%;
+  background-color: var(--color-white);
+  color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.button-icon {
+  height: 1vw;
+  width: 1vw;
+  transition: var(--transition-medium);
+}
+
+.button:hover .button-icon {
+  rotate: 360deg;
+}
+
+.button:hover .button-icon-180 {
+  rotate: 135deg;
+}
+
+.button-content {
+  transition: var(--transition-medium);
+  cursor: pointer;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+  text-decoration: none;
+  user-select: none;
+}
+
+.button span {
+  display: block;
+  transition: 0.75s transform cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button span:nth-child(2) {
+  position: absolute;
+}
+
+.button:hover span:nth-child(1) {
+  transform: translateY(-100%);
+}
+
+.button:hover span:nth-child(2) {
+  transform: translateY(-100%);
+}
+
+/* ============================================
+   8. TEXTBOX
+   ============================================ */
+
+.textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+}
+
+.titlebox {
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+}
+
+.titlebox-gradient {
+  width: 12vw;
+  height: 11vw;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  filter: blur(50px);
+  opacity: 0.85;
+  position: absolute;
+  right: -5vw;
+  bottom: -7.5vw;
+  z-index: 1;
+}
+
+.titlebox-medium-gradient {
+  width: 17vw;
+  height: 13vw;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  filter: blur(50px);
+  opacity: 0.85;
+  position: absolute;
+  right: -5vw;
+  bottom: -7.5vw;
+  z-index: 1;
+}
+
+.titlebox-big-gradient {
+  width: 20vw;
+  height: 13vw;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  filter: blur(50px);
+  opacity: 0.85;
+  position: absolute;
+  right: -5vw;
+  bottom: -7.5vw;
+  z-index: 1;
+}
+
+.subpage-titlebox-gradient {
+  width: 12vw;
+  height: 11vw;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  filter: blur(50px);
+  opacity: 0.85;
+  position: absolute;
+  right: -5vw;
+  bottom: -7.5vw;
+  z-index: 1;
+}
+
+.subheadline-box {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5vh 0.75vw;
+  border-radius: var(--radius-full);
+  box-shadow: var(--glass-border), inset 0 0 1vw rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.25vw;
+}
+
+.subheadline-box-icon {
+  width: 0.8vw;
+  height: 0.8vw;
+  color: var(--color-grey);
+}
+
+/* ============================================
+   9. CONTACT BUTTON
+   ============================================ */
+
+.contact-button-wrapper {
+  width: 10vw;
+  height: fit-content;
+  display: flex;
+  pointer-events: all;
+}
+
+.contact-button-white {
+  height: 5vh;
+  padding: 0;
+  display: grid;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-white);
+  cursor: pointer;
+  position: relative;
+  background: var(--color-white);
+  color: var(--color-black);
+  outline-color: var(--color-black);
+  outline-offset: 0.25vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-left: 3vh;
+}
+
+.contact-button-white:is(:hover, :focus-visible) {
+  --active: 1;
+}
+
+.contact-button-white:active {
+  --pressed: 1;
+}
+
+.contact-button-white>span:nth-of-type(1) {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--radius);
+  position: absolute;
+  inset: 0;
+}
+
+.contact-button-white:is(:hover, :focus-visible) .contact-button-container-white {
+  width: 100%;
+}
+
+.contact-button-container-white {
+  --mask-image: url(https://assets.codepen.io/605876/chev-mask_1.png);
+  --spread: 1.25vw;
+  --size: 1vw;
+  width: 5vh;
+  height: 100%;
+  background: var(--color-black);
+  position: absolute;
+  left: 0;
+  transition: width var(--transition-medium);
+  border-radius: var(--radius);
+  container-type: inline-size;
+}
+
+.contact-button-primary-white {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: hsl(0 100% 100% / 0.25);
+  z-index: 2;
+  mask: var(--mask-image) 50% 50% / var(--size) var(--size) no-repeat;
+  container-type: inline-size;
+}
+
+:where(.contact-button-primary-white, .contact-button-complimentary-white)::after {
+  --distance: calc(100cqi + 100%);
+  content: "";
+  height: calc(var(--size) * 4);
+  aspect-ratio: 1;
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  translate: -50% -50%;
+  background: radial-gradient(hsl(0 100% 100%), transparent);
+  animation: fly-by calc((2 - var(--active, 0)) * 2s) infinite linear;
+}
+
+@keyframes fly-by {
+  0% {
+    translate: -100% -50%;
+  }
+
+  100% {
+    translate: var(--distance) -50%;
+  }
+}
+
+.contact-button-complimentary-white {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: var(--active, 0);
+  transition: opacity var(--transition-medium);
+  background: hsl(0 100% 100% / 0.25);
+  mask:
+    var(--mask-image) calc(50% - (var(--spread) * 1)) 50% / var(--size) var(--size) no-repeat,
+    var(--mask-image) calc(50% - (var(--spread) * 2)) 50% / var(--size) var(--size) no-repeat,
+    var(--mask-image) calc(50% - (var(--spread) * 3)) 50% / var(--size) var(--size) no-repeat,
+    var(--mask-image) calc(50% + (var(--spread) * 1)) 50% / var(--size) var(--size) no-repeat,
+    var(--mask-image) calc(50% + (var(--spread) * 2)) 50% / var(--size) var(--size) no-repeat,
+    var(--mask-image) calc(50% + (var(--spread) * 3)) 50% / var(--size) var(--size) no-repeat;
+}
+
+.contact-buttonv-button-white>span:nth-of-type(2) {
+  padding: 0 1.1rem 0 calc(58px + 1.1rem);
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+/* ============================================
+   10. CURSOR
+   ============================================ */
+
+.hover-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+  border-radius: var(--radius-full);
+  background-color: var(--color-glass);
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5vh 1.5vw;
+  box-shadow: var(--glass-border), var(--glass-glow), 0 0 20px 5px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  will-change: transform, opacity;
+}
+
+.hover-cursor .small-description {
+  color: var(--color-white);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   11. CAROUSEL
+   ============================================ */
+
+.embla__progress {
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.05);
+  position: relative;
+  height: 0.25vh;
+  justify-self: flex-end;
+  align-self: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.embla__progress__bar {
+  background-color: var(--color-white);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  border-radius: var(--radius-full);
+}
+
+.carousel-button {
+  width: 2vw;
+  height: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.carousel-button:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+.carousel-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--color-glass);
+}
+
+.carousel-button-icon {
+  width: 0.5vw;
+  height: 0.5vw;
+  object-fit: contain;
+}
+
+/* ============================================
+   12. LOADING SCREENS
+   ============================================ */
+
+/* Website Loading Screen */
+.website-loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 400;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #010001;
+  opacity: 1;
+  transition: opacity var(--transition-fast);
+  pointer-events: all;
+}
+
+.website-loading-video {
+  position: relative;
+  width: 20%;
+}
+
+.website-loading-screen--hidden {
+  animation: fade-out var(--transition-fast) forwards 0.25s;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Loading Screen */
+.loading-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+}
+
+.loading-image-box {
+  width: 17.5vw;
+  height: 17.5vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Section Loader */
+.section-loader {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+}
+
+.section-loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-white);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================
+   13. CALENDLY
+   ============================================ */
+/* ============================================
+   13. CALENDLY - NO SCROLL VERSION
+   ============================================ */
+
+.calendly-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vh;
+  padding: 20px;
+}
+
+.calendly-overlay-widget {
+  width: 100%;
+  max-width: 450px;
+  height: 80vh; /* INCREASED for no scroll */
+  max-height: 700px; /* INCREASED */
+  background-color: #1a1a1a;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.075),
+    inset 0 0 5vw rgba(255, 255, 255, 0.05);
+}
+
+.calendly-inline-widget {
+  width: 100% !important;
+  min-width: unset !important;
+  height: 100% !important;
+}
+
+.calendly-overlay-widget-border {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.075),
+    inset 0 0 5vw rgba(255, 255, 255, 0.05);
+}
+
+.calendly-overlay-widget-scrollbar-hider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 25px;
+  background-color: #1a1a1a;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.calendly-overlay-widget-button {
+  width: 3vw;
+  height: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: #1a1a1a;
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.075),
+    inset 0 0 5vw rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.calendly-overlay-widget-button:hover {
+  background-color: #222222;
+}
+
+.calendly-overlay-widget-button-icon {
+  width: 1vw;
+  height: 1vw;
+  color: white;
+  transition: transform 0.5s ease;
+}
+
+.calendly-overlay-widget-button:hover .calendly-overlay-widget-button-icon {
+  transform: rotate(90deg);
+}
+
+.calendly-loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #1a1a1a;
+  border-radius: 25px;
+}
+
+.calendly-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Video styles */
+.services-content-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: #0a0a0a;
+}
+
+.services-content-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 1 !important;
+  background-color: #000;
+}
+
+.video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: rgba(10, 10, 10, 0.9);
+  z-index: 5;
+}
+
+.video-loader {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   15. MOBILE RESPONSIVE - CALENDLY + VIDEO
+   ============================================ */
+
+@media (max-width: 768px) {
+  
+  /* Calendly Mobile - NO SCROLL */
+  .calendly-overlay {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .calendly-overlay-widget {
+    width: calc(100% - 30px);
+    max-width: 400px; /* INCREASED */
+    height: calc(100vh - 120px); /* INCREASED - almost full screen */
+    max-height: none; /* Remove max-height limit */
+    border-radius: 20px;
+  }
+
+  .calendly-inline-widget {
+    width: 100% !important;
+    min-width: unset !important;
+    height: 100% !important;
+  }
+
+  .calendly-overlay-widget-border {
+    border-radius: 20px;
+  }
+
+  .calendly-overlay-widget-scrollbar-hider {
+    width: 20px;
+  }
+
+  .calendly-overlay-widget-button {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+  }
+
+  .calendly-overlay-widget-button-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Button fix */
+  .contact-button-wrapper {
+    pointer-events: auto !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .contact-button-white {
+    pointer-events: auto !important;
+    touch-action: manipulation;
+  }
+
+  /* Video container */
+  .services-content-container {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 430px) {
+  .calendly-overlay {
+    padding: 12px;
+  }
+
+  .calendly-overlay-widget {
+    width: calc(100% - 24px);
+    max-width: 380px;
+    height: calc(100vh - 100px); /* Maximum usable space */
+    border-radius: 18px;
+  }
+
+  .calendly-overlay-widget-border {
+    border-radius: 18px;
+  }
+
+  .calendly-overlay-widget-button {
+    width: 46px;
+    height: 46px;
+  }
+
+  .calendly-overlay-widget-button-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .calendly-overlay-widget {
+    width: calc(100% - 20px);
+    max-width: 360px;
+    height: calc(100vh - 90px);
+  }
+}
+
+/* ============================================
+   14. FOOTER
+   ============================================ */
+
+.footer {
+  padding: 0 10vw;
+  padding-bottom: 5vh;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-content-left,
+.footer-content-right {
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  gap: 1.5vh;
+}
+
+.footer-content-left {
+  padding: 0 15vw 0 0;
+  flex-direction: column;
+}
+
+.footer-logo {
+  width: 4vw;
+}
+
+.footer-content-right {
+  justify-content: end;
+  gap: 5vw;
+}
+
+.footer-content-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+}
+
+.footer-column-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.footer-column-contents-item {
+  width: fit-content;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border-medium);
+}
+
+.footer-content-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1vw;
+}
+
+.footer-socials-icon {
+  width: 1.5vw;
+  height: 1.5vw;
+  color: var(--color-grey);
+}
+
+/* ============================================
+   15. MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* Visibility */
+  .hide-on-desktop {
+    display: flex;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  /* Cursor - Hide on mobile */
+  .hover-cursor {
+    display: none;
+  }
+
+  /* Section */
+  section {
+    width: 100%;
+    height: 200vw;
+    padding: 0 5vw;
+  }
+
+  /* Typography */
+  .headline {
+    font-size: 11.5vw;
+  }
+
+  .subheadline {
+    font-size: 7.5vw;
+  }
+
+  .small-subheadline {
+    font-size: 5vw;
+  }
+
+  .big-description {
+    width: 100%;
+    font-size: 3.5vw;
+  }
+
+  .description {
+    font-size: 3.25vw;
+  }
+
+  .small-description {
+    font-size: 3.25vw;
+  }
+
+  /* Buttons */
+  .button {
+    height: 10vw;
+    padding: 0 5vw;
+    padding-right: 2.5vw;
+    gap: 2.5vw;
+  }
+
+  .button-circle {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .button-icon {
+    height: 2.5vw;
+    width: 2.5vw;
+  }
+
+  .button:hover .button-icon {
+    rotate: 0;
+  }
+
+  .button:hover .button-icon-180 {
+    rotate: 0;
+  }
+
+  .button:hover span:nth-child(1) {
+    transform: translateY(0%);
+  }
+
+  .button:hover span:nth-child(2) {
+    transform: translateY(0%);
+  }
+
+  /* Textbox */
+  .textbox {
+    gap: 2.5vw;
+  }
+
+  .subheadline-box {
+    padding: 1.5vw 2.5vw;
+    gap: 1.5vw;
+  }
+
+  .subheadline-box-icon {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  /* Contact Button */
+  .contact-button-wrapper {
+    width: 50vw;
+  }
+
+  .contact-button-white {
+    height: 10vw;
+    border-radius: var(--radius);
+    padding-left: 5vw;
+  }
+
+  .contact-button-container-white {
+    --spread: 1.25vw;
+    --size: 4vw;
+    width: 9vw;
+  }
+
+  /* Carousel */
+  .carousel-button {
+    width: 12vw;
+    height: 12vw;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .carousel-button-icon {
+    width: 4vw;
+    height: 4vw;
+  }
+
+  /* Footer - Mobile */
+  .footer {
+    padding: 0 5vw;
+    padding-bottom: 5vh;
+    gap: 5vw;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 7.5vw;
+  }
+
+  .footer-content-left,
+  .footer-content-right {
+    width: 100%;
+  }
+
+  .footer-content-left {
+    padding: 0;
+    gap: 3vw;
+  }
+
+  .footer-logo {
+    width: 12vw;
+  }
+
+  .footer-content-right {
+    justify-content: flex-start;
+    gap: 10vw;
+  }
+
+  .footer-content-right-column {
+    gap: 3vw;
+  }
+
+  .footer-column-contents {
+    gap: 2vw;
+  }
+
+  .footer-content-bottom {
+    flex-direction: column;
+    gap: 5vw;
+    align-items: flex-start;
+  }
+
+  .footer-socials {
+    gap: 5vw;
+  }
+
+  .footer-socials-icon {
+    width: 5vw;
+    height: 5vw;
+  }
+}

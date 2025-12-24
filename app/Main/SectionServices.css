@@ -1,0 +1,372 @@
+/* ============================================
+   SERVICES SECTION STYLES
+   ============================================ */
+
+.services {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    contain: layout style paint;
+}
+
+.services-content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.services-content-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #010101;
+}
+
+/* Gradient Overlays */
+.services-content-container-top,
+.services-content-container-bottom,
+.services-content-container-left,
+.services-content-container-right {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.services-content-container-top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5vw;
+    background: linear-gradient(to top, rgba(1, 1, 1, 0) 0%, #010101 100%);
+}
+
+.services-content-container-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5vw;
+    background: linear-gradient(to bottom, rgba(1, 1, 1, 0) 0%, #010101 100%);
+}
+
+.services-content-container-left {
+    top: 0;
+    left: 0;
+    width: 5vw;
+    height: 100%;
+    background: linear-gradient(to left, rgba(1, 1, 1, 0) 0%, #010101 100%);
+}
+
+.services-content-container-right {
+    top: 0;
+    right: 0;
+    width: 5vw;
+    height: 100%;
+    background: linear-gradient(to right, rgba(1, 1, 1, 0) 0%, #010101 100%);
+}
+
+.services-content-video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    z-index: 0;
+    transition: opacity 0.5s ease;
+    will-change: opacity;
+}
+
+/* Video Placeholder */
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 2;
+}
+
+.video-loader {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+.calendly-loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: #1a1a1a;
+}
+
+/* ============================================
+   SHOWREEL SECTION
+   ============================================ */
+
+.showreel {
+    height: fit-content;
+    padding: 0 10vw;
+}
+
+.showreel-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.showreel-content-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 2000px;
+}
+
+.showreel-content-videobox {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transform: rotateY(30deg) scale(0.6) rotateX(2.5deg) translateY(10vh);
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showreel-content-videobox-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #010101;
+    border-radius: 25px;
+}
+
+.showreel-content-videobox-trail {
+    width: 25vw;
+    aspect-ratio: 2 / 1;
+    position: absolute;
+    background: radial-gradient(100% 100% at right, rgba(255, 255, 255, 1), transparent 50%);
+    offset-path: border-box;
+    offset-anchor: 100% 50%;
+    animation: journey var(--speed, 12s) infinite linear;
+}
+
+@keyframes journey {
+    to {
+        offset-distance: 100%;
+    }
+}
+
+.showreel-content-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 25px;
+    padding: 0.1vw;
+}
+
+.showreel-video-playbutton {
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #010101;
+    transition: background-color 0.25s ease, width 0.25s ease, height 0.25s ease;
+}
+
+.showreel-video-playbutton:hover {
+    background-color: white;
+    width: 6vw;
+    height: 6vw;
+}
+
+.showreel-video-playbutton-icon {
+    width: 1.25vw;
+    height: 1.25vw;
+}
+
+.showreel-content-row {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    gap: 2.5vw;
+}
+
+.showreel-content-row-item {
+    width: 18.125vw;
+    height: 18.125vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    gap: 1vh;
+    z-index: 1;
+    position: relative;
+    box-shadow: inset 0 0 0 calc(1px + 0px) rgba(255, 255, 255, 0.075), inset 0 0 5vw rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.025);
+    background-image: radial-gradient(140% 107.13% at 50% 10%, transparent 40%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.1) 100%);
+    overflow: hidden;
+}
+
+.showreel-content-row-item-grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 19vw;
+    height: 19vw;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 4vw 4vw;
+    background-position: center;
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, #010101 10%, #010101 90%, transparent),
+        linear-gradient(to bottom, transparent, #010101 10%, #010101 90%, transparent);
+    -webkit-mask-composite: destination-in;
+    mask-image: linear-gradient(to right, transparent, #010101 10%, #010101 90%, transparent),
+        linear-gradient(to bottom, transparent, #010101 10%, #010101 90%, transparent);
+    mask-composite: intersect;
+}
+
+.showreel-content-row-item-image {
+    width: auto;
+    height: 7.5vw;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    /* Services */
+    .services-content {
+        gap: 5vw;
+    }
+
+    .services-content-container-top,
+    .services-content-container-bottom {
+        height: 2.5vw;
+    }
+
+    .services-content-container-left,
+    .services-content-container-right {
+        width: 2.5vw;
+    }
+
+    .services-content-video {
+        width: 150%;
+        margin-left: -25%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    /* Disable video on reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        .services-content-video {
+            display: none;
+        }
+
+        .video-placeholder::after {
+            content: "Video disabled for performance";
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Showreel */
+    .showreel {
+        padding: 0 5vw;
+    }
+
+    .showreel-content {
+        gap: 2.5vw;
+    }
+
+    .showreel-content-container {
+        height: 150vw;
+        border-radius: 15px;
+    }
+
+    .showreel-content-videobox {
+        transform: rotateY(30deg) scale(0.6) rotateX(2.5deg) translateY(25vw);
+        border-radius: 15px;
+    }
+
+    .showreel-content-videobox-background {
+        border-radius: 15px;
+    }
+
+    .showreel-content-video {
+        border-radius: 15px;
+    }
+
+    .showreel-video-playbutton {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .showreel-video-playbutton:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .showreel-video-playbutton-icon {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .showreel-content-row {
+        gap: 2.5vw;
+    }
+
+    .showreel-content-row-item {
+        width: 20.625vw;
+        height: 20.625vw;
+        border-radius: 10px;
+    }
+
+    .showreel-content-row-item-grid {
+        width: 20.625vw;
+        height: 20.625vw;
+    }
+
+    .showreel-content-row-item-image {
+        height: 7.5vw;
+    }
+}

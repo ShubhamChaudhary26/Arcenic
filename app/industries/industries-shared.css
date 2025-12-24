@@ -1,0 +1,810 @@
+/* ============================================
+   INDUSTRIES PAGE STYLES
+   Separate from Services with unique classes
+   ============================================ */
+
+/* CRITICAL: Override global section styles */
+.industry-page {
+    width: 100%;
+    height: auto !important;
+    min-height: 100vh;
+    overflow: visible !important;
+    background-color: #010101;
+    padding: 20vh 0 10vh 0 !important;
+}
+.split-word {
+    display: inline-block;
+    white-space: nowrap; /* Words don't break */
+    /* margin-right: 0.25em; */
+}
+
+.split-char {
+    display: inline-block;
+}
+.industry-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15vh;
+    overflow: visible;
+}
+
+/* ====================================
+   HERO SECTION - INDUSTRY
+   ==================================== */
+
+.industry-hero {
+    position: relative;
+    padding: 0 10vw;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    overflow: visible;
+}
+
+.industry-hero-content {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.industry-hero-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.75vw;
+    width: fit-content;
+    padding: 0.75vh 1vw;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.industry-hero-badge-icon {
+    width: 1vw;
+    height: 1vw;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.industry-hero-title {
+    margin-top: 2vh;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+}
+
+.industry-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    margin-top: 2vh;
+}
+
+.industry-hero-stats {
+    display: flex;
+    gap: 2.5vw;
+}
+
+.industry-hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.industry-hero-visual {
+    width: 45%;
+    height: 52vh;
+    position: relative;
+    border-radius: 0 !important; /* ✅ REMOVED border-radius */
+    overflow: hidden;
+    border: none !important; /* ✅ REMOVED border */
+}
+
+.industry-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.industry-hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(1, 1, 1, 0.3) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* ====================================
+   SECTION HEADERS - INDUSTRY
+   ==================================== */
+
+.industry-section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    align-items: center;
+}
+
+/* ====================================
+   CHALLENGES SECTION (2-COLUMN)
+   ==================================== */
+
+.industry-challenges {
+    padding: 0 10vw;
+}
+
+.industry-challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5vw;
+}
+
+.industry-challenge-card {
+    padding: 3.5vw 2.5vw;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    transition: all 0.3s ease;
+}
+
+.industry-challenge-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+}
+
+.industry-challenge-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.industry-challenge-impact {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    padding: 0.6vh 0.85vw;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: fit-content;
+    margin-top: 1vh;
+}
+
+.industry-challenge-impact svg {
+    width: 0.75vw;
+    height: 0.75vw;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ====================================
+   SOLUTIONS SECTION (3-COLUMN)
+   ==================================== */
+
+.industry-solutions {
+    padding: 0 10vw;
+}
+
+.industry-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
+
+.industry-solution-card {
+    padding: 3vw 2vw;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    transition: all 0.3s ease;
+}
+
+.industry-solution-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+}
+
+.industry-solution-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.industry-solution-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+    margin-top: 1vh;
+}
+
+.industry-solution-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    padding: 0.5vh 0.75vw;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.industry-solution-tag svg {
+    width: 0.75vw;
+    height: 0.75vw;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ====================================
+   TECH STACK - INDUSTRY
+   ==================================== */
+
+.industry-tech {
+    padding: 0 10vw;
+}
+
+.industry-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2vw;
+}
+
+.industry-tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    padding: 2vw 1vw;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.industry-tech-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.industry-tech-logo {
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.industry-tech-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* filter: grayscale(100%) brightness(0.8); */
+    transition: filter 0.3s ease;
+}
+
+.industry-tech-item:hover .industry-tech-logo img {
+    filter: grayscale(0%) brightness(1);
+}
+
+/* ====================================
+   CASE STUDIES - INDUSTRY
+   ==================================== */
+
+.industry-projects {
+    padding: 0 10vw;
+}
+
+.industry-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5vw;
+}
+
+.industry-project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.5vw;
+    overflow: hidden;
+}
+
+.industry-project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.industry-project-image {
+    position: relative;
+    width: 100%;
+    height: 26vh;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.industry-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.industry-project-card:hover .industry-project-image img {
+    transform: scale(1.06);
+}
+
+.industry-project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(1, 1, 1, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.industry-project-card:hover .industry-project-overlay {
+    opacity: 1;
+}
+
+.industry-project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+.industry-project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6vw;
+    margin-top: 1vh;
+}
+
+.industry-project-tag {
+    padding: 0.6vh 0.9vw;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    font-size: 0.75vw;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.industry-projects-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+/* ====================================
+   FAQ SECTION - INDUSTRY
+   ==================================== */
+
+.industry-faq {
+    padding: 0 10vw;
+}
+
+.industry-faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.industry-faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.industry-faq-item:last-child {
+    border-bottom: none;
+}
+
+.industry-faq-trigger {
+    width: 100%;
+    padding: 3vh 0;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.industry-faq-trigger:hover {
+    padding-left: 1vw;
+}
+
+.industry-faq-number {
+    font-size: 0.9vw;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    font-family: "SF PRO DISPLAY 600", sans-serif;
+}
+
+.industry-faq-question {
+    flex: 1;
+}
+
+.industry-faq-icon {
+    color: rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.industry-faq-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.industry-faq-content-expanded {
+    height: auto;
+}
+
+.industry-faq-inner {
+    padding: 0 0 3vh 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.industry-faq-content-expanded .industry-faq-inner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.industry-faq-item-expanded {
+    margin: 0 -2vw;
+    padding: 0 2vw;
+    border-radius: 15px;
+}
+
+.industry-faq-item-expanded .industry-faq-trigger {
+    padding-left: 1vw;
+}
+
+.industry-faq-item-expanded .industry-faq-number {
+    color: white;
+}
+
+.industry-faq-item-expanded .industry-faq-icon {
+    transform: rotate(180deg);
+}
+
+/* ====================================
+   CTA SECTION - INDUSTRY
+   ==================================== */
+
+.industry-cta {
+    margin: 0 10vw;
+    padding: 10vh 5vw;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+    pointer-events: none;
+}
+
+.industry-cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3vh;
+    position: relative;
+    z-index: 1;
+}
+
+.industry-cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    margin-top: 2vh;
+}
+
+.industry-cta-button-primary {
+    background: white;
+    color: #010101;
+}
+
+.industry-cta-button-primary .button-content span {
+    color: #010101;
+}
+
+.industry-cta-button-primary .button-circle {
+    background: #010101;
+    color: white;
+}
+
+.industry-cta-info {
+    display: flex;
+    gap: 2vw;
+}
+
+.industry-cta-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75vw;
+    padding: 1vh 1.5vw;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+}
+
+.industry-cta-info-item svg {
+    width: 1vw;
+    height: 1vw;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ====================================
+   MOBILE RESPONSIVE
+   ==================================== */
+
+@media (max-width: 768px) {
+    .industry-page {
+        padding: 15vh 0 5vh 0 !important;
+    }
+
+    .industry-content {
+        gap: 10vh;
+    }
+
+    /* Hero Mobile */
+    .industry-hero {
+        flex-direction: column;
+        padding: 0 5vw;
+        gap: 4vh;
+    }
+
+    .industry-hero-content {
+        width: 100%;
+    }
+
+    .industry-hero-badge {
+        padding: 1.5vh 3vw;
+        gap: 2vw;
+    }
+
+    .industry-hero-badge-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .industry-hero-title {
+        font-size: 8vw;
+        line-height: 1.1;
+    }
+
+    .industry-hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3vh;
+    }
+
+    .industry-hero-stats {
+        gap: 4vw;
+        width: 100%;
+    }
+
+    .industry-hero-stat {
+        flex: 1;
+        padding: 1.75vh 3vw;
+    }
+
+    .industry-hero-visual {
+        width: 100%;
+        height: 38vh;
+    }
+
+    /* Challenges Mobile */
+    .industry-challenges {
+        padding: 0 5vw;
+    }
+
+    .industry-challenges-grid {
+        grid-template-columns: 1fr;
+        gap: 3vh;
+    }
+
+    .industry-challenge-card {
+        padding: 5vw;
+    }
+
+    .industry-challenge-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .industry-challenge-impact {
+        padding: 1vh 3vw;
+        gap: 1.5vw;
+    }
+
+    .industry-challenge-impact svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Solutions Mobile */
+    .industry-solutions {
+        padding: 0 5vw;
+    }
+
+    .industry-solutions-grid {
+        grid-template-columns: 1fr;
+        gap: 3vh;
+    }
+
+    .industry-solution-card {
+        padding: 5vw;
+    }
+
+    .industry-solution-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .industry-solution-tag {
+        padding: 1vh 3vw;
+        gap: 1.5vw;
+    }
+
+    .industry-solution-tag svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Tech Stack Mobile */
+    .industry-tech {
+        padding: 0 5vw;
+    }
+
+    .industry-tech-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3vw;
+    }
+
+    .industry-tech-item {
+        padding: 4vw 2vw;
+    }
+
+    .industry-tech-logo {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    /* Projects Mobile */
+    .industry-projects {
+        padding: 0 5vw;
+    }
+
+    .industry-projects-grid {
+        grid-template-columns: 1fr;
+        gap: 4vh;
+    }
+
+    .industry-project-card {
+        padding: 4vw;
+    }
+
+    .industry-project-image {
+        height: 30vh;
+    }
+
+    .industry-project-tag {
+        padding: 1vh 2.5vw;
+        font-size: 2.5vw;
+    }
+
+    /* FAQ Mobile */
+    .industry-faq {
+        padding: 0 5vw;
+    }
+
+    .industry-faq-trigger {
+        padding: 2.5vh 0;
+        gap: 4vw;
+    }
+
+    .industry-faq-trigger:hover {
+        padding-left: 0;
+    }
+
+    .industry-faq-number {
+        font-size: 3vw;
+    }
+
+    .industry-faq-inner {
+        padding: 0 0 2.5vh 0;
+    }
+
+    .industry-faq-item-expanded {
+        margin: 0 -3vw;
+        padding: 0 3vw;
+    }
+
+    /* CTA Mobile */
+    .industry-cta {
+        margin: 0 5vw;
+        padding: 6vh 5vw;
+        border-radius: 20px;
+    }
+
+    .industry-cta-actions {
+        gap: 3vh;
+    }
+
+    .industry-cta-info {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .industry-cta-info-item {
+        padding: 2vh 4vw;
+        gap: 2vw;
+    }
+
+    .industry-cta-info-item svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .industry-challenges-grid {
+        gap: 2.5vh;
+    }
+
+    .industry-tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .industry-cta {
+        padding: 5vh 4vw;
+    }
+}
+
+

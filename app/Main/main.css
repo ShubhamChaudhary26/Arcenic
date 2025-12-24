@@ -1,0 +1,82 @@
+/* ============================================
+   MAIN.CSS - Base Layout Only
+   Component-specific CSS is in their own files
+   ============================================ */
+
+/* ============================================
+   1. LOADING SCREENS
+   ============================================ */
+
+.initial-loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: #010101;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.initial-loading-screen.fade-out {
+    animation: fade-out 0.25s ease-in-out forwards 0.25s;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* ============================================
+   2. PADDING UTILITIES
+   ============================================ */
+
+.border-padding {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101;
+}
+
+.section-border {
+    width: 80vw;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.normal-padding {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #010101;
+}
+
+/* ============================================
+   3. MOBILE OVERRIDES
+   ============================================ */
+
+@media (max-width: 768px) {
+    .border-padding {
+        height: 50vw;
+    }
+
+    .section-border {
+        width: 90vw;
+    }
+
+    .normal-padding {
+        height: 25vw;
+    }
+}

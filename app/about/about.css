@@ -1,0 +1,618 @@
+/* ============================================
+   ABOUT PAGE - FINAL VERSION
+   ============================================ */
+
+.about {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    overflow: visible;
+}
+
+.about-content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    padding: 0 3vw;
+}
+
+/* ====================================
+   HERO SECTION
+   ==================================== */
+
+.about-content-textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.about-content-top {
+    display: flex;
+    flex-direction: column;
+    gap: 8.25vh;
+}
+
+.about-main-title {
+    word-break: keep-all;
+    overflow-wrap: normal;
+    hyphens: none;
+    white-space: normal;
+}
+
+/* ====================================
+   DIVIDERS
+   ==================================== */
+
+.about-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ====================================
+   SECTION HEADERS
+   ==================================== */
+
+.about-section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+/* ====================================
+   STORY SECTION
+   ==================================== */
+
+.about-story {
+    max-width: 850px;
+}
+
+.about-story-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.about-story-title {
+    margin-bottom: 2vh;
+}
+
+.about-story-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+.about-story-text p {
+    line-height: 1.8;
+    font-size: 1.15vw;
+}
+
+/* ====================================
+   STATS SECTION
+   ==================================== */
+
+.about-stats-wrapper {
+    position: relative;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 1px;
+}
+
+.about-stats-item {
+    background-color: #010101;
+    padding: 4vw 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.about-stats-item:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.about-stats-number {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    margin-bottom: 1vh;
+    font-family: var(--font-heading);
+    background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.6) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-stats-label {
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    font-family: var(--font-body);
+}
+
+.about-stats-icon-bg {
+    position: absolute;
+    top: 1.5vw;
+    right: 1.5vw;
+    color: rgba(255, 255, 255, 0.1);
+    opacity: 0.5;
+}
+
+/* ====================================
+   WHY CHOOSE US
+   ==================================== */
+
+.about-whyus {
+    display: block;
+}
+
+.about-whyus-description {
+    display: inline-block;
+    margin-right: 2.5vw;
+}
+
+.about-whyus-subheadline {
+    display: inline;
+}
+
+/* ====================================
+   WHAT GUIDES OUR WORK
+   ==================================== */
+
+.about-guides {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.about-guides-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+}
+
+.about-guides-item {
+    padding: 3vw 2vw;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.about-guides-item:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+}
+
+.about-guides-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+}
+
+.about-guides-item:hover .about-guides-icon {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ====================================
+   SERVICES - Sticky Cards
+   ==================================== */
+
+.about-sticky-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-sticky-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5vw;
+    width: 90%;
+    max-width: 1400px;
+    position: sticky;
+    top: 12.5vh;
+    min-height: 85vh;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.075),
+        inset 0 0 5vw rgba(255, 255, 255, 0.05);
+    background-color: #070707;
+    color: white;
+    border-radius: 25px;
+    margin-bottom: 2.5vh;
+    overflow: hidden;
+    padding: 4vw;
+    will-change: transform, filter;
+}
+
+.about-sticky-item-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-sticky-item-left-textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+.about-service-badge {
+    width: fit-content;
+    padding: 0.75vh 1vw;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.about-sticky-headline {
+    font-size: clamp(2rem, 4.5vw, 4rem);
+    line-height: 1.1;
+}
+
+.about-sticky-item-left-textbox-description {
+    line-height: 1.7;
+    font-size: 1.15vw;
+}
+
+.about-service-button {
+    margin-top: 2vh;
+    width: fit-content;
+}
+
+.about-sticky-item-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.about-sticky-item-right-imagebox {
+    width: 100%;
+    height: 40vh;
+    min-height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.about-sticky-item-right-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ====================================
+   CTA SECTION
+   ==================================== */
+
+.about-cta {
+    margin-top: 10vh;
+    padding: 10vh 5vw;
+    border-radius: 30px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-cta::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+    pointer-events: none;
+}
+
+.about-cta-text {
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    position: relative;
+    z-index: 1;
+}
+
+.about-cta-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    color: white;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+}
+
+.about-cta-link:hover {
+    gap: 1vw;
+}
+
+/* ====================================
+   TABLET RESPONSIVE (1024px)
+   ==================================== */
+
+@media (max-width: 1024px) {
+    .about-content {
+        gap: 7vh;
+    }
+
+    .about-story-text p {
+        font-size: 1rem;
+    }
+
+    .about-guides-grid {
+        grid-template-columns: 1fr;
+        gap: 3vw;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-stats-label {
+        font-size: 0.9rem;
+    }
+
+    .about-sticky-item {
+        width: 95%;
+        padding: 3vw;
+        gap: 3vw;
+    }
+
+    .about-sticky-headline {
+        font-size: clamp(1.75rem, 4vw, 3rem);
+    }
+
+    .about-sticky-item-left-textbox-description {
+        font-size: 1rem;
+    }
+
+    .about-sticky-item-right-imagebox {
+        height: 30vh;
+    }
+
+    .about-cta-actions {
+        flex-direction: column;
+        gap: 3vh;
+    }
+}
+
+/* ====================================
+   MOBILE RESPONSIVE (768px)
+   ==================================== */
+
+@media (max-width: 768px) {
+    .about {
+        padding-top: 15vh;
+        padding-bottom: 5vh;
+    }
+
+    .about-content {
+        gap: 5vh;
+    }
+
+    .about-content-top {
+        gap: 5vh;
+    }
+
+    .about-main-title {
+        font-size: 8vw;
+        line-height: 1.1;
+    }
+
+    .about-story-content {
+        max-width: 100%;
+    }
+
+    .about-story-text p {
+        font-size: 3.5vw;
+        line-height: 1.7;
+    }
+
+    .about-guides-grid {
+        grid-template-columns: 1fr;
+        gap: 3vh;
+    }
+
+    .about-guides-item {
+        padding: 6vw 5vw;
+        border-radius: 15px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 1px;
+    }
+
+    .about-stats-item {
+        padding: 8vw 4vw;
+    }
+
+    .about-stats-number {
+        font-size: 3rem;
+    }
+
+    .about-stats-label {
+        font-size: 0.85rem;
+    }
+
+    .about-stats-icon-bg {
+        top: 3vw;
+        right: 3vw;
+    }
+
+    .about-sticky-container {
+        gap: 2vh;
+    }
+
+    .about-sticky-item {
+        position: relative;
+        top: 0;
+        width: 100%;
+        min-height: auto;
+        flex-direction: column;
+        gap: 3vh;
+        padding: 6vw;
+        margin-bottom: 2vh;
+    }
+
+    .about-sticky-item-left {
+        width: 100%;
+        gap: 3vh;
+    }
+
+    .about-sticky-item-left-textbox {
+        gap: 2vh;
+    }
+
+    .about-sticky-item-left-textbox-description {
+        font-size: 3.25vw;
+        line-height: 1.6;
+    }
+
+    .about-sticky-headline {
+        font-size: 7vw;
+    }
+
+    .about-service-button {
+        margin-top: 1vh;
+    }
+
+    .about-sticky-item-right {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-sticky-item-right-imagebox {
+        height: 200px;
+        min-height: 200px;
+    }
+
+    .about-cta {
+        margin-top: 5vh;
+        padding: 6vh 5vw;
+        border-radius: 20px;
+        gap: 3vh;
+    }
+
+    .about-cta-actions {
+        flex-direction: column;
+        gap: 2vh;
+        width: 100%;
+    }
+
+    .about-section-header {
+        margin-bottom: 3vh;
+    }
+}
+
+/* ====================================
+   SMALL MOBILE (480px)
+   ==================================== */
+
+@media (max-width: 480px) {
+    .about {
+        padding-top: 10vh;
+    }
+
+    .headline {
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+    }
+
+    .description {
+        font-size: clamp(0.875rem, 3.5vw, 1rem);
+    }
+
+    .subheadline {
+        font-size: clamp(1.125rem, 6vw, 1.5rem);
+    }
+
+    .about-stats-item {
+        padding: 10vw 5vw;
+    }
+
+    .about-sticky-item {
+        padding: 5vw;
+        border-radius: 15px;
+    }
+
+    .about-sticky-headline {
+        font-size: 6.5vw;
+    }
+
+    .about-sticky-item-right-imagebox {
+        height: 150px;
+        min-height: 150px;
+        border-radius: 8px;
+    }
+
+    .about-cta {
+        padding: 5vh 4vw;
+        border-radius: 15px;
+    }
+}
+
+/* ====================================
+   ACCESSIBILITY
+   ==================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .about-divider {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .about-sticky-item,
+    .about-guides-item {
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+    }
+}

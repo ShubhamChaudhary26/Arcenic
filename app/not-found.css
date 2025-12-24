@@ -1,0 +1,456 @@
+/* ===========================
+   404 NOT FOUND PAGE
+   =========================== */
+
+.not-found-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    background: #010101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+/* Background Particles */
+.particles-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+/* Main Content */
+.not-found-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+/* 404 Error Code */
+.error-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    perspective: 500px;
+}
+
+.digit {
+    font-size: clamp(8rem, 20vw, 16rem);
+    font-family: "SF PRO TEXT", "Causten Regular", -apple-system, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transform-style: preserve-3d;
+    line-height: 1;
+}
+
+.digit-middle {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: clamp(6rem, 16vw, 12rem);
+}
+
+/* Glitch Text Effect */
+.glitch-text {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-family: "SF PRO TEXT", "Causten Regular", sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    opacity: 0;
+    letter-spacing: 0.05em;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch-text::before {
+    animation: glitch-1 2s infinite;
+    color: rgba(255, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.glitch-text::after {
+    animation: glitch-2 2s infinite;
+    color: rgba(0, 255, 255, 0.7);
+    z-index: -2;
+}
+
+@keyframes glitch-1 {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(2px, -2px);
+    }
+}
+
+@keyframes glitch-2 {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(2px, -2px);
+    }
+
+    40% {
+        transform: translate(2px, 2px);
+    }
+
+    60% {
+        transform: translate(-2px, -2px);
+    }
+
+    80% {
+        transform: translate(-2px, 2px);
+    }
+}
+
+/* Description */
+.error-description {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    font-family: "Causten Regular", "SF PRO TEXT", sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    opacity: 0;
+}
+
+/* Back to Home Button */
+.back-home-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    padding-right: 1rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    color: #ffffff;
+    font-family: "SF PRO TEXT", "Causten Regular", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.back-home-button:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+.back-home-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.back-home-button:hover::before {
+    left: 100%;
+}
+
+.button-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+}
+
+.button-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.back-home-button:hover .button-circle {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+}
+
+.button-icon {
+    stroke: #ffffff;
+}
+
+/* Scan Line Effect */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.5),
+            transparent);
+    animation: scan 4s linear infinite;
+    z-index: 3;
+    pointer-events: none;
+}
+
+@keyframes scan {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 768px) {
+    .error-code {
+        gap: 1rem;
+    }
+
+    .digit {
+        font-size: clamp(6rem, 18vw, 10rem);
+    }
+
+    .digit-middle {
+        font-size: clamp(4rem, 14vw, 8rem);
+    }
+
+    .glitch-text {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    .error-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .back-home-button {
+        padding: 0.875rem 1.5rem;
+        padding-right: 0.875rem;
+        font-size: 0.9rem;
+    }
+
+    .button-circle {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .not-found-content {
+        padding: 1rem;
+    }
+
+    .error-code {
+        gap: 0.5rem;
+    }
+
+    .error-description br {
+        display: none;
+    }
+}
+/* ✅ SEO: Helpful Links Section */
+.helpful-links {
+  margin-top: 4rem;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.helpful-links-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.helpful-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.helpful-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.helpful-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.helpful-link:hover {
+  transform: translateY(-4px);
+  border-color: rgba(102, 126, 234, 0.5);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+}
+
+.helpful-link:hover::before {
+  opacity: 1;
+}
+
+.helpful-link:focus {
+  outline: 2px solid rgba(102, 126, 234, 0.8);
+  outline-offset: 2px;
+}
+
+.helpful-link svg {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.helpful-link:hover svg {
+  transform: scale(1.1);
+}
+
+.helpful-link span {
+  position: relative;
+  z-index: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .helpful-links {
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+
+  .helpful-links-title {
+    font-size: 1rem;
+  }
+
+  .helpful-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .helpful-link {
+    padding: 1rem 0.75rem;
+  }
+
+  .helpful-link span {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .helpful-links-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Prevent layout shift during particle load */
+.particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  /* Smooth fade-in */
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Ensure content loads even if particles don't */
+.not-found-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Rest of your existing CSS... */

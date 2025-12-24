@@ -1,0 +1,672 @@
+/* components/LaptopModal/LaptopModal.css */
+
+/* ============ MODAL ============ */
+.laptop-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.laptop-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  opacity: 0;
+}
+
+/* ============ WRAPPER ============ */
+.laptop-modal-wrapper {
+  position: relative;
+  background: linear-gradient(180deg, #141416 0%, #0a0a0b 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  width: 100%;
+  max-width: 1400px;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.8);
+}
+
+/* ============ CLOSE BUTTON ============ */
+.laptop-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.laptop-modal-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+/* ============ CONTENT ============ */
+.laptop-modal-content {
+  flex: 1;
+  padding: 3rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.laptop-modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.laptop-modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.laptop-modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+/* ============ DEVICE SECTION ============ */
+.laptop-modal-device-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* ============ GLOW EFFECT ============ */
+.laptop-modal-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(88, 86, 214, 0.15) 0%,
+    rgba(88, 86, 214, 0.05) 40%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============ MACBOOK LAPTOP ============ */
+.laptop-modal-macbook {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ============ SCREEN CONTAINER (LID) ============ */
+.laptop-modal-screen-container {
+  width: 100%;
+  background: linear-gradient(180deg, #2a2a2e 0%, #1a1a1d 100%);
+  border-radius: 20px 20px 0 0;
+  padding: 8px;
+  box-shadow: 
+    0 -4px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* ============ TOP BEZEL WITH CAMERA ============ */
+.laptop-modal-top-bezel {
+  width: 100%;
+  height: 28px;
+  background: #0c0c0d;
+  border-radius: 14px 14px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laptop-modal-camera-dot {
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle at 30% 30%, #1a1a22 0%, #08080a 100%);
+  border-radius: 50%;
+  box-shadow: 
+    inset 0 1px 2px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/* ============ MAIN SCREEN ============ */
+.laptop-modal-screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 8.5;
+  background: #000;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+
+.laptop-modal-screenshot {
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.laptop-modal-screenshot.active {
+  opacity: 1;
+}
+
+/* Screen Glare */
+.laptop-modal-screen-glare {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ============ BASE (KEYBOARD PART) ============ */
+.laptop-modal-base {
+  width: 104%;
+  max-width: 1150px;
+}
+
+.laptop-modal-base-top {
+  height: 14px;
+  background: linear-gradient(180deg, #18181a 0%, #111112 100%);
+  border-radius: 0 0 4px 4px;
+  margin: 0 auto;
+  width: 96%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.laptop-modal-notch {
+  width: 180px;
+  height: 5px;
+  background: linear-gradient(180deg, #0a0a0b 0%, #151517 100%);
+  border-radius: 0 0 8px 8px;
+}
+
+.laptop-modal-base-bottom {
+  height: 10px;
+  background: linear-gradient(180deg, #1e1e20 0%, #141415 50%, #0d0d0e 100%);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* ============ NAVIGATION ============ */
+.laptop-modal-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.laptop-modal-nav-btn {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.laptop-modal-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.laptop-modal-dots {
+  display: flex;
+  gap: 12px;
+}
+
+.laptop-modal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.laptop-modal-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.15);
+}
+
+.laptop-modal-dot.active {
+  background: #fff;
+  transform: scale(1.35);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* ============ INFO SECTION ============ */
+.laptop-modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-width: 950px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.laptop-modal-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Badge */
+.laptop-modal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, rgba(88, 86, 214, 0.2) 0%, rgba(88, 86, 214, 0.08) 100%);
+  border: 1px solid rgba(88, 86, 214, 0.3);
+  border-radius: 30px;
+}
+
+.laptop-modal-badge svg {
+  color: #8b89e6;
+}
+
+.laptop-modal-badge span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* Title */
+.laptop-modal-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* Description */
+.laptop-modal-desc {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 650px;
+  margin: 0;
+}
+
+/* ============ TAGS ============ */
+.laptop-modal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.laptop-modal-tag {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  transition: all 0.25s ease;
+}
+
+.laptop-modal-tag:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* ============ FEATURES ============ */
+.laptop-modal-features {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+}
+
+.laptop-modal-features h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.laptop-modal-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.laptop-modal-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.laptop-modal-feature-dot {
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #5856d6 0%, #7c7aff 100%);
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.laptop-modal-feature span {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+}
+
+/* ============ HIGHLIGHTS ============ */
+.laptop-modal-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.laptop-modal-highlight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  transition: all 0.25s ease;
+}
+
+.laptop-modal-highlight:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.laptop-modal-highlight svg {
+  color: #7c7aff;
+  flex-shrink: 0;
+}
+
+.laptop-modal-highlight > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.laptop-modal-highlight .label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.laptop-modal-highlight .value {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* ============ LINK BUTTON ============ */
+.laptop-modal-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #5856d6 0%, #6e6ce8 100%);
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.laptop-modal-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(88, 86, 214, 0.4);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1200px) {
+  .laptop-modal-content {
+    padding: 2.5rem;
+  }
+
+  .laptop-modal-macbook {
+    max-width: 95%;
+  }
+
+  .laptop-modal-title {
+    font-size: 2.5rem;
+  }
+
+  .laptop-modal-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .laptop-modal-wrapper {
+    max-height: 96vh;
+    border-radius: 20px;
+  }
+
+  .laptop-modal-content {
+    padding: 2rem;
+    gap: 2.5rem;
+  }
+
+  .laptop-modal-device-section {
+    padding: 1rem 0;
+  }
+
+  .laptop-modal-screen-container {
+    border-radius: 14px 14px 0 0;
+    padding: 6px;
+  }
+
+  .laptop-modal-top-bezel {
+    height: 22px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .laptop-modal-camera-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .laptop-modal-base-top {
+    height: 10px;
+  }
+
+  .laptop-modal-base-bottom {
+    height: 8px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .laptop-modal-title {
+    font-size: 2rem;
+  }
+
+  .laptop-modal-desc {
+    font-size: 1rem;
+  }
+
+  .laptop-modal-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .laptop-modal {
+    padding: 0.5rem;
+  }
+
+  .laptop-modal-wrapper {
+    border-radius: 16px;
+  }
+
+  .laptop-modal-content {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .laptop-modal-close {
+    top: 14px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .laptop-modal-screen-container {
+    border-radius: 10px 10px 0 0;
+    padding: 4px;
+  }
+
+  .laptop-modal-top-bezel {
+    height: 18px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .laptop-modal-camera-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .laptop-modal-base-top {
+    height: 8px;
+  }
+
+  .laptop-modal-notch {
+    width: 100px;
+    height: 4px;
+  }
+
+  .laptop-modal-base-bottom {
+    height: 6px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .laptop-modal-nav-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .laptop-modal-dots {
+    gap: 10px;
+  }
+
+  .laptop-modal-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .laptop-modal-title {
+    font-size: 1.75rem;
+  }
+
+  .laptop-modal-desc {
+    font-size: 0.95rem;
+  }
+
+  .laptop-modal-features {
+    padding: 1.5rem;
+  }
+
+  .laptop-modal-highlights {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .laptop-modal-highlight {
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .laptop-modal-link {
+    width: 100%;
+    padding: 16px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .laptop-modal-content {
+    padding: 1.25rem;
+  }
+
+  .laptop-modal-title {
+    font-size: 1.5rem;
+  }
+
+  .laptop-modal-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .laptop-modal-highlight {
+    flex-direction: row;
+  }
+
+  .laptop-modal-tags {
+    gap: 8px;
+  }
+
+  .laptop-modal-tag {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+}

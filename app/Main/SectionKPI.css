@@ -1,0 +1,400 @@
+/* ============================================
+   KPI SECTION STYLES
+   ============================================ */
+
+.kpi {
+    height: fit-content;
+    display: flex;
+    position: relative;
+    contain: layout style paint;
+}
+
+.kpi-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 5vh;
+    position: relative;
+}
+
+.kpi-content-row {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    perspective: 2000px;
+    justify-content: space-between;
+}
+
+.kpi-content-item {
+    width: 26vw;
+    height: 22vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+    background-color: rgba(255, 255, 255, 0.025);
+    box-shadow: inset 0 0 0 calc(1px + 0px) rgba(255, 255, 255, 0.075), inset 0 0 5vw rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    padding: 2vw;
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kpi-content-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.035);
+}
+
+.kpi-item-textbox {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.kpi-item-textbox-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.kpi-item-textbox-number {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -2vh;
+    z-index: 0;
+}
+
+.kpi-item-textbox-number-text {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(0deg, hsla(0, 0%, 100%, 0) 15%, #fff 80%);
+}
+
+.kpi-item-textbox-top-text {
+    position: relative;
+    z-index: 1;
+}
+
+.kpi-item-textbox-number-gradient {
+    width: 100%;
+    height: 7.5vw;
+    border-radius: 50%;
+    background-color: #010101;
+    filter: blur(20px);
+    opacity: 0.85;
+    position: absolute;
+    right: 0;
+    bottom: -6vw;
+    z-index: 1;
+}
+
+.kpi-item-button {
+    position: absolute;
+    z-index: 1;
+    bottom: 2vw;
+    left: 2vw;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.025);
+    box-shadow: inset 0 0 0 calc(1px + 0px) rgba(255, 255, 255, 0.075), inset 0 0 5vw rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+
+.kpi-item-button-icon {
+    width: 1vw;
+    height: 1vw;
+    color: white;
+}
+
+.kpi-item-grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 26vw;
+    height: 22vw;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 5.2vw 5.2vw;
+    background-position: center;
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, #010101 10%, #010101 90%, transparent),
+        linear-gradient(to bottom, transparent, #010101 10%, #010101 90%, transparent);
+    -webkit-mask-composite: destination-in;
+    mask-image: linear-gradient(to right, transparent, #010101 10%, #010101 90%, transparent),
+        linear-gradient(to bottom, transparent, #010101 10%, #010101 90%, transparent);
+    mask-composite: intersect;
+}
+
+.kpi-loading {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .kpi-content {
+        gap: 7.5vw;
+    }
+
+    .kpi-content-row {
+        flex-direction: column;
+        gap: 5vw;
+        perspective: none;
+    }
+
+    .kpi-content-item {
+        width: 100%;
+        height: 60vw;
+        padding: 6vw;
+        border-radius: 20px;
+        gap: 4vw;
+    }
+
+    .kpi-content-item:hover {
+        transform: none;
+    }
+
+    .kpi-item-textbox {
+        gap: 3vw;
+    }
+
+    .kpi-item-textbox-number {
+        margin-bottom: -3vw;
+    }
+
+    .kpi-item-textbox-number-gradient {
+        height: 15vw;
+        bottom: -10vw;
+    }
+
+    .kpi-item-button {
+        bottom: 6vw;
+        left: 6vw;
+        width: 12vw;
+        height: 12vw;
+    }
+
+    .kpi-item-button-icon {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .kpi-item-grid {
+        width: 100%;
+        height: 60vw;
+        background-size: 12vw 12vw;
+    }
+
+    .kpi-item-textbox-number-text {
+        font-size: 12vw;
+        line-height: 1;
+    }
+
+    .kpi-item-textbox-top-text {
+        font-size: 5vw;
+    }
+
+    .kpi-item-textbox .description {
+        font-size: 3.5vw;
+        line-height: 1.4;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .kpi-content {
+        gap: 10vw;
+    }
+
+    .kpi-content-item {
+        height: 70vw;
+        padding: 7vw;
+    }
+
+    .kpi-item-button {
+        width: 14vw;
+        height: 14vw;
+    }
+
+    .kpi-item-button-icon {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .kpi-item-grid {
+        height: 70vw;
+        background-size: 14vw 14vw;
+    }
+
+    .kpi-item-textbox-number-text {
+        font-size: 14vw;
+    }
+
+    .kpi-item-textbox-top-text {
+        font-size: 6vw;
+    }
+
+    .kpi-item-textbox .description {
+        font-size: 4vw;
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .kpi-content-row {
+        gap: 2vw;
+    }
+
+    .kpi-content-item {
+        width: 30vw;
+        height: 25vw;
+        padding: 2.5vw;
+    }
+
+    .kpi-item-textbox-number-gradient {
+        height: 8vw;
+        bottom: -6.5vw;
+    }
+
+    .kpi-item-button {
+        width: 4vw;
+        height: 4vw;
+        bottom: 2.5vw;
+        left: 2.5vw;
+    }
+
+    .kpi-item-button-icon {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+
+    .kpi-item-grid {
+        width: 30vw;
+        height: 25vw;
+        background-size: 6vw 6vw;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+    .kpi-content-item {
+        width: 28vw;
+        height: 24vw;
+    }
+
+    .kpi-item-grid {
+        width: 28vw;
+        height: 24vw;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .kpi-content-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3vw;
+    }
+
+    .kpi-content-item {
+        width: 48%;
+        height: 40vw;
+        padding: 4vw;
+    }
+
+    .kpi-content-item:nth-child(3) {
+        width: 100%;
+        height: 35vw;
+    }
+
+    .kpi-item-textbox-number-text {
+        font-size: 8vw;
+    }
+
+    .kpi-item-textbox-top-text {
+        font-size: 4vw;
+    }
+
+    .kpi-item-textbox .description {
+        font-size: 2.5vw;
+    }
+
+    .kpi-item-button {
+        width: 8vw;
+        height: 8vw;
+        bottom: 4vw;
+        left: 4vw;
+    }
+
+    .kpi-item-button-icon {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .kpi-item-grid {
+        background-size: 8vw 8vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .kpi-content-item {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .kpi-item-button {
+        touch-action: manipulation;
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kpi-content-item {
+        transition: none;
+    }
+
+    .kpi-content-item:hover {
+        transform: none;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .kpi-content-item {
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .kpi-item-grid {
+        opacity: 0.8;
+    }
+
+    .kpi-item-button {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+}

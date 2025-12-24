@@ -1,0 +1,310 @@
+/* ============================================
+   TESTIMONIALS SECTION STYLES
+   ============================================ */
+
+.testimonials {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    contain: layout style paint;
+}
+
+.testimonials-content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.testimonials-content-textbox {
+    padding: 0 10vw;
+}
+
+.testimonials-carousel {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    -webkit-overflow-scrolling: touch;
+}
+
+.testimonials-carousel-row {
+    display: flex;
+    gap: 1vw;
+    width: 100%;
+    will-change: transform;
+}
+
+.testimonials-item-padding {
+    flex: 0 0 9vw;
+    min-width: 0;
+}
+
+.testimonials-item {
+    flex: 0 0 24vw;
+    min-width: 0;
+    height: 24vw;
+    padding: 2.5vw;
+    border-radius: 25px;
+    box-shadow: inset 0 0 0 calc(1px + 0px) rgba(255, 255, 255, 0.075), inset 0 0 5vw rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.025);
+    background-image: radial-gradient(140% 107.13% at 50% 10%, transparent 40%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.1) 100%);
+    user-select: none;
+    transition: background-color 0.5s ease;
+    overflow: hidden;
+    position: relative;
+    will-change: transform;
+}
+
+.testimonials-item-grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 24vw;
+    height: 24vw;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 5.2vw 5.2vw;
+    background-position: center;
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, #010101 10%, #010101 90%, transparent),
+        linear-gradient(to bottom, transparent, #010101 10%, #010101 90%, transparent);
+    -webkit-mask-composite: destination-in;
+    mask-image: linear-gradient(to right, transparent, #010101 10%, #010101 90%, transparent),
+        linear-gradient(to bottom, transparent, #010101 10%, #010101 90%, transparent);
+    mask-composite: intersect;
+}
+
+.testimonials-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.testimonials-item-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonials-item-profile {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.testimonials-item-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials-item-center {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.testimonials-item-content-last {
+    text-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.testimonials-content-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 10vw;
+    gap: 2.5vw;
+}
+
+.testimonials-content-bottom-buttons {
+    display: flex;
+    gap: 0.5vw;
+}
+
+.testimonials-loading {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    margin: 0 10vw;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .testimonials-content {
+        gap: 7.5vw;
+    }
+
+    .testimonials-content-textbox {
+        padding: 0 5vw;
+    }
+
+    .testimonials-carousel-row {
+        gap: 4vw;
+    }
+
+    .testimonials-item-padding {
+        flex: 0 0 5vw;
+    }
+
+    .testimonials-item {
+        flex: 0 0 80vw;
+        height: 80vw;
+        padding: 6vw;
+        border-radius: 20px;
+    }
+
+    .testimonials-item-grid {
+        width: 80vw;
+        height: 80vw;
+        background-size: 13vw 13vw;
+    }
+
+    .testimonials-item:hover {
+        background-color: rgba(255, 255, 255, 0.025);
+    }
+
+    .testimonials-item-profile {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .testimonials-item-center {
+        gap: 2vw;
+    }
+
+    .testimonials-content-bottom {
+        padding: 0 5vw;
+        gap: 5vw;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .testimonials-content-bottom-buttons {
+        gap: 3vw;
+        justify-content: center;
+    }
+
+    .testimonials-loading {
+        margin: 0 5vw;
+        height: 30vh;
+    }
+
+    .testimonials-carousel {
+        touch-action: pan-x;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .testimonials-carousel-row {
+        touch-action: pan-x;
+    }
+
+    .testimonials-item {
+        touch-action: pan-x;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials-content {
+        gap: 10vw;
+    }
+
+    .testimonials-item {
+        flex: 0 0 85vw;
+        height: 85vw;
+        padding: 7vw;
+        border-radius: 15px;
+    }
+
+    .testimonials-item-grid {
+        width: 85vw;
+        height: 85vw;
+        background-size: 15vw 15vw;
+    }
+
+    .testimonials-item-profile {
+        width: 18vw;
+        height: 18vw;
+    }
+
+    .testimonials-item-center {
+        gap: 3vw;
+    }
+
+    .testimonials-content-bottom {
+        gap: 7vw;
+    }
+
+    .testimonials-content-bottom-buttons {
+        gap: 4vw;
+    }
+
+    .testimonials-item .big-description {
+        font-size: 4vw;
+    }
+
+    .testimonials-item .description {
+        font-size: 3.5vw;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .testimonials-item {
+        flex: 0 0 60vw;
+        height: 60vw;
+        padding: 5vw;
+    }
+
+    .testimonials-item-grid {
+        width: 60vw;
+        height: 60vw;
+        background-size: 10vw 10vw;
+    }
+
+    .testimonials-item-profile {
+        width: 12vw;
+        height: 12vw;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .testimonials-item {
+        transition: none;
+    }
+
+    .embla__progress__bar {
+        transition: none;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .testimonials-item {
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .testimonials-item-grid {
+        opacity: 0.8;
+    }
+}
