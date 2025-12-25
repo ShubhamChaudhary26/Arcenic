@@ -41,7 +41,7 @@ export const AboutPageSection = () => {
       description:
         "We don't just use templates. We build custom, high-performance websites using Next.js that rank high on Google and convert visitors into customers. Perfect for brands that want to stand out, not blend in.",
       image: "/images/macbook.webp",
-      link: "/services/website-development",
+      link: "/services/web-development",
     },
     {
       title: "UI/UX Design",
@@ -57,7 +57,7 @@ export const AboutPageSection = () => {
       description:
         "From simple shops to complex marketplaces. We build scalable e-commerce platforms with secure payments, inventory tracking, and smooth checkout flows that maximize your sales.",
       image: "/casestudy/cs2.webp",
-      link: "/services/ecommerce",
+      link: "/services/e-commerce-solutions",
     },
     {
       title: "Branding & SEO",
@@ -73,7 +73,7 @@ export const AboutPageSection = () => {
       description:
         "Stop using spreadsheets to manage clients. Our custom CRMs are built for your specific workflow—automating follow-ups, tracking leads, and giving you a clear view of your sales pipeline.",
       image: "/images/CRM.webp",
-      link: "/services/crm",
+      link: "/services/crm-solutions",
     },
     {
       title: "ERP Solutions",
@@ -81,7 +81,7 @@ export const AboutPageSection = () => {
       description:
         "Finance, HR, Inventory, Operations—all in one place. We build custom ERPs that connect every part of your business, eliminating data silos and manual entry errors.",
       image: "/images/ERP.webp",
-      link: "/services/erp",
+      link: "/services/erp-systems",
     },
     {
       title: "Graphic Design",
@@ -95,7 +95,7 @@ export const AboutPageSection = () => {
 
   const stats = [
     { number: "5+", label: "Years Experience", icon: Award },
-    { number: "30+", label: "Happy Clients", icon: Users },
+    { number: "20+", label: "Happy Clients", icon: Users },
     { number: "100%", label: "Client Satisfaction", icon: Target },
     { number: "24/7", label: "Support Available", icon: Headphones },
   ];

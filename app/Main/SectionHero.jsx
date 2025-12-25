@@ -221,7 +221,7 @@ export const SectionHero = () => {
             </div>
             <div className="hero-buttons-row">
               <Link
-                href="/about"
+                href="/works"
                 className="button button-transparent-border opacity-blur"
                 ref={buttonRef1}
               >

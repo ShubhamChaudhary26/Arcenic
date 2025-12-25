@@ -399,20 +399,6 @@ export const RealEstateSection = () => {
                   </div>
                 </Link>
 
-                <div className="industry-hero-stats">
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">₹1000Cr+</span>
-                    <span className="small-description grey">
-                      Property Value Listed
-                    </span>
-                  </div>
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">25+</span>
-                    <span className="small-description grey">
-                      PropTech Projects
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
 

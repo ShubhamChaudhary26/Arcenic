@@ -37,64 +37,76 @@ export const SectionTechstack = () => {
   const [cardsAnimated, setCardsAnimated] = useState(false);
 
   const slideData = useMemo(
-    () => [
-      {
-        logo: "/logos/blenderwhite.svg",
-        alt: "Blender",
-        description:
-          "We create stunning 3D models, animations, and realistic environments for immersive experiences.",
-      },
-      {
-        logo: "/logos/ahrefs.svg",
-        alt: "After Effects",
-        description:
-          "Dynamic motion graphics and cinematic visual effects brought to life with seamless precision.",
-      },
-      {
-        logo: "/logos/searchconsole.svg",
-        alt: "Photoshop",
-        description:
-          "Precision-crafted designs and visuals with unmatched detail for polished, professional results.",
-      },
-      {
-        logo: "/logos/davinciresolvewhite.svg",
-        alt: "DaVinci Resolve",
-        description:
-          "Professional-grade video editing and vibrant color grading for high-quality storytelling impact.",
-      },
-      {
-        logo: "/logos/photoshop.svg",
-        alt: "Photoshop",
-        description:
-          "Complex simulations and breathtaking VFX for cutting-edge creativity in every project.",
-      },
-    ],
-    []
+   () => [
+  {
+    logo: "/logos/nextjs.svg",
+    alt: "Next.js",
+    description:
+      "A powerful React framework for building fast, SEO-friendly, and scalable web applications with server-side rendering and static generation.",
+  },
+  {
+    logo: "/logos/n8n.svg",
+    alt: "n8n Automation",
+    description:
+      "Workflow automation platform that connects APIs and services to automate repetitive tasks with flexible, customizable logic.",
+  },
+  {
+    logo: "/logos/nodejs.svg",
+    alt: "Node.js",
+    description:
+      "A high-performance JavaScript runtime for building scalable, event-driven backend services and RESTful APIs.",
+  },
+  {
+    logo: "/logos/shopify.svg",
+    alt: "Shopify",
+    description:
+      "A complete eCommerce platform for building, customizing, and scaling online stores with secure payment and inventory management.",
+  },
+  {
+    logo: "/logos/react.svg",
+    alt: "React.js",
+    description:
+      "A component-based JavaScript library for building dynamic, responsive, and interactive user interfaces efficiently.",
+  },
+  {
+    logo: "/logos/mongodb.svg",
+    alt: "MongoDB",
+    description:
+      "A flexible NoSQL database designed for handling large-scale, schema-less data with high performance and scalability.",
+  },
+  {
+    logo: "/logos/postgresql.svg",
+    alt: "PostgreSQL",
+    description:
+      "An advanced open-source relational database known for reliability, performance, and powerful data integrity features.",
+  },
+],[]
   );
 
   const cardData = useMemo(
     () => [
-      {
-        platform: "Slack",
-        logo: "/logos/slack.svg",
-        message:
-          "Content draft progress at 75%. Feedback incorporated, updates shared.",
-        date: "Nov 5",
-      },
-      {
-        platform: "Gmail",
-        logo: "/logos/gmail.png",
-        message:
-          "Development is now 90% complete. Testing schedule shared with all stakeholders.",
-        date: "Nov 6",
-      },
-      {
-        platform: "Notion",
-        logo: "/logos/notion.png",
-        message:
-          "Design phase completed successfully. Tasks updated and prepared for review.",
-        date: "Nov 7",
-      },
+     {
+  platform: "Tailwind CSS",
+  logo: "/logos/tailwind.svg",
+  message:
+    "Responsive UI components and layouts completed using Tailwind CSS for a consistent design system.",
+  date: "Nov 5",
+},
+{
+  platform: "Zapier",
+  logo: "/logos/zapier.svg",
+  message:
+    "Automation workflows configured to connect multiple apps and reduce manual effort.",
+  date: "Nov 6",
+},
+{
+  platform: "Redis",
+  logo: "/logos/redis.svg",
+  message:
+    "Redis caching layer implemented to significantly improve application performance.",
+  date: "Nov 7",
+},
+
     ],
     []
   );

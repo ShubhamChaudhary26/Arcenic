@@ -18,10 +18,13 @@ import {
 import useEmblaCarousel from "embla-carousel-react";
 import { Send } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation"; // 👈 ADD THIS
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export const SectionTestimonials = () => {
+  const router = useRouter(); // 👈 ADD THIS
+  
   const subheadlineBoxRef = useRef();
   const titleRef = useRef();
   const emblaWrapperRef = useRef();
@@ -52,7 +55,7 @@ export const SectionTestimonials = () => {
           "We needed a custom CRM that actually works for our business. Arcenik built exactly what we needed — clean, fast, and easy for our team to use daily.",
       },
       {
-        name: "Priya Sharma",
+        name: "Sujit Sharma",
         role: "Director, Flavor House Restaurants",
         image: "/images/testimonial2.jpg",
         testimonial:
@@ -167,11 +170,10 @@ export const SectionTestimonials = () => {
     };
   }, [emblaApi, onScroll]);
 
-  // Handle CTA button click
+  // 👇 UPDATED - Handle CTA button click - Now redirects to contact page
   const handleCTAClick = useCallback(() => {
-    // Add your CTA logic here
-    console.log("Book a call clicked");
-  }, []);
+    router.push('/contact'); // 👈 CHANGE THIS TO YOUR CONTACT PAGE PATH
+  }, [router]);
 
   // SSR fallback
   if (!isClient) {
@@ -287,7 +289,7 @@ export const SectionTestimonials = () => {
               onClick={onPrevButtonClick}
               disabled={prevBtnDisabled}
             />
-            <NextButton
+            <NextButton 
               onClick={onNextButtonClick}
               disabled={nextBtnDisabled}
             />

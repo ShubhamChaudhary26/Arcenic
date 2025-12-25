@@ -401,20 +401,7 @@ export const ECommerceSection = () => {
                   </div>
                 </Link>
 
-                <div className="industry-hero-stats">
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">₹500Cr+</span>
-                    <span className="small-description grey">
-                      GMV Processed
-                    </span>
-                  </div>
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">100+</span>
-                    <span className="small-description grey">
-                      E-Commerce Projects
-                    </span>
-                  </div>
-                </div>
+             
               </div>
             </div>
 

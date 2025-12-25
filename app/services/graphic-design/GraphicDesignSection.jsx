@@ -446,20 +446,7 @@ export const GraphicDesignSection = () => {
                   </div>
                 </Link>
 
-                <div className="service-hero-stats">
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">500+</span>
-                    <span className="small-description grey">
-                      Designs Created
-                    </span>
-                  </div>
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">98%</span>
-                    <span className="small-description grey">
-                      Client Satisfaction
-                    </span>
-                  </div>
-                </div>
+              
               </div>
             </div>
 
@@ -824,7 +811,7 @@ export const GraphicDesignSection = () => {
                   <div className="service-cta-info-item">
                     <Sparkles size={20} />
                     <span className="small-description white">
-                      500+ designs created
+                      10+ designs created
                     </span>
                   </div>
                   <div className="service-cta-info-item">

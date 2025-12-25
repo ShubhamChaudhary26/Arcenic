@@ -145,19 +145,17 @@ export const WorksPageSection = () => {
 
  // 17. Software
   {
-    title: "LogiFlow ERP",
+    title: "KVL ERP",
     category: "software",
     type: "software",
     categoryLabel: "Enterprise Resource Planning",
     tags: ["Python", "Django", "PostgreSQL", "Redis", "Celery"],
-    image: "/works/kinimatic.webp",
+    image: "/works/kvl.png",
     description:
       "Complete enterprise resource planning system for supply chain and logistics management.",
     screenshots: [
-      "/software/logiflow/main.png",
-      "/software/logiflow/inventory.png",
-      "/software/logiflow/orders.png",
-      "/software/logiflow/analytics.png",
+      "/works/kvl2.jpeg",
+      "/works/kvl.jpeg",
     ],
     features: [
       "End-to-end supply chain visibility",
@@ -1391,7 +1389,7 @@ export const WorksPageSection = () => {
           </div>
 
           {/* ========== OUR PROCESS SECTION ========== */}
-          <div className="works-process" ref={processRef}>
+          {/* <div className="works-process" ref={processRef}>
             <div className="works-section-header">
               <div className="subheadline-box opacity-blur">
                 <Zap className="subheadline-box-icon" />
@@ -1423,10 +1421,10 @@ export const WorksPageSection = () => {
                 );
               })}
             </div>
-          </div>
+          </div> */}
 
           {/* ========== TESTIMONIALS SECTION ========== */}
-          <SectionTestimonials />
+          {/* <SectionTestimonials /> */}
 
           {/* ========== CTA SECTION ========== */}
           <div className="works-cta">

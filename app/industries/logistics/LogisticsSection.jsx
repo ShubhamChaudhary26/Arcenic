@@ -408,20 +408,7 @@ export const LogisticsSection = () => {
                   </div>
                 </Link>
 
-                <div className="industry-hero-stats">
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">10K+</span>
-                    <span className="small-description grey">
-                      Vehicles Tracked
-                    </span>
-                  </div>
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">30%</span>
-                    <span className="small-description grey">
-                      Cost Reduction
-                    </span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

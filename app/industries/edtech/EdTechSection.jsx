@@ -397,20 +397,7 @@ export const EdTechSection = () => {
                   </div>
                 </Link>
 
-                <div className="industry-hero-stats">
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">5M+</span>
-                    <span className="small-description grey">
-                      Students Impacted
-                    </span>
-                  </div>
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">75+</span>
-                    <span className="small-description grey">
-                      EdTech Projects
-                    </span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

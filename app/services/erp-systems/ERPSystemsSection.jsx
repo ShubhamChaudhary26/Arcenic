@@ -434,16 +434,7 @@ export const ERPSystemsSection = () => {
                   </div>
                 </Link>
 
-                <div className="service-hero-stats">
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">60%</span>
-                    <span className="small-description grey">Time Saved</span>
-                  </div>
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">15+</span>
-                    <span className="small-description grey">ERP Deployed</span>
-                  </div>
-                </div>
+               
               </div>
             </div>
 

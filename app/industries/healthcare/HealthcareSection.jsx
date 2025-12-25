@@ -401,20 +401,7 @@ export const HealthcareSection = () => {
                   </div>
                 </Link>
 
-                <div className="industry-hero-stats">
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">2M+</span>
-                    <span className="small-description grey">
-                      Patients Served
-                    </span>
-                  </div>
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">50+</span>
-                    <span className="small-description grey">
-                      Healthcare Projects
-                    </span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

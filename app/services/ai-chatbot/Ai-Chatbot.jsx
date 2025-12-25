@@ -411,20 +411,7 @@ export const AIChatbotSection = () => {
                 </div>
               </Link>
 
-              <div className="service-hero-stats">
-                <div className="service-hero-stat">
-                  <span className="small-subheadline white">1M+</span>
-                  <span className="small-description grey">
-                    Messages Handled
-                  </span>
-                </div>
-                <div className="service-hero-stat">
-                  <span className="small-subheadline white">70%</span>
-                  <span className="small-description grey">
-                    Queries Auto-Resolved
-                  </span>
-                </div>
-              </div>
+             
             </div>
           </div>
 

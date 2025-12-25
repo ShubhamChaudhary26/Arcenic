@@ -397,20 +397,6 @@ export const FintechSection = () => {
                   </div>
                 </Link>
 
-                <div className="industry-hero-stats">
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">₹100Cr+</span>
-                    <span className="small-description grey">
-                      Transactions Processed
-                    </span>
-                  </div>
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">15+</span>
-                    <span className="small-description grey">
-                      Fintech Projects
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
 

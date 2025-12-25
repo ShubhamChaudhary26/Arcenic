@@ -402,20 +402,7 @@ export const HospitalitySection = () => {
                   </div>
                 </Link>
 
-                <div className="industry-hero-stats">
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">500+</span>
-                    <span className="small-description grey">
-                      Properties Managed
-                    </span>
-                  </div>
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">40+</span>
-                    <span className="small-description grey">
-                      Hospitality Projects
-                    </span>
-                  </div>
-                </div>
+              
               </div>
             </div>
 
@@ -718,7 +705,7 @@ export const HospitalitySection = () => {
                   <div className="industry-cta-info-item">
                     <Hotel size={20} />
                     <span className="small-description white">
-                      500+ Properties
+                      5+ Properties
                     </span>
                   </div>
                   <div className="industry-cta-info-item">

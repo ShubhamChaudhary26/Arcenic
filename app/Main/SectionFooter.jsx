@@ -155,9 +155,9 @@ export const SectionFooter = () => {
   // Social links handler
   const handleSocialClick = (platform) => {
     const urls = {
-      instagram: "https://instagram.com/arceniktechnologies",
-      twitter: "https://twitter.com/arceniktechnologies",
-      linkedin: "https://linkedin.com/company/arceniktechnologies",
+      instagram: "https://www.instagram.com/arcenik_technologies/",
+      twitter: "#",
+      linkedin: "https://in.linkedin.com/company/arcenik-technologies",
     };
     window.open(urls[platform], "_blank", "noopener,noreferrer");
   };

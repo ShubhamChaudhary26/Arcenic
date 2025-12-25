@@ -406,20 +406,7 @@ export const ManufacturingSection = () => {
                   </div>
                 </Link>
 
-                <div className="industry-hero-stats">
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">50+</span>
-                    <span className="small-description grey">
-                      Factories Digitized
-                    </span>
-                  </div>
-                  <div className="industry-hero-stat">
-                    <span className="small-subheadline white">35%</span>
-                    <span className="small-description grey">
-                      Avg Efficiency Gain
-                    </span>
-                  </div>
-                </div>
+             
               </div>
             </div>
 

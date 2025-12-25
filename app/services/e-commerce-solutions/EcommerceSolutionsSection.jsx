@@ -439,20 +439,7 @@ const pricingPlans = [
                   </div>
                 </Link>
 
-                <div className="service-hero-stats">
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">₹2Cr+</span>
-                    <span className="small-description grey">
-                      Revenue Generated
-                    </span>
-                  </div>
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">35+</span>
-                    <span className="small-description grey">
-                      Stores Launched
-                    </span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

@@ -445,20 +445,7 @@ const pricingPlans = [
                   </div>
                 </Link>
 
-                <div className="service-hero-stats">
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">10x</span>
-                    <span className="small-description grey">
-                      Avg. Traffic Growth
-                    </span>
-                  </div>
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">60+</span>
-                    <span className="small-description grey">
-                      Brands Created
-                    </span>
-                  </div>
-                </div>
+            
               </div>
             </div>
 

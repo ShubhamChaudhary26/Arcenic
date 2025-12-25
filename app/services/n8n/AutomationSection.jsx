@@ -490,20 +490,7 @@ const packages = [
                   </div>
                 </Link>
 
-                <div className="service-hero-stats">
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">500+</span>
-                    <span className="small-description grey">
-                      Workflows Built
-                    </span>
-                  </div>
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">10,000+</span>
-                    <span className="small-description grey">
-                      Hours Saved/Month
-                    </span>
-                  </div>
-                </div>
+            
               </div>
             </div>
 

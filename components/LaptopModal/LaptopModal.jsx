@@ -379,7 +379,7 @@ export const LaptopModal = ({ isOpen, onClose, project }) => {
             </div>
 
             {/* Link Button */}
-            {project.link && project.link !== "#" && (
+            {/* {project.link && project.link !== "#" && (
               <a
                 href={project.link}
                 target="_blank"
@@ -389,7 +389,7 @@ export const LaptopModal = ({ isOpen, onClose, project }) => {
                 <span>View Live Project</span>
                 <ExternalLink size={16} />
               </a>
-            )}
+            )} */}
           </div>
         </div>
       </div>

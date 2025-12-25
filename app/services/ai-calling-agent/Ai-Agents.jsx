@@ -399,20 +399,7 @@ export const AICallingAgentSection = () => {
                 </div>
               </Link>
 
-              <div className="service-hero-stats">
-                <div className="service-hero-stat">
-                  <span className="small-subheadline white">50K+</span>
-                  <span className="small-description grey">
-                    Calls Handled
-                  </span>
-                </div>
-                <div className="service-hero-stat">
-                  <span className="small-subheadline white">80%</span>
-                  <span className="small-description grey">
-                    Cost Reduction
-                  </span>
-                </div>
-              </div>
+           
             </div>
           </div>
 

@@ -12,6 +12,7 @@ import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { X, Zap } from "lucide-react";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation"; // 👈 ADD THIS
 import "./SectionServices.css";
 
 const CalendlyWidget = dynamic(() => import("./CalendlyWidget"), {
@@ -29,6 +30,8 @@ gsap.registerPlugin(SplitText, ScrollTrigger, CustomEase);
 const customEase = CustomEase.create("customEase", ".4,0,.1,1");
 
 export const SectionServices = () => {
+  const router = useRouter(); // 👈 ADD THIS
+  
   const subheadlineBoxRef = useRef();
   const titleRef = useRef();
   const descriptionRef = useRef();
@@ -146,20 +149,16 @@ export const SectionServices = () => {
         hasPlayed = true;
         console.log("Video playing");
       } catch (err) {
-        // Wait for user interaction
         console.log("Waiting for user interaction");
       }
     };
 
-    // Try playing immediately
     tryPlayVideo();
 
-    // Try again on user interaction (only once)
     const handleFirstInteraction = () => {
       if (!hasPlayed) {
         tryPlayVideo();
       }
-      // Remove listeners after first interaction
       document.removeEventListener("click", handleFirstInteraction);
       document.removeEventListener("touchstart", handleFirstInteraction);
     };
@@ -215,13 +214,14 @@ export const SectionServices = () => {
     setIsOverlayVisible(!isOverlayVisible);
   }, [isOverlayVisible]);
 
+  // 👇 UPDATED FUNCTION - Now redirects to contact page
   const handleButtonClick = useCallback(
     (e) => {
       e.preventDefault();
       e.stopPropagation();
-      toggleOverlay();
+      router.push('/contact'); // 👈 CHANGE THIS TO YOUR CONTACT PAGE PATH
     },
-    [toggleOverlay]
+    [router]
   );
 
   if (!isClient) {
@@ -249,6 +249,7 @@ export const SectionServices = () => {
 
   return (
     <section className="services">
+      {/* You can keep or remove this overlay section if not needed anymore */}
       <div
         className="calendly-overlay"
         ref={overlayRef}
@@ -341,7 +342,6 @@ export const SectionServices = () => {
             <source src="/videos/serviceshighquality.mp4" type="video/mp4" />
           </video>
 
-          {/* Borders */}
           <div className="services-content-container-left" />
           <div className="services-content-container-right" />
           <div className="services-content-container-bottom" />

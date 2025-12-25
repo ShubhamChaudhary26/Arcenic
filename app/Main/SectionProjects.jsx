@@ -32,27 +32,27 @@ export const SectionProjects = () => {
   const projectData = useMemo(
     () => [
       {
-        src: "/works/heave.webp",
-        alt: "Heavecorp project",
-        title: "Heavecorp",
+        src: "/works/gym-min.png",
+        alt: "VELTRIX GYM",
+        title: "GYM WEBSITE",
       },
       {
-        src: "/works/essentia.webp",
-        alt: "Essentia project",
-        title: "Essentia",
+        src: "/works/mintsurvey.png",
+        alt: " SaaS Platform",
+        title: "MintSurvey",
       },
       {
-        src: "/works/kinimatic.webp",
-        alt: "Kinimatic project",
-        title: "Kinimatic",
+        src: "/works/rental-min.png",
+        alt: "Rent Agreement project",
+        title: "Rent Agreement",
       },
       { src: "/works/peak.webp", alt: "Peak project", title: "Peak" },
       {
-        src: "/works/vitalenta.webp",
-        alt: "Vitalenta project",
-        title: "Vitalenta",
+        src: "/works/tourist.png",
+        alt: "7sevent Star project",
+        title: "Tour and Travels",
       },
-      { src: "/works/rev.webp", alt: "Rev project", title: "Rev" },
+      { src: "/works/gift.jpeg", alt: "Gift project", title: "Gift" },
     ],
     []
   );

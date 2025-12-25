@@ -442,20 +442,7 @@ export const CRMSolutionsSection = () => {
                   </div>
                 </Link>
 
-                <div className="service-hero-stats">
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">40%</span>
-                    <span className="small-description grey">
-                      Sales Increase
-                    </span>
-                  </div>
-                  <div className="service-hero-stat">
-                    <span className="small-subheadline white">25+</span>
-                    <span className="small-description grey">
-                      CRM Implementations
-                    </span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 

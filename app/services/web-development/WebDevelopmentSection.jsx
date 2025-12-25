@@ -443,7 +443,7 @@ const pricingPlans = [
                   </div>
                 </Link>
 
-                <div className="service-hero-stats">
+                {/* <div className="service-hero-stats">
                   <div className="service-hero-stat">
                     <span className="small-subheadline white">50+</span>
                     <span className="small-description grey">
@@ -456,7 +456,7 @@ const pricingPlans = [
                       Client Satisfaction
                     </span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="service-hero-visual">

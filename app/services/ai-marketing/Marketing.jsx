@@ -411,20 +411,7 @@ export const AIMarketingSection = () => {
                 </div>
               </Link>
 
-              <div className="service-hero-stats">
-                <div className="service-hero-stat">
-                  <span className="small-subheadline white">3x</span>
-                  <span className="small-description grey">
-                    Avg. ROAS Improvement
-                  </span>
-                </div>
-                <div className="service-hero-stat">
-                  <span className="small-subheadline white">50%</span>
-                  <span className="small-description grey">
-                    Time Saved
-                  </span>
-                </div>
-              </div>
+            
             </div>
           </div>
 
