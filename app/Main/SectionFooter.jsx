@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import gsap from "gsap";
 import SplitText from "gsap/src/SplitText";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -11,8 +11,6 @@ if (typeof window !== "undefined") {
 }
 
 export const SectionFooter = () => {
-  const router = useRouter();
-
   const topRef1 = useRef();
   const topRef2 = useRef();
   const topRef3 = useRef();
@@ -147,21 +145,6 @@ export const SectionFooter = () => {
     return () => clearTimeout(timer);
   }, [isClient]);
 
-  // Navigation handler
-  const handleNavigate = (path) => {
-    router.push(path);
-  };
-
-  // Social links handler
-  const handleSocialClick = (platform) => {
-    const urls = {
-      instagram: "https://www.instagram.com/arcenik_technologies/",
-      twitter: "#",
-      linkedin: "https://in.linkedin.com/company/arcenik-technologies",
-    };
-    window.open(urls[platform], "_blank", "noopener,noreferrer");
-  };
-
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -174,13 +157,14 @@ export const SectionFooter = () => {
             filter: isClient ? undefined : "none",
           }}
         >
-          <img
-            src="/images/logo1.png"
-            className="footer-logo"
-            alt="Arcenik Logo"
-            onClick={() => handleNavigate("/")}
-            style={{ cursor: "pointer" }}
-          />
+          <Link href="/">
+            <img
+              src="/images/logo1.png"
+              className="footer-logo"
+              alt="Arcenik Logo"
+              style={{ cursor: "pointer" }}
+            />
+          </Link>
           <h2 className="description grey">Where vision meets web.</h2>
           <p className="description grey">
             We design and develop tailor-made web solutions that blend
@@ -202,46 +186,25 @@ export const SectionFooter = () => {
           <div className="footer-content-right-column">
             <h2 className="description white">Company</h2>
             <div className="footer-column-contents">
-              <div
-                className="footer-column-contents-item"
-                onClick={() => handleNavigate("/")}
-              >
+              <Link href="/" className="footer-column-contents-item">
                 <p className="description grey hover-text-grey">Home</p>
-              </div>
-              <div
-                className="footer-column-contents-item"
-                onClick={() => handleNavigate("/about")}
-              >
+              </Link>
+              <Link href="/about" className="footer-column-contents-item">
                 <p className="description grey hover-text-grey">About</p>
-              </div>
-              <div
-                className="footer-column-contents-item"
-                onClick={() => handleNavigate("/services")}
-              >
-                <p className="description grey hover-text-grey">Services</p>
-              </div>
-              <div
-                className="footer-column-contents-item"
-                onClick={() => handleNavigate("/works")}
-              >
+              </Link>
+              <Link href="/works" className="footer-column-contents-item">
                 <p className="description grey hover-text-grey">Works</p>
-              </div>
-              <div
-                className="footer-column-contents-item"
-                onClick={() => handleNavigate("/blog")}
-              >
+              </Link>
+              <Link href="/blogs" className="footer-column-contents-item">
                 <p className="description grey hover-text-grey">Blog</p>
-              </div>
-              <div
-                className="footer-column-contents-item"
-                onClick={() => handleNavigate("/contact")}
-              >
+              </Link>
+              <Link href="/contact" className="footer-column-contents-item">
                 <p className="description grey hover-text-grey">Contact</p>
-              </div>
+              </Link>
             </div>
           </div>
 
-          {/* Services Links */}
+          {/* Services Links - ✅ NOW WITH PROPER <Link> TAGS! */}
           <div
             className="footer-content-right-column"
             ref={topRef3}
@@ -252,34 +215,48 @@ export const SectionFooter = () => {
           >
             <h2 className="description white">Services</h2>
             <div className="footer-column-contents">
-              <div
+              <Link
+                href="/services/web-development"
                 className="footer-column-contents-item"
-                onClick={() => handleNavigate("/services/web-development")}
               >
                 <p className="description grey hover-text-grey">
                   Web Development
                 </p>
-              </div>
-              <div
+              </Link>
+              <Link
+                href="/services/ui-ux-design"
                 className="footer-column-contents-item"
-                onClick={() => handleNavigate("/services/ui-ux-design")}
               >
                 <p className="description grey hover-text-grey">UI/UX Design</p>
-              </div>
-              <div
+              </Link>
+              <Link
+                href="/services/e-commerce-solutions"
                 className="footer-column-contents-item"
-                onClick={() => handleNavigate("/services/e-commerce-solutions")}
               >
                 <p className="description grey hover-text-grey">E-Commerce</p>
-              </div>
-              <div
+              </Link>
+              <Link
+                href="/services/ai-calling-agent"
                 className="footer-column-contents-item"
-                onClick={() => handleNavigate("/services/branding-seo")}
+              >
+                <p className="description grey hover-text-grey">
+                  AI Calling Agent
+                </p>
+              </Link>
+              <Link
+                href="/services/ai-chatbot"
+                className="footer-column-contents-item"
+              >
+                <p className="description grey hover-text-grey">AI Chatbot</p>
+              </Link>
+              <Link
+                href="/services/branding-seo"
+                className="footer-column-contents-item"
               >
                 <p className="description grey hover-text-grey">
                   Branding & SEO
                 </p>
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -287,22 +264,19 @@ export const SectionFooter = () => {
           <div className="footer-content-right-column">
             <h2 className="description white">Legal</h2>
             <div className="footer-column-contents">
-              <div
-                className="footer-column-contents-item"
-                onClick={() => handleNavigate("/terms")}
-              >
+              <Link href="/terms" className="footer-column-contents-item">
                 <p className="description grey hover-text-grey">
                   Terms of Service
                 </p>
-              </div>
-              <div
+              </Link>
+              <Link
+                href="/privacy-policy"
                 className="footer-column-contents-item"
-                onClick={() => handleNavigate("/privacy-policy")}
               >
                 <p className="description grey hover-text-grey">
                   Privacy Policy
                 </p>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -336,24 +310,30 @@ export const SectionFooter = () => {
             filter: isClient ? undefined : "none",
           }}
         >
-          <Instagram
-            strokeWidth={1.25}
-            className="footer-socials-icon"
+          <a
+            href="https://www.instagram.com/arcenik_technologies/"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Visit our Instagram"
-            onClick={() => handleSocialClick("instagram")}
-          />
-          <Twitter
-            strokeWidth={1.25}
-            className="footer-socials-icon"
+          >
+            <Instagram strokeWidth={1.25} className="footer-socials-icon" />
+          </a>
+          <a
+            href="https://twitter.com/arcenik"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Visit our Twitter"
-            onClick={() => handleSocialClick("twitter")}
-          />
-          <Linkedin
-            strokeWidth={1.25}
-            className="footer-socials-icon"
+          >
+            <Twitter strokeWidth={1.25} className="footer-socials-icon" />
+          </a>
+          <a
+            href="https://in.linkedin.com/company/arcenik-technologies"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Visit our LinkedIn"
-            onClick={() => handleSocialClick("linkedin")}
-          />
+          >
+            <Linkedin strokeWidth={1.25} className="footer-socials-icon" />
+          </a>
         </div>
       </div>
     </footer>

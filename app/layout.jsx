@@ -1,5 +1,3 @@
-// app/layout.jsx
-
 import "./globals.css";
 import { SectionFooter } from "./Main/SectionFooter";
 import { Navigation } from "./Navigation";
@@ -16,8 +14,6 @@ export const metadata = {
   // ✅ Description: Mix both Software + Website (Best Coverage)
   description:
     "Leading software development company in Vapi, Gujarat. Expert website development, web design, mobile apps, CRM, ERP & digital solutions for businesses across India.",
-
-  // ✅ Keywords: 60% Website + 40% Software (Optimal Mix)
   keywords: [
     // 🎯 PRIMARY - Software Development (Positioning)
     "software development company vapi",

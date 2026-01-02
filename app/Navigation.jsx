@@ -502,10 +502,11 @@ export const Navigation = () => {
                       {category.category}
                     </span>
                     {category.items.map((service, index) => (
-                      <div
+                      <Link
                         key={index}
+                        href={service.path}
                         className="mega-menu-item"
-                        onClick={() => handleServiceClick(service.path)}
+                        onClick={() => closeServicesDropdown(true)}
                       >
                         <span className="mega-menu-item-text">
                           {service.name}
@@ -514,7 +515,7 @@ export const Navigation = () => {
                           className="mega-menu-item-arrow"
                           size={14}
                         />
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 ))}
@@ -544,10 +545,11 @@ export const Navigation = () => {
               <div className="mega-menu-bridge" />
               <div className="industries-dropdown-inner">
                 {industriesData.map((industry, index) => (
-                  <div
+                  <Link
                     key={index}
+                    href={industry.path}
                     className="industries-dropdown-item"
-                    onClick={() => handleIndustryClick(industry.path)}
+                    onClick={() => closeIndustriesDropdown(true)}
                   >
                     <span className="industries-dropdown-text">
                       {industry.name}
@@ -556,7 +558,7 @@ export const Navigation = () => {
                       className="industries-dropdown-arrow"
                       size={12}
                     />
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
