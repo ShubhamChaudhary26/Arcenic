@@ -37,76 +37,76 @@ export const SectionTechstack = () => {
   const [cardsAnimated, setCardsAnimated] = useState(false);
 
   const slideData = useMemo(
-   () => [
-  {
-    logo: "/logos/nextjs.svg",
-    alt: "Next.js",
-    description:
-      "A powerful React framework for building fast, SEO-friendly, and scalable web applications with server-side rendering and static generation.",
-  },
-  {
-    logo: "/logos/n8n.svg",
-    alt: "n8n Automation",
-    description:
-      "Workflow automation platform that connects APIs and services to automate repetitive tasks with flexible, customizable logic.",
-  },
-  {
-    logo: "/logos/nodejs.svg",
-    alt: "Node.js",
-    description:
-      "A high-performance JavaScript runtime for building scalable, event-driven backend services and RESTful APIs.",
-  },
-  {
-    logo: "/logos/shopify.svg",
-    alt: "Shopify",
-    description:
-      "A complete eCommerce platform for building, customizing, and scaling online stores with secure payment and inventory management.",
-  },
-  {
-    logo: "/logos/react.svg",
-    alt: "React.js",
-    description:
-      "A component-based JavaScript library for building dynamic, responsive, and interactive user interfaces efficiently.",
-  },
-  {
-    logo: "/logos/mongodb.svg",
-    alt: "MongoDB",
-    description:
-      "A flexible NoSQL database designed for handling large-scale, schema-less data with high performance and scalability.",
-  },
-  {
-    logo: "/logos/postgresql.svg",
-    alt: "PostgreSQL",
-    description:
-      "An advanced open-source relational database known for reliability, performance, and powerful data integrity features.",
-  },
-],[]
+    () => [
+      {
+        logo: "/logos/nextjs.svg",
+        alt: "Next.js",
+        description:
+          "A powerful React framework for building fast, SEO-friendly, and scalable web applications with server-side rendering and static generation.",
+      },
+      {
+        logo: "/logos/n8n.svg",
+        alt: "n8n Automation",
+        description:
+          "Workflow automation platform that connects APIs and services to automate repetitive tasks with flexible, customizable logic.",
+      },
+      {
+        logo: "/logos/nodejs.svg",
+        alt: "Node.js",
+        description:
+          "A high-performance JavaScript runtime for building scalable, event-driven backend services and RESTful APIs.",
+      },
+      {
+        logo: "/logos/shopify.svg",
+        alt: "Shopify",
+        description:
+          "A complete eCommerce platform for building, customizing, and scaling online stores with secure payment and inventory management.",
+      },
+      {
+        logo: "/logos/react.svg",
+        alt: "React.js",
+        description:
+          "A component-based JavaScript library for building dynamic, responsive, and interactive user interfaces efficiently.",
+      },
+      {
+        logo: "/logos/mongodb.svg",
+        alt: "MongoDB",
+        description:
+          "A flexible NoSQL database designed for handling large-scale, schema-less data with high performance and scalability.",
+      },
+      {
+        logo: "/logos/postgresql.svg",
+        alt: "PostgreSQL",
+        description:
+          "An advanced open-source relational database known for reliability, performance, and powerful data integrity features.",
+      },
+    ],
+    []
   );
 
   const cardData = useMemo(
     () => [
-     {
-  platform: "Tailwind CSS",
-  logo: "/logos/tailwind.svg",
-  message:
-    "Responsive UI components and layouts completed using Tailwind CSS for a consistent design system.",
-  date: "Nov 5",
-},
-{
-  platform: "Zapier",
-  logo: "/logos/zapier.svg",
-  message:
-    "Automation workflows configured to connect multiple apps and reduce manual effort.",
-  date: "Nov 6",
-},
-{
-  platform: "Redis",
-  logo: "/logos/redis.svg",
-  message:
-    "Redis caching layer implemented to significantly improve application performance.",
-  date: "Nov 7",
-},
-
+      {
+        platform: "Slack",
+        logo: "/logos/slack.svg",
+        message:
+          "Project milestone completed! Dashboard UI is ready for review. Check the Figma link for details.",
+        date: "Nov 5",
+      },
+      {
+        platform: "Notion",
+        logo: "/logos/notion.png",
+        message:
+          "Weekly progress report updated. All tasks on track, deployment scheduled for Friday.",
+        date: "Nov 6",
+      },
+      {
+        platform: "Gmail",
+        logo: "/logos/gmail.png",
+        message:
+          "Invoice #1247 sent. Payment gateway integration completed successfully.",
+        date: "Nov 7",
+      },
     ],
     []
   );
